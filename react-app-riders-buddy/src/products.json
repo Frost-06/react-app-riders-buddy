@@ -1,0 +1,446 @@
+[
+  {
+    "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
+    "image": "/img/item-img/1.png",
+    "price": 1500,
+    "endingPrice": 2500,
+    "salePrice": "0.25",
+    "rating": {
+      "stars": 4,
+      "count": "2.5k"
+    },
+    "productDescription": {
+      "soldItems": "500",
+      "parts": "Bike Chain",
+      "categories": "Bicycle Products",
+      "SKU": "96635",
+      "weight": "4kg",
+      "brand": "KMC",
+      "color": "Silver",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "25",
+      "Dimensions": "10 x 20 x15"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
+    "price": 500,
+    "image": "/img/item-img/2.jpg",
+    "endingPrice": 2500,
+    "salePrice": 0.1,
+    "rating": {
+      "stars": 5,
+      "count": "1.5k"
+    },
+    "serviceDescription": {
+      "soldItems": "100",
+      "status": "Available",
+      "categories": "Bicycle Services",
+      "serviceType": "Tire Installation",
+      "availability": "Mon - Fri",
+      "laborType": "per service",
+      "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "categoryType": "service"
+  },
+  {
+    "name": "Shimano Tourney 6/7/8 speed Rear Derailleur RD-TZ500 Bicycle Mountain Bike Part roller Groupset",
+    "price": 400,
+    "image": "/img/item-img/3.png",
+    "endingPrice": 500,
+    "salePrice": "0.30",
+    "rating": {
+      "stars": 4,
+      "count": "1.3k"
+    },
+    "productDescription": {
+      "soldItems": "107",
+      "parts": "Rear Shifter",
+      "categories": "Bicycle Products",
+      "SKU": "96636",
+      "weight": "270g",
+      "brand": "Shimano",
+      "color": "Black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "3",
+      "Dimensions": "14 x 12 x 55"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "SNAIL 96BCD 32-38T MTB Bike Bicycle Chainring Chain Wheel Circular Disc Single speed positive and negative plate Bike Parts",
+    "price": 500,
+    "image": "/img/item-img/4.png",
+    "endingPrice": 600,
+    "salePrice": "0.50",
+    "rating": {
+      "stars": 4,
+      "count": "1.7k"
+    },
+    "productDescription": {
+      "soldItems": "98",
+      "parts": "Chain Wheel Circular Disc",
+      "categories": "Bicycle Products",
+      "SKU": "96637",
+      "weight": "52g",
+      "brand": "Snail",
+      "color": "Black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "26",
+      "Dimensions": "10 x 15 x 12"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "THE PROJECT MTB TOURING BAR",
+    "price": 2300,
+    "endingPrice": 2800,
+    "image": "/img/item-img/5.png",
+    "salePrice": "0.20",
+    "rating": {
+      "stars": 4,
+      "count": "995"
+    },
+    "productDescription": {
+      "soldItems": "76",
+      "parts": "Handle Bar",
+      "categories": "Bicycle Products",
+      "SKU": "96638",
+      "weight": "52g",
+      "brand": "Project MTB",
+      "color": "Black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "15",
+      "Dimensions": "71 x 31 x 13"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "MTB bicycle pedals TANKE TP-10 TP20 aluminum alloy oil slick colorful Sealed bearing road bike parts",
+    "price": 1500,
+    "image": "/img/item-img/6.png",
+    "endingPrice": 2000,
+    "salePrice": "0.45",
+    "rating": {
+      "stars": 5,
+      "count": "2.9k"
+    },
+    "productDescription": {
+      "soldItems": "43",
+      "parts": "Bike Pedals",
+      "categories": "Bicycle Products",
+      "SKU": "96639",
+      "weight": "280.6g",
+      "brand": "TANKE",
+      "color": "colorful, red, black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "86",
+      "Dimensions": "80 x 81 x 10"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "Sweet Cycling:1 Pair Bike Part Brake Handle Cover Bike Brakes Silicone Sleeve Brake Lever",
+    "price": 100,
+    "image": "/img/item-img/7.png",
+    "endingPrice": 150,
+    "salePrice": "",
+    "rating": {
+      "stars": 5,
+      "count": "204"
+    },
+    "productDescription": {
+      "soldItems": "20",
+      "parts": "Brake Handle Cover",
+      "categories": "Bicycle Products",
+      "SKU": "96640",
+      "weight": "20g",
+      "brand": "Crazy Fly",
+      "color": "Red, Bla, Blue, Green, Yellow, White, Pink",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "18",
+      "Dimensions": "75 x 14 x 95"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "FMFXTR Seat Tube Aluminum Alloy Extension Seat Post 25.4/27.2/28.6/30.4/30.9/31.6*450MM Bike Parts",
+    "price": 950,
+    "image": "/img/item-img/8.png",
+    "endingPrice": 1005,
+    "salePrice": "0.40",
+    "rating": {
+      "stars": 5,
+      "count": "1.1k"
+    },
+    "productDescription": {
+      "soldItems": "29",
+      "parts": "Extension Seat Post",
+      "categories": "Bicycle Products",
+      "SKU": "96641",
+      "weight": "---",
+      "brand": "fmfxtr",
+      "color": "Black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "22",
+      "Dimensions": "25 x 50 x 70"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "Outdoor Bike Parts Accessories 3D Soft Bike Saddle Saddle Cover",
+    "price": 89,
+    "image": "/img/item-img/9.png",
+    "endingPrice": 189,
+    "salePrice": "",
+    "rating": {
+      "stars": 4,
+      "count": "677"
+    },
+    "productDescription": {
+      "soldItems": "64",
+      "parts": "Bike Saddle Cover",
+      "categories": "Bicycle Products",
+      "SKU": "96642",
+      "weight": "---",
+      "brand": "fmfxtr",
+      "color": "red, blue, black, orange",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "62",
+      "Dimensions": "28 x 16 x 2"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "Motorcycle Shock for XRM/WAVE 310mm One Pair",
+    "price": 1000,
+    "image": "/img/item-img/10.png",
+    "endingPrice": 1200,
+    "salePrice": "0.05",
+    "rating": {
+      "stars": 4,
+      "count": "2.4k"
+    },
+    "productDescription": {
+      "soldItems": "604",
+      "parts": "Motorcycle Shock",
+      "categories": "Motorcycle Products",
+      "SKU": "96643",
+      "weight": "5 kg",
+      "brand": "XRM Stock",
+      "color": "yellow",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "62",
+      "Dimensions": "50 x 15 45"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "2Pcs Motorcycle Spotlight Mini Driving Light Yellow + White Hi-Lo Beam Led Motorcycle Spot Light",
+    "price": 1500,
+    "image": "/img/item-img/11.png",
+    "endingPrice": 1700,
+    "salePrice": "0.50",
+    "rating": {
+      "stars": 4,
+      "count": "1.6k"
+    },
+    "productDescription": {
+      "soldItems": "502",
+      "parts": "Motorcycle mini Driving Light",
+      "categories": "Motorcycle Products",
+      "SKU": "96644",
+      "weight": "200g",
+      "brand": "Surfly",
+      "color": "yellow",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "31",
+      "Dimensions": "10 x 15 x 13"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "TMX155 Fuel Cock LPI - Motorcycle parts",
+    "price": 100,
+    "image": "/img/item-img/12.png",
+    "endingPrice": 150,
+    "salePrice": "0.15",
+    "rating": {
+      "stars": 4,
+      "count": "1.1k"
+    },
+    "productDescription": {
+      "soldItems": "105",
+      "parts": "Motorcycle Fuel Cock",
+      "categories": "Motorcycle Products",
+      "SKU": "96645",
+      "weight": "250 g",
+      "brand": "Brandnew Tmx155",
+      "color": "---",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "10",
+      "Dimensions": "5 x 5 x 5"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "220CM*3.5CM LIGHTEN DISC 4HOLES XRM/WAVE125 AND MOTORCYCLE",
+    "price": 400,
+    "image": "/img/item-img/3.png",
+    "endingPrice": 600,
+    "salePrice": "",
+    "rating": {
+      "stars": 4,
+      "count": "142"
+    },
+    "productDescription": {
+      "soldItems": "1.3k",
+      "parts": "Disc Plate",
+      "categories": "Motorcycle Products",
+      "SKU": "96646",
+      "weight": "---",
+      "brand": "Brandnew Tmx155",
+      "color": "BLACK.SILVER.GOLD",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "90",
+      "Dimensions": "220CM x 3.5CM"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "MOTORCYCLE CARBURATOR TMX-125, RUSI, WAVE, STX, XRM, ETC.",
+    "price": 350,
+    "image": "/img/item-img/14.png",
+    "endingPrice": 1000,
+    "salePrice": "0.65",
+    "rating": {
+      "stars": 4,
+      "count": "134"
+    },
+    "productDescription": {
+      "soldItems": "328",
+      "parts": "MOTORCYCLE CARBURATOR",
+      "categories": "Motorcycle Products",
+      "SKU": "96647",
+      "weight": "---",
+      "brand": "Universal",
+      "color": "Gray",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "24",
+      "Dimensions": "10 x 13"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "C2 Motorcycle Universal Mobile Cellphone Holder Mount Alloy Motor holder",
+    "price": 199,
+    "image": "/img/item-img/15.png",
+    "endingPrice": 299,
+    "salePrice": "",
+    "rating": {
+      "stars": 4,
+      "count": "6.1k"
+    },
+    "productDescription": {
+      "soldItems": "58",
+      "parts": "MOTORCYCLE Mobile Cellphone Holder",
+      "categories": "Motorcycle Products",
+      "SKU": "96648",
+      "weight": "20g",
+      "brand": "Universal",
+      "color": "Black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "100",
+      "Dimensions": "5 x 5"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "LJ Motorcycle absorber front shock xrm 110/125(telescopic assy)",
+    "price": 799,
+    "image": "/img/item-img/16.png",
+    "endingPrice": 999,
+    "salePrice": "0.05",
+    "rating": {
+      "stars": 4,
+      "count": "1.8k"
+    },
+    "productDescription": {
+      "soldItems": "58",
+      "parts": "MOTORCYCLE front shock",
+      "categories": "Motorcycle Products",
+      "SKU": "96649",
+      "weight": "---",
+      "brand": "XRM Stock",
+      "color": "Gray",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "10",
+      "Dimensions": "3 x 4 x 2"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "Motorcycle Decals Painting",
+    "price": 1000,
+    "image": "/img/item-img/17.jpg",
+    "endingPrice": 3000,
+    "salePrice": 0.1,
+    "rating": {
+      "stars": 5,
+      "count": "1.5k"
+    },
+    "serviceDescription": {
+      "soldItems": "--",
+      "status": "Available",
+      "categories": "Motorcycle Services",
+      "serviceType": "Decals or Painting modifications",
+      "availability": "Mon - Fri",
+      "laborType": "per service",
+      "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "categoryType": "service"
+  },
+  {
+    "name": "Motorcycle Change oil",
+    "price": 300,
+    "image": "/img/item-img/18.jpg",
+    "endingPrice": 500,
+    "salePrice": 0.1,
+    "rating": {
+      "stars": 5,
+      "count": "3.2k"
+    },
+    "serviceDescription": {
+      "soldItems": "--",
+      "status": "Available",
+      "categories": "Motorcycle Services",
+      "serviceType": "Motorcycle new oil application",
+      "availability": "Mon - Fri",
+      "laborType": "per service",
+      "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "categoryType": "service"
+  },
+  {
+    "name": "Motorcycle Engine Overhaul",
+    "price": 3000,
+    "image": "/img/item-img/19.jpg",
+    "endingPrice": 5000,
+    "salePrice": 0.1,
+    "rating": {
+      "stars": 5,
+      "count": "1.1k"
+    },
+    "serviceDescription": {
+      "soldItems": "--",
+      "status": "Available",
+      "categories": "Motorcycle Services",
+      "serviceType": "Motorcycle Engine Overhauling",
+      "availability": "Mon - Fri",
+      "laborType": "per service",
+      "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "categoryType": "service"
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
+    "price": 1500,
+    "image": "/img/item-img/1.png",
+    "endingPrice": 2500,
+    "salePrice": "0.25",
+    "rating": {
+      "stars": 4,
+      "count": "2.5k"
+    },
+    "productDescription": {
+      "soldItems": "500",
+      "parts": "Bike Chain",
+      "categories": "Bicycle Products",
+      "SKU": "96635",
+      "weight": "4kg",
+      "brand": "KMC",
+      "color": "Silver",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "25",
+      "Dimensions": "10 x 20 x15"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
+    "price": 500,
+    "image": "/img/item-img/2.jpg",
+    "endingPrice": 2500,
+    "salePrice": 0.1,
+    "rating": {
+      "stars": 5,
+      "count": "1.5k"
+    },
+    "serviceDescription": {
+      "soldItems": "100",
+      "status": "Available",
+      "categories": "Bicycle Services",
+      "serviceType": "Tire Installation",
+      "availability": "Mon - Fri",
+      "laborType": "per service",
+      "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "categoryType": "service"
+  },
+  {
+    "name": "LJ Motorcycle absorber front shock xrm 110/125(telescopic assy)",
+    "price": 799,
+    "image": "/img/item-img/16.png",
+    "endingPrice": 999,
+    "salePrice": "0.05",
+    "rating": {
+      "stars": 4,
+      "count": "1.8k"
+    },
+    "productDescription": {
+      "soldItems": "58",
+      "parts": "MOTORCYCLE front shock",
+      "categories": "Motorcycle Products",
+      "SKU": "96649",
+      "weight": "---",
+      "brand": "XRM Stock",
+      "color": "Gray",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "10",
+      "Dimensions": "3 x 4 x 2"
+    },
+    "categoryType": "product"
+  },
+  {
+    "name": "SNAIL 96BCD 32-38T MTB Bike Bicycle Chainring Chain Wheel Circular Disc Single speed positive and negative plate Bike Parts",
+    "price": 500,
+    "image": "/img/item-img/4.png",
+    "endingPrice": 600,
+    "salePrice": "0.50",
+    "rating": {
+      "stars": 4,
+      "count": "1.7k"
+    },
+    "productDescription": {
+      "soldItems": "98",
+      "parts": "Chain Wheel Circular Disc",
+      "categories": "Bicycle Products",
+      "SKU": "96637",
+      "weight": "52g",
+      "brand": "Snail",
+      "color": "Black",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "26",
+      "Dimensions": "10 x 15 x 12"
+    },
+    "categoryType": "product"
+  }
+]

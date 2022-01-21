@@ -1,0 +1,40 @@
+.chat-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.chat-container .chat-overlay {
+  position: fixed;
+  z-index: 29;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(20, 20, 43, 0.4);
+}
+
+.chat {
+  position: relative;
+  z-index: 31;
+  background: #ffffff;
+  -webkit-box-shadow: 0 13px 37px rgba(0, 0, 0, 0.21);
+          box-shadow: 0 13px 37px rgba(0, 0, 0, 0.21);
+  width: 464px;
+  height: 100%;
+}
+
+.chat .product-image {
+  width: 72px;
+  height: 72px;
+}
+/*# sourceMappingURL=style.css.map */
