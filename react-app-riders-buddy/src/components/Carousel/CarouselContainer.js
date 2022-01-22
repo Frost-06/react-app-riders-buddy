@@ -35,7 +35,7 @@ function CarouselContainer({ maxSteps = 1 }) {
       >
         {new Array(10).fill(0).map((step, index) => (
           <div key={step.label}>
-            {Math.abs(activeStep - index) <= 2 ? <CarouselItems /> : null}
+            {Math.abs(activeStep - index) <= 1 ? <CarouselItems /> : null}
           </div>
         ))}
       </AutoPlaySwipeableViews>

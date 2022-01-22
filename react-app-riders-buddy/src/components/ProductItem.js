@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Button, Grid, LinearProgress } from "@mui/material";
+import { Button, Grid} from "@mui/material";
 import Card from "@mui/material/Card";
 
 import CardContent from "@mui/material/CardContent";
@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import ProductPage from "../routes/ProductPage";
 import { motion } from "framer-motion";
 
 const ExpandMore = styled((props) => {
