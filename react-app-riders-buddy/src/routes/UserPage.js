@@ -15,6 +15,7 @@ import ChatContainer from "../components/Chat/ChatContainer";
 import Footer from "../components/Footer";
 import SecondHeader from "../components/SecondHeader";
 import ProductItem from "../components/ProductItem";
+import {motion} from "framer-motion"
 
 function UserPage(props) {
   return (
@@ -61,7 +62,6 @@ function UserPage(props) {
           }}
           variant="outlined"
         />
-
         <Typography variant="h2">What’s new?</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Experience the latest and be part of the trend!
@@ -76,7 +76,8 @@ function UserPage(props) {
           <Grid container columns={4} spacing={2}>
             {require("../products.json").map((product, index) => (
               <Grid key={index} item xs={1}>
-                <ProductItem {...product} />
+
+                  <ProductItem {...product} />                  
               </Grid>
             ))}
           </Grid>

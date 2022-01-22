@@ -6,6 +6,7 @@ import {
   Link,
   Breadcrumbs,
   Divider,
+  CardMedia
 } from "@mui/material";
 
 import React from "react";
@@ -66,11 +67,9 @@ function Service(props) {
               borderRadius: "24px",
             }}
           >
-            <Container
-              style={{ display: "block", width: "79%", objecFit: "contain" }}
-            >
-              <img src={image} style={{ width: "109%" }} />
-            </Container>
+            <CardMedia 
+              component="img" height="600" image={image} style={{borderRadius: "32px"}}
+            />
           </Grid>
           <Grid item md={5} elevation={6}>
             <ServiceDetails />

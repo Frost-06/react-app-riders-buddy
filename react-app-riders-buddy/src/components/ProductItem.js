@@ -13,6 +13,7 @@ import { Box } from "@mui/system";
 import * as React from "react";
 import { Link } from "react-router-dom";
 import ProductPage from "../routes/ProductPage";
+import { motion } from "framer-motion";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -72,7 +73,13 @@ export default function ProductItem(props) {
           title=""
           subheader=""
         />
-        <CardMedia component="img" height="194" image={image} alt="" />
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+          }}
+        >
+          <CardMedia component="img" height="194" image={image} alt="" />
+        </motion.div>
         <CardContent>
           <Typography
             variant="h2"

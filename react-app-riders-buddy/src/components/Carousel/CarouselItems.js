@@ -7,12 +7,12 @@ function CarouselItems(props) {
   return (
     <Box
       width="100%"
-      spacing={4}
+      spacing={20}
       style={{
         padding: "10px 0px 10px 1px",
       }}
     >
-      <Grid container columns={4} spacing={2}>
+      <Grid container columns={4} spacing={4}>
         {require("../../bestSeller.json").map((bestSeller, index) => (
           <Grid key={index} item xs={1}>
             <ProductItem {...bestSeller} />

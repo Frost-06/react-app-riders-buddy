@@ -12,6 +12,7 @@ import {
   Link,
   Breadcrumbs,
   Divider,
+  CardMedia,
 } from "@mui/material";
 
 import React from "react";
@@ -23,6 +24,7 @@ import ChatContainer from "../components/Chat/ChatContainer";
 import Footer from "../components/Footer";
 import TabPage from "../components/Product/TabPage";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function ProductPage(props) {
   const theme = useTheme();
@@ -79,11 +81,12 @@ function ProductPage(props) {
               borderRadius: "24px",
             }}
           >
-            <Container
-              style={{ display: "block", width: "79%", objecFit: "contain" }}
-            >
-              <img src={image} style={{ width: "109%" }} />
-            </Container>
+            <CardMedia
+              component="img"
+              height="600"
+              image={image}
+              style={{ borderRadius: "32px", cursor: "zoom-in" }}
+            />
           </Grid>
 
           {/* Product Details */}
