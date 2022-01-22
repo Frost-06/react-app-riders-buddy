@@ -121,11 +121,6 @@ export default function ProductItem(props) {
             </Grid>
           </Grid>
         </CardContent>
-        {/* <CardActions disableSpacing>
-          <div style={{ width: "100%" }}>
-            <LinearProgress variant="determinate" value={80} />
-          </div>
-        </CardActions> */}
       </Card>
     </Link>
   );
