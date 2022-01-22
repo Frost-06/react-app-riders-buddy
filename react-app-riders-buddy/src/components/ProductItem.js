@@ -43,9 +43,6 @@ export default function ProductItem(props) {
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   // check if category type product or service
   categoryType === "product"
