@@ -10,10 +10,13 @@ import {
 
 import React from "react";
 import { useTheme } from "@emotion/react";
+import useChat from "../../hooks/useChat";
 import { useLocation } from "react-router-dom";
 
 function ServiceDetails(props) {
   const theme = useTheme();
+
+  const { chatDrawer, setChatDrawer } = useChat();
   const loc = useLocation();
   const { name } = loc.state;
   const { rating } = loc.state;
@@ -21,6 +24,7 @@ function ServiceDetails(props) {
   const { price } = loc.state;
   const { endingPrice } = loc.state;
   const { salePrice } = loc.state;
+
   return (
     <div>
       <Typography
@@ -207,7 +211,15 @@ function ServiceDetails(props) {
         </Container>
       </Grid>
 
-      <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+      <Button
+        onClick={() => {
+          setChatDrawer({ ...chatDrawer, right: true });
+        }}
+        type="submit"
+        fullWidth
+        variant="contained"
+        sx={{ mt: 3, mb: 2 }}
+      >
         Get Price
       </Button>
       <Grid

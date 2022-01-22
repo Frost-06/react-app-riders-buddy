@@ -14,6 +14,7 @@ import SecondHeader from "../components/SecondHeader";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import ServiceDetails from "../components/Service/ServiceDetails";
 import Footer from "../components/Footer";
+import ChatContainer from "../components/Chat/ChatContainer";
 import ServiceTabPage from "../components/Service/serviceTabPage";
 import { useLocation } from "react-router-dom";
 
@@ -24,6 +25,7 @@ function Service(props) {
 
   return (
     <div>
+      <ChatContainer />
       <SecondHeader />
       <Container
         style={{ maxWidth: 1600, marginTop: "48px" }}
