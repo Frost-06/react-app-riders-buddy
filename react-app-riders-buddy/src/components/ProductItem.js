@@ -38,6 +38,8 @@ export default function ProductItem(props) {
     serviceDescription,
     categoryLabelIcon = "/img/product-category-label-icon.png",
     categoryType,
+    productSpec,
+    serviceSpec,
     categoryLabelIcon1,
   } = props;
   const [expanded, setExpanded] = React.useState(false);

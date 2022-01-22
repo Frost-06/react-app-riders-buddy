@@ -6,7 +6,9 @@ import {
   ListItemText,
   SwipeableDrawer,
   Link,
-  Divider,
+  TextField,
+  InputAdornment,
+  Divider
 } from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -158,10 +160,23 @@ export default function Header() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link href="/">
+              <Link href="/homepage">
                 <img src="/img/logo.png" width="249" height="40" />
               </Link>
             </Typography>
+            <TextField
+          style={{ width: 760, marginBottom: 6, marginRight: 525 }}
+          className="searchbox noshadow"
+          placeholder="Search product, or services..."
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <img src="/img/search-icon.png" />
+              </InputAdornment>
+            ),
+          }}
+          variant="outlined"
+        />
             <Link style={{ marginRight: 40, width: "-25%" }}>
               <img src="/img/message.png" height="40" />
             </Link>

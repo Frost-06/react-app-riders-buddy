@@ -21,6 +21,13 @@
       "numberOfStocks": "25",
       "Dimensions": "10 x 20 x15"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -40,7 +47,16 @@
       "serviceType": "Tire Installation",
       "availability": "Mon - Fri",
       "laborType": "per service",
-      "time": "08:00 A.M. - 05:00 P.M."
+      "time": "08:00 A.M. - 05:00 P.M.",
+      "description": "Assemble & tune new boxed bike or new-to-you pre-owned bike We are more than happy to assemble and tune new boxed bikes or pre-owned bicycles that are new-to-you. If you purchased a new or used bicycle online or elsewhere, you are more than welcome to bring it in for a professional assembly and safety check."
+    },
+    "serviceSpec": {
+      "service1": "Labor does not include the tube or tire.",
+      "service2": "We keep track of our time and charge accordingly. Brakes and derailleurs can vary greatly from bike to bike.",
+      "service3": "Includes labor, tape and sealant.",
+      "service4": "Includes spoke calculation and lifetime free truing for the wheel.",
+      "service5": "Labor & oil only, seal kits additional. Additional services available."
+      
     },
     "categoryType": "service"
   },
@@ -66,6 +82,13 @@
       "numberOfStocks": "10",
       "Dimensions": "3 x 4 x 2"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -89,6 +112,13 @@
       "stockStatus": "In Stock",
       "numberOfStocks": "26",
       "Dimensions": "10 x 15 x 12"
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
     },
     "categoryType": "product"
   }

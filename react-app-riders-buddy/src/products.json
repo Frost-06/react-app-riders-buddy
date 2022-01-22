@@ -19,7 +19,15 @@
       "color": "Silver",
       "stockStatus": "In Stock",
       "numberOfStocks": "25",
-      "Dimensions": "10 x 20 x15"
+      "Dimensions": "10 x 20 x15",
+      "description": ""
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
     },
     "categoryType": "product"
   },
@@ -40,7 +48,16 @@
       "serviceType": "Tire Installation",
       "availability": "Mon - Fri",
       "laborType": "per service",
-      "time": "08:00 A.M. - 05:00 P.M."
+      "time": "08:00 A.M. - 05:00 P.M.",
+      "description": "Assemble & tune new boxed bike or new-to-you pre-owned bike We are more than happy to assemble and tune new boxed bikes or pre-owned bicycles that are new-to-you. If you purchased a new or used bicycle online or elsewhere, you are more than welcome to bring it in for a professional assembly and safety check."
+    },
+    "serviceSpec": {
+      "service1": "Labor does not include the tube or tire.",
+      "service2": "We keep track of our time and charge accordingly. Brakes and derailleurs can vary greatly from bike to bike.",
+      "service3": "Includes labor, tape and sealant.",
+      "service4": "Includes spoke calculation and lifetime free truing for the wheel.",
+      "service5": "Labor & oil only, seal kits additional. Additional services available."
+      
     },
     "categoryType": "service"
   },
@@ -66,6 +83,13 @@
       "numberOfStocks": "3",
       "Dimensions": "14 x 12 x 55"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -90,6 +114,13 @@
       "numberOfStocks": "26",
       "Dimensions": "10 x 15 x 12"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -112,8 +143,18 @@
       "color": "Black",
       "stockStatus": "In Stock",
       "numberOfStocks": "15",
-      "Dimensions": "71 x 31 x 13"
+      "Dimensions": "71 x 31 x 13",
+      "description": "Made of metal, not easy to break Hard enough, chrome molybdenum steel core, aluminum alloy frame, integrated non-slip aluminum alloy nails, with excellent strength Non-slip, double-sided anti-slip nails, anti-slip floor, real tread, to ensure your safety Bearing design, high lubrication, easy to rotate, uses DU bearing, strong durability and tough, suitable for daily leisure Disadvantage: DU bearing, The new pedal will be very tight and difficult to rotate, and the lubricity will increase after running-in; if you mind, please do not buy"
     },
+
+    "productSpec": {
+      "specOne": "100% brand new and high quality",
+      "specTwo": "Made of high-quality materials, durable and practical",
+      "material": "Material: 7075-T6 Aviation Aluminum Alloy",
+      "type": "Type: Single speed positive and negative plate (circular disc)"
+      
+    },
+
     "categoryType": "product"
   },
   {
@@ -136,7 +177,16 @@
       "color": "colorful, red, black",
       "stockStatus": "In Stock",
       "numberOfStocks": "86",
-      "Dimensions": "80 x 81 x 10"
+      "Dimensions": "80 x 81 x 10",
+      "description": "Made of metal, not easy to break Hard enough, chrome molybdenum steel core, aluminum alloy frame, integrated non-slip aluminum alloy nails, with excellent strength Non-slip, double-sided anti-slip nails, anti-slip floor, real tread, to ensure your safety Bearing design, high lubrication, easy to rotate, uses DU bearing, strong durability and tough, suitable for daily leisure Disadvantage: DU bearing, The new pedal will be very tight and difficult to rotate, and the lubricity will increase after running-in; if you mind, please do not buy"
+    },
+
+    "productSpec": {
+      "specOne": "100% brand new and high quality",
+      "specTwo": "Made of high-quality materials, durable and practical",
+      "material": "Material: 7075-T6 Aviation Aluminum Alloy",
+      "type": "Type: Single speed positive and negative plate (circular disc)"
+      
     },
     "categoryType": "product"
   },
@@ -162,6 +212,20 @@
       "numberOfStocks": "18",
       "Dimensions": "75 x 14 x 95"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -185,6 +249,13 @@
       "stockStatus": "In Stock",
       "numberOfStocks": "22",
       "Dimensions": "25 x 50 x 70"
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
     },
     "categoryType": "product"
   },
@@ -210,6 +281,13 @@
       "numberOfStocks": "62",
       "Dimensions": "28 x 16 x 2"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -233,6 +311,13 @@
       "stockStatus": "In Stock",
       "numberOfStocks": "62",
       "Dimensions": "50 x 15 45"
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
     },
     "categoryType": "product"
   },
@@ -258,6 +343,13 @@
       "numberOfStocks": "31",
       "Dimensions": "10 x 15 x 13"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -281,6 +373,13 @@
       "stockStatus": "In Stock",
       "numberOfStocks": "10",
       "Dimensions": "5 x 5 x 5"
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
     },
     "categoryType": "product"
   },
@@ -306,6 +405,13 @@
       "numberOfStocks": "90",
       "Dimensions": "220CM x 3.5CM"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
     "categoryType": "product"
   },
   {
@@ -329,6 +435,13 @@
       "stockStatus": "In Stock",
       "numberOfStocks": "24",
       "Dimensions": "10 x 13"
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
     },
     "categoryType": "product"
   },
@@ -354,7 +467,13 @@
       "numberOfStocks": "100",
       "Dimensions": "5 x 5"
     },
-    "categoryType": "product"
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },    "categoryType": "product"
   },
   {
     "name": "LJ Motorcycle absorber front shock xrm 110/125(telescopic assy)",
@@ -378,6 +497,14 @@
       "numberOfStocks": "10",
       "Dimensions": "3 x 4 x 2"
     },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
+    
     "categoryType": "product"
   },
   {
@@ -399,6 +526,14 @@
       "laborType": "per service",
       "time": "08:00 A.M. - 05:00 P.M."
     },
+    "serviceSpec": {
+      "service1": "",
+      "service2": "",
+      "service3": "",
+      "service4": "",
+      "service5": ""
+      
+    },
     "categoryType": "service"
   },
   {
@@ -419,6 +554,14 @@
       "availability": "Mon - Fri",
       "laborType": "per service",
       "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "serviceSpec": {
+      "service1": "",
+      "service2": "",
+      "service3": "",
+      "service4": "",
+      "service5": ""
+      
     },
     "categoryType": "service"
   },

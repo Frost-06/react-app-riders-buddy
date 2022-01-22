@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { useLocation } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,6 +40,9 @@ function a11yProps(index) {
 }
 
 export default function ServiceTabPage() {
+  const loc = useLocation();
+  const { serviceDescription } = loc.state;
+  const { serviceSpec } = loc.state;
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -67,38 +71,7 @@ export default function ServiceTabPage() {
           Service Details
         </Typography>
         <Typography variant="label">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor
-          venenatis massa id molestie. Suspendisse in efficitur sapien, ut
-          egestas eros. Phasellus quis neque eget neque congue suscipit at
-          commodo leo. Cras a eros nibh. Praesent vulputate purus quis nibh
-          ullamcorper mattis. Etiam aliquam blandit arcu vel dignissim. Ut a
-          consequat turpis, in condimentum diam. Donec ex purus, imperdiet et
-          semper sed, mattis sed urna. Sed eget malesuada tellus. Ut sagittis
-          enim eget justo euismod, id volutpat enim tincidunt. Maecenas ut nibh
-          et eros blandit tincidunt at eu nisi. Curabitur ac aliquam massa, sed
-          semper elit. Donec erat lorem, mollis at neque eget, sagittis euismod
-          augue. Aenean rhoncus, lorem in eleifend efficitur, lectus lectus
-          sagittis magna, sit amet pharetra massa felis sed erat. Maecenas ante
-          libero, ullamcorper sed egestas nec, cursus sit amet sem. Ut sapien
-          neque, vehicula tempor odio at, tristique euismod tortor. Ut metus
-          erat, consectetur sit amet elit ac, tempus ultrices velit. Sed aliquam
-          molestie ipsum a molestie. Aenean rutrum commodo nisl, a ornare nisl
-          volutpat at. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Proin vulputate tempus lacus
-          et ultricies. Vestibulum sed lectus vitae dui imperdiet pharetra vel
-          eu nisi. Phasellus sit amet dolor sed lectus eleifend tristique.
-          Aenean at porta purus. Etiam et diam sodales, hendrerit nulla ut,
-          suscipit purus. Duis finibus diam vitae aliquet commodo. Cras at
-          sodales sem, ac tristique nisl. Morbi malesuada odio non nisi volutpat
-          fermentum. Integer cursus ipsum at nunc molestie egestas. Fusce
-          sagittis consectetur pretium. Praesent eget sem in ipsum sollicitudin
-          aliquam. Etiam convallis fermentum turpis, quis mattis ex luctus a.
-          Sed eleifend velit arcu, convallis sodales enim ultrices elementum.
-          Proin iaculis quam eget dolor pellentesque, sit amet cursus lacus
-          sollicitudin. Aenean non aliquam elit, ac rutrum lacus. Morbi id
-          volutpat massa. Nulla dignissim elit ut ex bibendum, et gravida dui
-          gravida. Curabitur congue porta sem, at sodales elit vehicula at.
-          Aliquam ac augue nulla.
+          {serviceDescription.description}
         </Typography>
 
         <Typography
@@ -121,7 +94,7 @@ export default function ServiceTabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            100% brand new and high quality
+            {serviceSpec.service1}
           </Typography>
           <Typography
             variant="label"
@@ -132,7 +105,7 @@ export default function ServiceTabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Made of high-quality materials, durable and practical
+            {serviceSpec.service2}
           </Typography>
           <Typography
             variant="label"
@@ -143,7 +116,7 @@ export default function ServiceTabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Type: Single speed positive and negative plate (circular disc)
+            {serviceSpec.service3}
           </Typography>
           <Typography
             variant="label"
@@ -154,7 +127,7 @@ export default function ServiceTabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Material: 7075-T6 Aviation Aluminum Alloy
+            {serviceSpec.service4}
           </Typography>
           <Typography
             variant="label"
@@ -165,7 +138,7 @@ export default function ServiceTabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Weight: 34T: 4kg (Approx)
+            {serviceSpec.service5}
           </Typography>
         </Box>
       </TabPanel>

@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import LinearProgress from "@mui/material/LinearProgress";
+import { useLocation } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -41,6 +42,9 @@ function a11yProps(index) {
 }
 
 export default function TabPage() {
+  const loc = useLocation();
+  const { productDescription } = loc.state;
+  const { productSpec } = loc.state;
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -69,12 +73,7 @@ export default function TabPage() {
           Product Details
         </Typography>
         <Typography variant="label">
-          Easy to install chain joints for the magic buckle easy to disassemble
-          easy to clean reusable Strong Rally special forging steel repeated
-          forging strict control of materials to ensure the strength Smooth
-          lubrication surface polishing internal oiling Accurate matching
-          professional equipment test spacing professional and technical test
-          data Durable rust and corrosion
+         {productDescription.description}
         </Typography>
 
         <Typography
@@ -97,7 +96,7 @@ export default function TabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            100% brand new and high quality
+            {productSpec.specOne}
           </Typography>
           <Typography
             variant="label"
@@ -108,7 +107,7 @@ export default function TabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Made of high-quality materials, durable and practical
+           {productSpec.specTwo}
           </Typography>
           <Typography
             variant="label"
@@ -119,7 +118,7 @@ export default function TabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Type: Single speed positive and negative plate (circular disc)
+           {productSpec.type}
           </Typography>
           <Typography
             variant="label"
@@ -130,7 +129,7 @@ export default function TabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Material: 7075-T6 Aviation Aluminum Alloy
+            {productSpec.material}
           </Typography>
           <Typography
             variant="label"
@@ -141,7 +140,7 @@ export default function TabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            Weight: 34T: 4kg (Approx)
+            {productDescription.weight}
           </Typography>
         </Box>
       </TabPanel>
