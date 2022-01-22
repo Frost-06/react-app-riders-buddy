@@ -85,7 +85,7 @@ function ProductPage(props) {
               component="img"
               height="600"
               image={image}
-              style={{ borderRadius: "32px", cursor: "zoom-in" }}
+              style={{ borderRadius: "32px"}}
             />
           </Grid>
 

@@ -67,7 +67,7 @@ export default createTheme({
           minHeight: 162,
           backgroundColor: "#ffffff",
           padding: 32,
-          borderBottom: "7px solid transparent",
+          borderBottom: "8px solid transparent",
           "&:hover": {
             cursor: "pointer",
             h2: {
@@ -75,6 +75,7 @@ export default createTheme({
             },
             borderBottomColor: "#1AA3E9",
           },
+
           h2: {
             fontWeight: 700,
             fontSize: 32,
@@ -85,9 +86,13 @@ export default createTheme({
           },
         },
         ".category-image": {
+          filter: "grayscale(100%)",
           position: "absolute",
           right: 0,
           bottom: -1,
+          "&:hover": {
+            filter: "none",
+          },
         },
 
         ".priceRange": {
