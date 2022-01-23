@@ -83,7 +83,7 @@ function Service(props) {
           variant="h2"
           style={{ marginTop: "128px", marginBottom: "32px" }}
         >
-          Similar Services
+          Product or Service You May Like
         </Typography>
         <CarouselContainer />
       </Container>

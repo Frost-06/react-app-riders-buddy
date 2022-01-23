@@ -100,7 +100,7 @@ function ProductPage(props) {
           variant="h2"
           style={{ marginTop: "128px", marginBottom: "32px" }}
         >
-          Similar Product
+          Product or Service You May Like
         </Typography>
         <CarouselContainer />
       </Container>
