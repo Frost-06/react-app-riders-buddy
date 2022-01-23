@@ -1,22 +1,30 @@
 [
   {
-    "name": "Motorcycle Change oil",
-    "price": 300,
-    "image": "/img/item-img/18.jpg",
-    "endingPrice": 500,
-    "salePrice": 0.1,
+    "name": "TYRE FITTING SERVICE",
+    "price": 3200,
+    "image": "/img/item-img/20.png",
+    "endingPrice": 5800,
+    "salePrice": 0.45,
     "rating": {
       "stars": 5,
-      "count": "3.2k"
+      "count": "2.1k"
     },
     "serviceDescription": {
       "soldItems": "--",
       "status": "Available",
       "categories": "Motorcycle Services",
-      "serviceType": "Motorcycle new oil application",
+      "serviceType": "Motorcycle Fitting",
       "availability": "Mon - Fri",
-      "laborType": "per service",
+      "laborType": "per hour",
       "time": "08:00 A.M. - 05:00 P.M."
+    },
+    "serviceSpec": {
+      "service1": "",
+      "service2": "",
+      "service3": "",
+      "service4": "",
+      "service5": ""
+      
     },
     "categoryType": "service"
   },
