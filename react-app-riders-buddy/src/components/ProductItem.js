@@ -1,11 +1,9 @@
 import { useTheme } from "@emotion/react";
-import { Button, Grid} from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
-
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
-
 import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
@@ -44,7 +42,6 @@ export default function ProductItem(props) {
   } = props;
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
-
 
   // check if category type product or service
   categoryType === "product"

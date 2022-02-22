@@ -1,8 +1,21 @@
 import { createTheme } from "@mui/material/styles";
-
+import EudoxusSans from '../fonts/EudoxusSans-Medium.ttf'
+const eudoxusSans = {
+  fontFamily: 'Eudoxus Sans',
+  fontStyle: 'medium',
+  // fontDisplay: 'swap',
+  // fontWeight: '600',
+  src: `
+    local('EudoxusSans'),
+    local('EudoxusSans-Medium'),
+    url(${EudoxusSans}) format('ttf')
+  `,
+  unicodeRange:
+    'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
+ };
 export default createTheme({
   typography: {
-    fontFamily: "Poppins",
+    fontFamily: 'Eudoxus Sans'
   },
 
   palette: {
@@ -13,6 +26,7 @@ export default createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        '@font-face': [eudoxusSans],
         "a:link": {
           textDecoration: "none",
         },
@@ -61,7 +75,7 @@ export default createTheme({
           },
         },
         ".category-card": {
-          fontFamily: "Poppins",
+          fontFamily: "Eudoxus Sans",
           position: "relative",
           width: 500,
           minHeight: 162,
@@ -75,11 +89,13 @@ export default createTheme({
             },
             borderBottomColor: "#1AA3E9",
           },
-
+          
           h2: {
-            fontWeight: 700,
+            fontWeight: 800,
+            letterSpacing: 1,
             fontSize: 32,
           },
+          
           p: {
             fontSize: 12,
             maxWidth: "70%",
@@ -130,7 +146,6 @@ export default createTheme({
       styleOverrides: {
         h1: {
           fontSize: 48,
-          fontFamily: "Poppins",
           color: "#14142B",
         },
         h2: {
@@ -146,7 +161,6 @@ export default createTheme({
         label: {
           fontSize: 15,
           color: "#6E7191",
-          fontWeight: "normal",
         },
       },
     },

@@ -7,14 +7,13 @@ import {
   Button,
   Avatar,
 } from "@mui/material";
-
 import React from "react";
 import { useTheme } from "@emotion/react";
 import useChat from "../../hooks/useChat";
 import ChatContainer from "../Chat/ChatContainer";
 import { useLocation } from "react-router-dom";
 
-function ProductPage(props) {
+function ProductDetails(props) {
   const theme = useTheme();
   const { chatDrawer, setChatDrawer } = useChat();
 
@@ -37,7 +36,6 @@ function ProductPage(props) {
       >
         {name}
       </Typography>
-
       <Typography
         variant="body2"
         color="text.secondary"
@@ -55,7 +53,6 @@ function ProductPage(props) {
           </Typography>
         )}
       </Typography>
-
       <Grid className="priceRange" container columns={2}>
         <Typography
           style={{
@@ -66,7 +63,6 @@ function ProductPage(props) {
         >
           ₱ {price} - ₱ {endingPrice}
         </Typography>
-
         <CardHeader
           style={{ width: "60%" }}
           avatar={
@@ -84,7 +80,6 @@ function ProductPage(props) {
           subheader=""
         />
       </Grid>
-
       <Grid
         style={{
           width: "100%",
@@ -126,7 +121,6 @@ function ProductPage(props) {
           </Typography>
         </Container>
       </Grid>
-
       <Grid
         style={{
           width: "100%",
@@ -167,7 +161,6 @@ function ProductPage(props) {
           </Typography>
         </Container>
       </Grid>
-
       <Grid
         style={{
           width: "100%",
@@ -208,7 +201,6 @@ function ProductPage(props) {
           </Typography>
         </Container>
       </Grid>
-
       <Grid style={{ width: "100%", display: "inline-flex" }}>
         <Container>
           <Typography
@@ -253,7 +245,6 @@ function ProductPage(props) {
           </Typography>
         </Container>
       </Grid>
-
       <Button
         onClick={() => {
           setChatDrawer({ ...chatDrawer, right: true });
@@ -293,4 +284,4 @@ function ProductPage(props) {
   );
 }
 
-export default ProductPage;
+export default ProductDetails;

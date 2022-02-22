@@ -9,8 +9,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .chat-container .chat-overlay {
@@ -28,7 +28,7 @@
   z-index: 31;
   background: #ffffff;
   -webkit-box-shadow: 0 13px 37px rgba(0, 0, 0, 0.21);
-          box-shadow: 0 13px 37px rgba(0, 0, 0, 0.21);
+  box-shadow: 0 13px 37px rgba(0, 0, 0, 0.21);
   width: 464px;
   height: 100%;
 }

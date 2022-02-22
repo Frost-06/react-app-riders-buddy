@@ -15,7 +15,7 @@ import ChatContainer from "../components/Chat/ChatContainer";
 import Footer from "../components/Footer";
 import SecondHeader from "../components/SecondHeader";
 import ProductItem from "../components/ProductItem";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 function UserPage(props) {
   return (
@@ -70,14 +70,13 @@ function UserPage(props) {
 
         <Typography variant="h2">Bicycle Products and Services</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Explore shops products and services that fits you.
         </Typography>
         <Box width="100%" spacing={2}>
           <Grid container columns={4} spacing={2}>
             {require("../products.json").map((product, index) => (
               <Grid key={index} item xs={1}>
-
-                  <ProductItem {...product} />                  
+                <ProductItem {...product} />
               </Grid>
             ))}
           </Grid>

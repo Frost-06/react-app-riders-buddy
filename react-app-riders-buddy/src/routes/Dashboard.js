@@ -37,7 +37,7 @@ function Dashboard(props) {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <img src="/img/search-icon.png" />
+                <img src="/img/search-icon.png" alt=""/>
               </InputAdornment>
             ),
           }}
@@ -55,7 +55,7 @@ function Dashboard(props) {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <img src="/img/search-icon.png" />
+                <img src="/img/search-icon.png" alt=""/>
               </InputAdornment>
             ),
           }}
@@ -70,7 +70,7 @@ function Dashboard(props) {
 
         <Typography variant="h2">Bicycle Products and Services</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Explore shops  products and services that fits you
         </Typography>
         <Box width="100%" spacing={2}>
           <Grid container columns={4} spacing={2}>
