@@ -42,9 +42,19 @@ function ProductDetails(props) {
         className="productRatingReview"
       >
         {rating && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ display: "inline-flex", alignItems: "center" }}
+          >
             {new Array(rating.stars).fill(0).map((s, i) => (
-              <React.Fragment key={i}>⭐</React.Fragment>
+              <React.Fragment key={i}>
+                <img
+                  src={"/img/star.png"}
+                  alt="stars"
+                  style={{ marginRight: "8px" }}
+                />
+              </React.Fragment>
             ))}
             &nbsp;&nbsp;
             <span variant> | </span>&nbsp;&nbsp;
@@ -75,7 +85,13 @@ function ProductDetails(props) {
               {salePrice * 100}% off
             </Box>
           }
-          action={<img src="/img/product-category-label-icon.png" />}
+          action={
+            <img
+              src="/img/product-category-label-icon.png"
+              style={{ marginTop: "-19px" }}
+              alt=""
+            />
+          }
           title=""
           subheader=""
         />

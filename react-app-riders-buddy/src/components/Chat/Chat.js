@@ -4,7 +4,8 @@ import {
   ListItemText,
   Toolbar,
   Typography,
-  CardMedia
+  CardMedia,
+  Container
 } from "@mui/material";
 import React from "react";
 import { useLocation } from "react-router-dom";
@@ -15,7 +16,8 @@ function Chat(props) {
   const { image } = loc.state;
   return (
     <div className="chat">
-      <AppBar style={{ position: "absolute", top: 0, left: 0, right: 0 }}>
+       
+      <AppBar style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -25,7 +27,7 @@ function Chat(props) {
             sx={{ mr: 2 }}
             onClick={() => {}}
           >
-            <img src="/img/backward-icon.png"/>
+            <img src="/img/backward-icon.png" alt=""/>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 0.6 }}>
             <CardMedia
@@ -41,12 +43,15 @@ function Chat(props) {
             secondary="Online"
           />
           <Typography>...</Typography>
-        </Toolbar>
-        
+        </Toolbar>  
       </AppBar>
-      Hello
- 
+      <div>
+      <Container>
+        Andre
+      </Container>
+      </div>
     </div>
+    
   );
 }
 

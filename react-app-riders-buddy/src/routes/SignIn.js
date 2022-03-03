@@ -87,7 +87,7 @@ export default function SignIn() {
               sx={{ mt: 1 }}
             >
               <TextField
-                style={{ width: 560, marginBottom: 56 }}
+                style={{ width: 560, marginBottom: 32 }}
                 className="searchbox noshadow"
                 placeholder="Enter your number..."
                 variant="outlined"

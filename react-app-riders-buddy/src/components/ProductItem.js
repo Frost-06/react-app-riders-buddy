@@ -58,13 +58,13 @@ export default function ProductItem(props) {
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px" }}
+                style={{ padding: "5px 9px", marginLeft:"-16px" }}
               >
                 {salePrice * 100}% off
               </Box>
             )
           }
-          action={categoryLabelIcon1 && <img src={categoryLabelIcon1} />}
+          action={categoryLabelIcon1 && <img src={categoryLabelIcon1} style={{ marginTop: "-12px"}} alt=""/>}
           title=""
           subheader=""
         />
@@ -73,7 +73,7 @@ export default function ProductItem(props) {
             scale: 1.1,
           }}
         >
-          <CardMedia component="img" height="194" image={image} alt="" />
+          <CardMedia component="img" height="194" image={image} alt="" style={{marginTop: "10px"}}/>
         </motion.div>
         <CardContent>
           <Typography
@@ -86,9 +86,9 @@ export default function ProductItem(props) {
             {name && name.slice(0, 40) + "..."}
           </Typography>
           {rating && (
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2">
               {new Array(rating.stars).fill(0).map((s, i) => (
-                <React.Fragment key={i}>⭐</React.Fragment>
+                <React.Fragment key={i}><img src={"/img/star.png"} alt="stars" style={{marginRight: "8px"}}/></React.Fragment>
               ))}
               &nbsp;&nbsp;
               <span>({rating.count})</span>

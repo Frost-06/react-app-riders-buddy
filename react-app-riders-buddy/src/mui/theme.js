@@ -132,7 +132,7 @@ export default createTheme({
           borderRadius: 40,
           color: "#ffffff",
           fontSize: 15,
-          fontWeight: 500,
+          fontWeight: "bold",
           textTransform: "none",
           padding: "20px 32px",
         },

@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { motion } from "framer-motion";
 
 function CategoryCard({ image, isActive, title, description }) {
   return (
@@ -9,10 +8,8 @@ function CategoryCard({ image, isActive, title, description }) {
       <Typography variant="h2">{title}</Typography>
       <Typography variant="body2">{description}</Typography>
       {image && (
-        <img
-          src={image}
-          className="category-image"
-        />
+        // eslint-disable-next-line jsx-a11y/alt-text
+        <img src={image} className="category-image"/>
       )}
     </Box>
   );

@@ -75,7 +75,7 @@ export default function SignUp() {
             <Typography
               component="h1"
               variant="h2"
-              style={{ marginBottom: 32, fontWeight: 700, width: "150%" }}
+              style={{ marginBottom: 16 , fontWeight: 700, width: "150%" }}
             >
               Sign up
             </Typography>
@@ -88,7 +88,7 @@ export default function SignUp() {
               <Grid container spacing={2} style={{ maxWidth: 1600 }}>
                 <Grid item xs={12} sm={9}>
                   <TextField
-                    style={{ width: 600, marginBottom: 24 }}
+                    style={{ width: 600, marginBottom: 16 }}
                     className="searchbox noshadow"
                     placeholder="First name..."
                     variant="outlined"
@@ -102,7 +102,7 @@ export default function SignUp() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
-                    style={{ width: 600, marginBottom: 24 }}
+                    style={{ width: 600, marginBottom: 16 }}
                     className="searchbox noshadow"
                     placeholder="Last name..."
                     variant="outlined"
@@ -116,7 +116,7 @@ export default function SignUp() {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
-                    style={{ width: 600, marginBottom: 24 }}
+                    style={{ width: 600, marginBottom: 16 }}
                     className="searchbox noshadow"
                     placeholder="Email address..."
                     variant="outlined"

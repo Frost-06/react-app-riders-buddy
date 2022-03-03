@@ -43,9 +43,19 @@ function ServiceDetails(props) {
         className="productRatingReview"
       >
         {rating && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ display: "inline-flex", alignItems: "center" }}
+          >
             {new Array(rating.stars).fill(0).map((s, i) => (
-              <React.Fragment key={i}>⭐</React.Fragment>
+              <React.Fragment key={i}>
+                <img
+                  src={"/img/star.png"}
+                  alt="stars"
+                  style={{ marginRight: "8px" }}
+                />
+              </React.Fragment>
             ))}
             &nbsp;&nbsp;
             <span variant> | </span>&nbsp;&nbsp;
