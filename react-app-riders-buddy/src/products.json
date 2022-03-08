@@ -622,5 +622,37 @@
       
     },
     "categoryType": "service"
+  },
+  {
+    "name": "MTB Air Suspension Fork Bicycle Plug Stroke 120MM 32MM 26 27.5 29 Inch Bike Cycling Accessories",
+    "image": "/img/item-img/img-21.jpg",
+    "price": 2000,
+    "endingPrice": 3000,
+    "salePrice": "0.25",
+    "rating": {
+      "stars": 4.5,
+      "count": "2.5k"
+    },
+    "productDescription": {
+      "soldItems": "500",
+      "parts": "Bike Chain",
+      "categories": "Bicycle Products",
+      "SKU": "9342345",
+      "weight": "4kg",
+      "brand": "MTB",
+      "color": "Silver",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "25",
+      "Dimensions": "10 x 20 x15",
+      "description": "Dear buyer, thank you very much for visiting bicycle hero bicycle accessories store. We focus on the production of bicycle heroes for your mountain bike for your mountain bike enthusiasts. This product uses the latest air sealing technology and uses lightweight materials. The amount of air in the new technology has increased, making the effect more stable. Sports control switches are easy to use. You can choose between manual control and remote control. The stroke reaches 120mm. It applies to XC and mountain bikes. Its air chamber is rugged, and the air pressure can increase 50 psi to protect the wrist. You can freely adjust it according to your weight. This seal technology is very durable, after purchase, you need 90 days to lubricate oil. In order to reduce the lubrication of the pillar, we offer a free warranty for 1 year. If you need accessories, we will deliver goods within 1 year, please rest assured to buy, thank you! If your mountain bike fork is too heavy or old, you can replace this lightweight and comfortable air suspension, which will provide you with a surprise buyer!"
+    },
+    "productSpec": {
+      "specOne": "Shoulder cover A6000 series, Forged",
+      "specTwo": "Lower part Magnesium",
+      "material": "Inner tube: Aluminum 32mm",
+      "type": "Bicycle"
+      
+    },
+    "categoryType": "product"
   }
 ]

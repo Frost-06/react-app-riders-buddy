@@ -1,5 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import EudoxusSans from '../fonts/EudoxusSans-Medium.ttf'
+import { StarIcon } from './CustomIcons';
+
 const eudoxusSans = {
   fontFamily: 'Eudoxus Sans',
   fontStyle: 'medium',
@@ -123,9 +125,37 @@ export default createTheme({
     },
     MuiButtonBase: {
       defaultProps: {
-        disableRipple: true,
+        disableRipple: false,
       },
     },
+
+    MuiRating: {
+      defaultProps: {
+        emptyIcon: <StarIcon />,
+        icon: <StarIcon />,
+      },
+
+      styleOverrides: {
+        root: {
+          '&.Mui-disabled': {
+            opacity: 0.25,
+          },
+        },
+        iconEmpty: { color: "#D9DBE9"},
+      },
+    },
+
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          position: 'relative',
+          boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
+          borderRadius: "16px",
+          zIndex: 0, // Fix Safari overflow: hidden with border radius
+        },
+      },
+    },
+
     MuiButton: {
       styleOverrides: {
         root: {
@@ -135,10 +165,20 @@ export default createTheme({
           fontWeight: "bold",
           textTransform: "none",
           padding: "20px 32px",
+          boxShadow: "0px 8px 16px rgba(26, 163, 233, 0.24)",
+          '&:hover': {
+            boxShadow: 'none',
+          },
         },
         outlined: ({ theme }) => ({
           color: theme.palette.primary.main,
           borderColor: theme.palette.primary.main,
+           boxShadow: 'none',
+        }),
+
+        chevron: ({ theme }) => ({
+          borderColor: 'none',
+          boxShadow: 'none',
         }),
       },
     },
@@ -175,7 +215,7 @@ export default createTheme({
           top: 0,
           zIndex: 20,
           color: theme.palette.primary.main,
-          boxShadow: "0px 4px 8px rgba(0,0,0,0.08)",
+          boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
         }),
       },
     },

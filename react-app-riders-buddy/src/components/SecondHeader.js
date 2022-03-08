@@ -21,6 +21,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { motion } from "framer-motion";
 
+
 export default function Header() {
   const loginID = 1;
   const [state, setState] = React.useState({
@@ -54,7 +55,7 @@ export default function Header() {
           <img src={"/img/user-icon.png"} style={{ width: "25%" }} alt="prof" />
           <Box style={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="h1" style={{ fontSize: 28 }}>
-              Username
+              Andre Guinita
             </Typography>
             <Link style={{ fontWeight: "bold !important", color: "#1AA3E9" }}>
               View Account

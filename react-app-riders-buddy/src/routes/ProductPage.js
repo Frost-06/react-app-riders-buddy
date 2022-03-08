@@ -1,14 +1,8 @@
 import {
-  Box,
   Container,
   Grid,
-  InputAdornment,
-  TextField,
   Typography,
-  CardHeader,
   CssBaseline,
-  Button,
-  Avatar,
   Link,
   Breadcrumbs,
   Divider,
@@ -34,77 +28,79 @@ function ProductPage(props) {
 
   return (
     <div>
-      <ChatContainer />
-      <SecondHeader />
-      <Container
-        style={{ maxWidth: 1600, marginTop: "48px" }}
-        className="productDesc"
-      >
-        <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: "24px" }}>
-          <Link
-            underline="hover"
-            color="inherit"
-            href="/homepage"
-            variant="h3"
-            st
-          >
-            Home
-          </Link>
-
-          <Typography color="text.primary">Product Page</Typography>
-        </Breadcrumbs>
-        <Grid
-          container
-          component="main"
-          sx={{ height: "140vh", marginBottom: "56px" }}
+      <useScrollToTop>
+        <ChatContainer />
+        <SecondHeader />
+        <Container
+          style={{ maxWidth: 1600, marginTop: "48px" }}
+          className="productDesc"
         >
-          <CssBaseline />
+          <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: "24px" }}>
+            <Link
+              underline="hover"
+              color="inherit"
+              href="/homepage"
+              variant="h3"
+              st
+            >
+              Home
+            </Link>
 
-          {/* Product Images */}
-
+            <Typography color="text.primary">Product Page</Typography>
+          </Breadcrumbs>
           <Grid
-            item
-            xs={false}
-            sm={4}
-            md={6.7}
-            sx={{
-              backgroundImage: "url(" + { image } + ")",
-              height: "600px",
-              backgroundRepeat: "no-repeat",
-              backgroundColor: (t) =>
-                t.palette.mode === "light"
-                  ? t.palette.grey[50]
-                  : t.palette.grey[900],
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              marginRight: "35px",
-              borderRadius: "24px",
-            }}
+            container
+            component="main"
+            sx={{ height: "140vh", marginBottom: "56px" }}
           >
-            <CardMedia
-              component="img"
-              height="600"
-              image={image}
-              style={{ borderRadius: "32px"}}
-            />
-          </Grid>
+            <CssBaseline />
 
-          {/* Product Details */}
-          <Grid item md={5} elevation={6}>
-            <ProductDetails />
+            {/* Product Images */}
+
+            <Grid
+              item
+              xs={false}
+              sm={4}
+              md={6.7}
+              sx={{
+                backgroundImage: "url(" + { image } + ")",
+                height: "600px",
+                backgroundRepeat: "no-repeat",
+                backgroundColor: (t) =>
+                  t.palette.mode === "light"
+                    ? t.palette.grey[50]
+                    : t.palette.grey[900],
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                marginRight: "35px",
+                borderRadius: "24px",
+              }}
+            >
+              <CardMedia
+                component="img"
+                height="600"
+                image={image}
+                style={{ borderRadius: "32px" }}
+              />
+            </Grid>
+
+            {/* Product Details */}
+            <Grid item md={5} elevation={6}>
+              <ProductDetails />
+            </Grid>
           </Grid>
-        </Grid>
-        <TabPage />
-        <Divider />
-        <Typography
-          variant="h2"
-          style={{ marginTop: "128px", marginBottom: "32px" }}
-        >
-          Product or Service You May Like
-        </Typography>
-        <CarouselContainer />
-      </Container>
-      <Footer />
+          <TabPage />
+          <Divider />
+          <Typography
+            variant="h2"
+            style={{ marginTop: "128px", marginBottom: "32px" }}
+          >
+            Product or Service You May Like
+          </Typography>
+          <CarouselContainer />
+        </Container>
+        <Footer />
+      </useScrollToTop>
     </div>
   );
 }

@@ -76,6 +76,7 @@ function ProductDetails(props) {
         <CardHeader
           style={{ width: "60%" }}
           avatar={
+            salePrice && (
             <Box
               bgcolor={theme.palette.primary.main}
               color="#ffffff"
@@ -84,6 +85,7 @@ function ProductDetails(props) {
             >
               {salePrice * 100}% off
             </Box>
+            )
           }
           action={
             <img
@@ -123,7 +125,7 @@ function ProductDetails(props) {
         <Container>
           <Typography
             variant="label"
-            style={{ display: "inline-flex", gap: "48px" }}
+            style={{ display: "inline-flex", gap: "36px" }}
           >
             Categories:
             <span

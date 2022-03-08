@@ -7,13 +7,18 @@ import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import Rating from "@mui/material/Rating";
 import { Box } from "@mui/system";
+import { StarIcon } from "../mui/CustomIcons";
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import ChatContainer from "../components/Chat/ChatContainer";
+import useChat from "../hooks/useChat";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
+
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
@@ -24,6 +29,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function ProductItem(props) {
+  const { chatDrawer, setChatDrawer } = useChat();
   // const static, let
   let {
     name,
@@ -43,11 +49,6 @@ export default function ProductItem(props) {
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
 
-  // check if category type product or service
-  categoryType === "product"
-    ? (categoryLabelIcon1 = categoryLabelIcon)
-    : (categoryLabelIcon1 = "/img/product-category-label-icon-hide.png");
-
   return (
     <Link to={"/" + categoryType} state={props}>
       <Card sx={{ maxWidth: 356 }}>
@@ -58,13 +59,22 @@ export default function ProductItem(props) {
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px", marginLeft:"-16px" }}
+                style={{ padding: "5px 9px", marginLeft: "-16px" }}
               >
                 {salePrice * 100}% off
               </Box>
             )
           }
-          action={categoryLabelIcon1 && <img src={categoryLabelIcon1} style={{ marginTop: "-12px"}} alt=""/>}
+          action={
+            // check if category type product or service
+            categoryType === "product" && (
+              <img
+                src={"/img/product-category-label-icon.png"}
+                style={{ marginTop: "-12px" }}
+                alt=""
+              />
+            )
+          }
           title=""
           subheader=""
         />
@@ -73,7 +83,13 @@ export default function ProductItem(props) {
             scale: 1.1,
           }}
         >
-          <CardMedia component="img" height="194" image={image} alt="" style={{marginTop: "10px"}}/>
+          <CardMedia
+            component="img"
+            height="194"
+            image={image}
+            alt=""
+            style={{ marginTop: "10px" }}
+          />
         </motion.div>
         <CardContent>
           <Typography
@@ -83,16 +99,32 @@ export default function ProductItem(props) {
               padding: "0px 0px 8px 0px",
             }}
           >
-            {name && name.slice(0, 40) + "..."}
+            {name && name.slice(0, 45) + "..."}
           </Typography>
           {rating && (
-            <Typography variant="body2">
-              {new Array(rating.stars).fill(0).map((s, i) => (
-                <React.Fragment key={i}><img src={"/img/star.png"} alt="stars" style={{marginRight: "8px"}}/></React.Fragment>
-              ))}
+            <Box
+              variant="body2"
+              style={{
+                display: "inline-flex",
+                justifyContent: "center",
+                alignItems: "center",
+                alignContent: "center",
+              }}
+            >
+              <Rating
+                name="half-rating-read"
+                defaultValue={rating.stars}
+                precision={0.5}
+                readOnly
+                style={{
+                  display: "inline-flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              />
               &nbsp;&nbsp;
               <span>({rating.count})</span>
-            </Typography>
+            </Box>
           )}
           <Grid
             container

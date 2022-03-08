@@ -5,13 +5,19 @@ import {
   TextField,
   Typography,
   Paper,
+  Alert,
+  AlertTitle,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
+import axios from "axios";
+import { useTheme } from "@mui/material/styles";
+import { useNavigate } from 'react-router-dom';
+import swal from "sweetalert";
 
 function Copyright(props) {
   return (
@@ -32,13 +38,42 @@ function Copyright(props) {
 }
 
 export default function SignUp() {
+  const navigate = useNavigate();
+  const [registerInput, setRegister] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    error_list: [],
+  });
+
+  const handleInput = (event) => {
+    event.persist();
+    setRegister({ ...registerInput, [event.target.name]: event.target.value });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    const data = {
+      firstName: registerInput.firstName,
+      lastName: registerInput.lastName,
+      email: registerInput.email,
+      password: registerInput.password,
+    };
+    axios.get("/sanctum/csrf-cookie").then((response) => {
+      axios.post(`/api/register`, data).then((res) => {
+        if (res.data.status === 200) {
+          localStorage.setItem("auth_token", res.data.token);
+          localStorage.setItem("auth_name", res.data.username);
+            swal("Success",res.data.message,"success")
+            navigate('/homepage');
+        } else {
+          setRegister({
+            ...registerInput,
+            error_list: res.data.validation_errors,
+          });
+        }
+      });
     });
   };
 
@@ -75,7 +110,7 @@ export default function SignUp() {
             <Typography
               component="h1"
               variant="h2"
-              style={{ marginBottom: 16 , fontWeight: 700, width: "150%" }}
+              style={{ marginBottom: 16, fontWeight: 700, width: "150%" }}
             >
               Sign up
             </Typography>
@@ -94,11 +129,20 @@ export default function SignUp() {
                     variant="outlined"
                     autoComplete="given-name"
                     name="firstName"
+                    onChange={handleInput}
+                    value={registerInput.firstName}
                     type="text"
                     id="firstName"
                     autoFocus
-                    required
                   />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={9}
+                  style={{ color: "red", marginTop: "-25px" }}
+                >
+                  {registerInput.error_list.firstName}
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -107,12 +151,21 @@ export default function SignUp() {
                     placeholder="Last name..."
                     variant="outlined"
                     autoComplete="family-name"
-                    name="lastname"
+                    name="lastName"
+                    onChange={handleInput}
+                    value={registerInput.lastName}
                     type="text"
-                    id="lastname"
-                    autoFocus
+                    id="lastName"
                     required
                   />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={9}
+                  style={{ color: "red", marginTop: "-25px" }}
+                >
+                  {registerInput.error_list.lastName}
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
@@ -122,11 +175,20 @@ export default function SignUp() {
                     variant="outlined"
                     autoComplete="femail"
                     name="email"
+                    onChange={handleInput}
+                    value={registerInput.email}
                     type="text"
                     id="email"
-                    autoFocus
                     required
                   />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={9}
+                  style={{ color: "red", marginTop: "-25px" }}
+                >
+                  {registerInput.error_list.email}
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
@@ -135,9 +197,19 @@ export default function SignUp() {
                     placeholder="Enter your password..."
                     variant="outlined"
                     name="password"
+                    onChange={handleInput}
+                    value={registerInput.password}
                     type="password"
                     id="password"
                   />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={9}
+                  style={{ color: "red", marginTop: "-25px" }}
+                >
+                  {registerInput.error_list.password}
                 </Grid>
                 <Grid item xs={12}>
                   <FormControlLabel

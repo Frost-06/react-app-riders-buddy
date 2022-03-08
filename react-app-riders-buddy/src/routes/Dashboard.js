@@ -47,7 +47,7 @@ function Dashboard(props) {
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Greatest offers awaits you.
         </Typography>
-        <CarouselContainer />
+        <CarouselContainer/>
         <TextField
           style={{ width: 560, marginBottom: 56 }}
           className="searchbox noshadow"

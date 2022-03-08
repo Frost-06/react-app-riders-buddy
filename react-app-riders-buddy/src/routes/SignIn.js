@@ -7,12 +7,15 @@ import {
   Typography,
   Paper,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import swal from "sweetalert";
 
 function Copyright(props) {
   return (
@@ -33,13 +36,37 @@ function Copyright(props) {
 }
 
 export default function SignIn() {
+  const navigate = useNavigate();
+  const [loginInput, setLogin] = useState({
+    email: "",
+    password: "",
+    error_list: []
+  });
+
+  const handleInput = (event) => {
+    event.persist();
+    setLogin({...loginInput, [event.target.name]: event.target.value });
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    const data = {
+
+      email: loginInput.email,
+      password: loginInput.password,
+    };
+    axios.get("/sanctum/csrf-cookie").then((response) => {
+      axios.post(`/api/login`, data).then((res) => {
+          if(res.data.status === 200) {
+            localStorage.setItem("auth_token", res.data.token);
+            localStorage.setItem("auth_name", res.data.username);
+            swal("Success",res.data.message,"success")
+            navigate('/homepage');
+          } else if(res.data.status === 401){
+            swal("Warning",res.data.message,"warning")
+          } else {
+            setLogin({...loginInput, error_list: res.data.validation_errors});
+          }
+      });
     });
   };
 
@@ -89,21 +116,41 @@ export default function SignIn() {
               <TextField
                 style={{ width: 560, marginBottom: 32 }}
                 className="searchbox noshadow"
-                placeholder="Enter your number..."
+                placeholder="Enter your email address"
                 variant="outlined"
-                name="number"
+                name="email"
                 type="text"
-                id="number"
+                id="email"
+                onChange={handleInput}
+                value={loginInput.email}
               />
+              <Container
+                  item
+                  xs={12}
+                  sm={9}
+                  style={{ color: "red", marginTop: "-27px", marginLeft: "-25px", marginBottom: "12px" }}
+                >
+                  {loginInput.error_list.email}
+                </Container>
               <TextField
                 style={{ width: 560, marginBottom: 16 }}
                 className="searchbox noshadow"
-                placeholder="Enter your password..."
+                placeholder="Enter your password"
                 variant="outlined"
                 name="password"
                 type="password"
-                id="email"
+                id="password"
+                onChange={handleInput}
+                value={loginInput.password}
               />
+              <Container
+                  item
+                  xs={12}
+                  sm={9}
+                  style={{ color: "red", marginTop: "-10px", marginLeft: "-25px" }}
+                >
+                  {loginInput.error_list.password}
+                </Container>
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"

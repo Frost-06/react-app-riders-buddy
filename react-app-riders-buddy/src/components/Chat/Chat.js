@@ -5,7 +5,10 @@ import {
   Toolbar,
   Typography,
   CardMedia,
-  Container
+  Container,
+  Divider,
+  TextField,
+  InputAdornment
 } from "@mui/material";
 import React from "react";
 import { useLocation } from "react-router-dom";
@@ -15,12 +18,12 @@ function Chat(props) {
   const { name } = loc.state;
   const { image } = loc.state;
   return (
-    <div className="chat">
-       
-      <AppBar style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 }}>
+    <div className="chat">   
+    
+      <AppBar style={{ position: "inherit", top: 0, left: 0, right: 0, zIndex: 1 }}>
         <Toolbar>
           <IconButton
-            size="large"
+            size="medium"
             edge="start"
             color="inherit"
             aria-label="menu"
@@ -42,13 +45,15 @@ function Chat(props) {
             primary={name && name.slice(0, 25) + "..."}
             secondary="Online"
           />
-          <Typography>...</Typography>
+          <Typography sx={{fontSize: 25}}>•••</Typography>
         </Toolbar>  
       </AppBar>
-      <div>
       <Container>
-        Andre
-      </Container>
+      <Divider>Yesterday</Divider>
+    </Container>
+      
+      <div>
+      
       </div>
     </div>
     

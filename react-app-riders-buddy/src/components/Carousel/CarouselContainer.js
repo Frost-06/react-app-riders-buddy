@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import Container from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import MobileStepper from "@mui/material/MobileStepper";
 import { useTheme } from "@mui/material/styles";
@@ -9,7 +9,7 @@ import CarouselItems from "./CarouselItems";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function CarouselContainer({ maxSteps = 1 }) {
+function CarouselContainer({ maxSteps = 3 }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -26,8 +26,8 @@ function CarouselContainer({ maxSteps = 1 }) {
   };
 
   return (
-    <Box width="100%">
-      <AutoPlaySwipeableViews
+    <Container width="100%">
+      <AutoPlaySwipeableViews style={{lineHeight: "15px"}}
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -45,7 +45,8 @@ function CarouselContainer({ maxSteps = 1 }) {
         activeStep={activeStep}
         nextButton={
           <Button
-            style={{ order: 3 }}
+            variant="chevron"
+            style={{ order: 2 }}
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
@@ -54,6 +55,7 @@ function CarouselContainer({ maxSteps = 1 }) {
         }
         backButton={
           <Button
+            variant="chevron"
             style={{ order: 2 }}
             size="small"
             startIcon={<img src="/img/chevron-backward.png" />}
@@ -62,7 +64,7 @@ function CarouselContainer({ maxSteps = 1 }) {
           ></Button>
         }
       />
-    </Box>
+    </Container>
   );
 }
 
