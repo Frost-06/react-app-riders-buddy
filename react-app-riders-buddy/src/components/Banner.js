@@ -5,27 +5,30 @@ import {
   InputAdornment,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import { useTheme } from "@emotion/react";
 
 function Banner(props) {
+  const theme = useTheme();
+  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
   var arr = ["banner-3", "banner", "banner-2"];
   var banner = arr[Math.floor(Math.random() * arr.length)];
   console.log(banner);
   return (
     <>
       <motion.div
-        initial={{ opacity: 0,}}
-        animate={{ opacity: 1,}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        <Container className={banner}>
-          <div>
+        <Container className={banner} maxWidth="100%">
+          <div style={{ marginLeft: isSm ? 0 : 150 }}>
             <Typography
               variant="h1"
               style={{
-                padding: "0px 0px 8px 150px",
                 fontWeight: 700,
                 marginBottom: 24,
               }}
@@ -49,9 +52,6 @@ function Banner(props) {
                   ),
                 }}
                 variant="outlined"
-                style={{
-                  padding: "0px 0px 0px 150px",
-                }}
               />
               <Button variant="contained">Find Shops</Button>
             </Grid>

@@ -1,4 +1,4 @@
-import { Container, Link } from "@mui/material";
+import { Container, Divider, Link } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -12,20 +12,23 @@ function Footer(props) {
     <div>
       <Box
         style={{
-          height: "140px",
           backgroundColor: "#F7F7FC",
-          maximumWidth: 1600,
-          marginTop: "88px",
           backgroundSize: "cover",
-          padding: "42px 170px 42px 170px",
           display: "flex!important",
           alignItems: "center",
           maxWidth: "1920px!important",
-          width: "1920px!important",
-          borderBottom: "1px solid #D9DBE9",
+          width: "100%",
         }}
       >
-        <Container style={{ marginLeft: "-20px" }}>
+        <Container
+          style={{
+            margin: "0 auto",
+            marginTop: "88px",
+            width: "80%",
+            padding: "42px 0",
+          }}
+          maxWidth="1920px!important"
+        >
           <Typography
             variant="h1"
             style={{ fontWeight: "bold", color: "#1AA3E9" }}
@@ -34,19 +37,21 @@ function Footer(props) {
           </Typography>
         </Container>
       </Box>
+      <Divider />
       <Box
         style={{
-          display: "inline-flex",
+          display: "flex",
           alignItems: "center",
           gap: "128px",
-          marginLeft: "180px",
-          marginTop: "36px",
-          marginBottom: "36px",
-          height: "140px",
+          flexWrap: "wrap",
+          width: "80%",
+          maxWidth: 1920,
+          margin: "0 auto",
+          padding: "22px 0",
         }}
       >
         <Box>
-          <Box style={{ display: "inline-flex", alignItems: "center" }}>
+          <Box style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/prof-mechanic.png"} alt="prof" />
             <Container>
               <Typography variant="h2" style={{ color: "#0D5275" }}>
@@ -60,7 +65,7 @@ function Footer(props) {
         </Box>
 
         <Box>
-          <Box style={{ display: "inline-flex", alignItems: "center" }}>
+          <Box style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/security.png"} alt="prof" />
             <Container>
               <Typography variant="h2" style={{ color: "#0D5275" }}>
@@ -74,7 +79,7 @@ function Footer(props) {
         </Box>
 
         <Box>
-          <Box style={{ display: "inline-flex", alignItems: "center" }}>
+          <Box style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/support.png"} alt="prof" />
             <Container>
               <Typography variant="h2" style={{ color: "#0D5275" }}>
@@ -85,13 +90,16 @@ function Footer(props) {
           </Box>
         </Box>
       </Box>
-
+      <Divider />
       <Box
         style={{
-          display: "inline-flex",
+          display: "flex",
           gap: "50px",
-          height: "460px",
-          borderTop: "1px solid #D9DBE9",
+          flexWrap: "wrap",
+          width: "80%",
+          maxWidth: 1920,
+          margin: "0 auto",
+          padding: "22px 0",
         }}
       >
         <Box
@@ -101,8 +109,8 @@ function Footer(props) {
             maxWidth: "50%",
             marginRight: "-100px",
             gap: "32px",
-            marginLeft: "170px",
             marginTop: "48px",
+            flexWrap: "wrap",
           }}
         >
           <img src={"/img/logo.png"} alt="logo" width="35%" />
@@ -183,7 +191,7 @@ function Footer(props) {
 
           <Typography>(032) 541 9812</Typography>
 
-          <Box style={{ display: "inline-flex", gap: "32px" }}>
+          <Box style={{ display: "flex", gap: "32px" }}>
             <Link>
               <img src={"/img/Facebook.png"} alt="fb" />
             </Link>
@@ -196,14 +204,17 @@ function Footer(props) {
           </Box>
         </Box>
       </Box>
+      <Divider />
       <Box
         style={{
-          borderTop: "1px solid #D9DBE9",
-          display: "inline-flex",
+          display: "flex",
           alignItems: "center",
-          gap: "1090px",
-          marginLeft: "120px",
           padding: "32px",
+          justifyContent: "space-between",
+          width: "80%",
+          maxWidth: 1920,
+          margin: "0 auto",
+          padding: "22px 0",
         }}
       >
         <Typography
@@ -211,9 +222,7 @@ function Footer(props) {
         >
           ©2022 Riders Buddy
         </Typography>
-        <Box
-          style={{ display: "inline-flex", flexDirection: "row", gap: "32px" }}
-        >
+        <Box style={{ display: "flex", flexDirection: "row", gap: "32px" }}>
           <Link href="https://sites.google.com/view/riders-buddy/home">
             Terms and Conditions
           </Link>

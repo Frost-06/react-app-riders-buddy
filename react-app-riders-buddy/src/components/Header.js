@@ -6,6 +6,7 @@ import {
   SwipeableDrawer,
   Link,
   Divider,
+  useMediaQuery,
 } from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -19,8 +20,11 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuIcon } from "../mui/CustomIcons";
 import SvgIcon from "@mui/material/SvgIcon";
+import { useTheme } from "@emotion/react";
 
 export default function Header() {
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   const loginID = 1;
   const [state, setState] = React.useState({
     top: false,
@@ -100,7 +104,7 @@ export default function Header() {
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link href="/">
-                <img src="/img/logo.png" width="249" height="40" />
+                <img src="/img/logo.png" width={isMd ? 150 : 249} />
               </Link>
             </Typography>
             <Button

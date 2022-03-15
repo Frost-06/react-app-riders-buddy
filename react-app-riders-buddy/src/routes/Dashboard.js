@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react";
 import {
   Box,
   Container,
@@ -5,6 +6,7 @@ import {
   InputAdornment,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import Banner from "../components/Banner";
@@ -17,6 +19,8 @@ import Header from "../components/Header";
 import ProductItem from "../components/ProductItem";
 
 function Dashboard(props) {
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
       <ChatContainer />
@@ -37,7 +41,7 @@ function Dashboard(props) {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <img src="/img/search-icon.png" alt=""/>
+                <img src="/img/search-icon.png" alt="" />
               </InputAdornment>
             ),
           }}
@@ -47,7 +51,7 @@ function Dashboard(props) {
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Greatest offers awaits you.
         </Typography>
-        <CarouselContainer/>
+        <CarouselContainer />
         <TextField
           style={{ width: 560, marginBottom: 56 }}
           className="searchbox noshadow"
@@ -55,7 +59,7 @@ function Dashboard(props) {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <img src="/img/search-icon.png" alt=""/>
+                <img src="/img/search-icon.png" alt="" />
               </InputAdornment>
             ),
           }}
@@ -70,10 +74,10 @@ function Dashboard(props) {
 
         <Typography variant="h2">Bicycle Products and Services</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
-        Explore shops  products and services that fits you
+          Explore shops products and services that fits you
         </Typography>
         <Box width="100%" spacing={2}>
-          <Grid container columns={4} spacing={2}>
+          <Grid container columns={isMd ? 2 : 4} spacing={2}>
             {require("../products.json").map((product, index) => (
               <Grid key={index} item xs={1}>
                 <ProductItem {...product} />

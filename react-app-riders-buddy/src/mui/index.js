@@ -1,10 +1,10 @@
 import { createTheme } from "@mui/material/styles";
-import EudoxusSans from '../fonts/EudoxusSans-Medium.ttf'
-import { StarIcon, MenuIcon } from './CustomIcons';
+import EudoxusSans from "../fonts/EudoxusSans-Medium.ttf";
+import { StarIcon, MenuIcon } from "./CustomIcons";
 
 const eudoxusSans = {
-  fontFamily: 'Eudoxus Sans',
-  fontStyle: 'medium',
+  fontFamily: "Eudoxus Sans",
+  fontStyle: "medium",
   // fontDisplay: 'swap',
   // fontWeight: '600',
   src: `
@@ -13,11 +13,11 @@ const eudoxusSans = {
     url(${EudoxusSans}) format('ttf')
   `,
   unicodeRange:
-    'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
- };
+    "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
+};
 export default createTheme({
   typography: {
-    fontFamily: 'Eudoxus Sans'
+    fontFamily: "Eudoxus Sans",
   },
 
   palette: {
@@ -28,14 +28,17 @@ export default createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        '@font-face': [eudoxusSans],
+        "@font-face": [eudoxusSans],
         "a:link": {
           textDecoration: "none",
         },
         html: {
-          width: '100%',
-          height: '100%',
-          WebkitOverflowScrolling: 'touch',
+          width: "100%",
+          height: "100%",
+          WebkitOverflowScrolling: "touch",
+        },
+        body: {
+          overflowX: "hidden",
         },
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
@@ -68,7 +71,7 @@ export default createTheme({
           justifyContent: "center",
         },
         ".searchbox": {
-          width: 676,
+          width: "calc(100% - 148x)",
           height: 67,
           "& > div": {
             height: "100%",
@@ -96,13 +99,13 @@ export default createTheme({
             },
             borderBottomColor: "#1AA3E9",
           },
-          
+
           h2: {
             fontWeight: 800,
             letterSpacing: 1,
             fontSize: 32,
           },
-          
+
           p: {
             fontSize: 12,
             maxWidth: "70%",
@@ -142,11 +145,11 @@ export default createTheme({
 
       styleOverrides: {
         root: {
-          '&.Mui-disabled': {
+          "&.Mui-disabled": {
             opacity: 0.25,
           },
         },
-        iconEmpty: { color: "#D9DBE9"},
+        iconEmpty: { color: "#D9DBE9" },
       },
     },
 
@@ -159,7 +162,7 @@ export default createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          position: 'relative',
+          position: "relative",
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
           borderRadius: "16px",
           zIndex: 0, // Fix Safari overflow: hidden with border radius
@@ -177,19 +180,19 @@ export default createTheme({
           textTransform: "none",
           padding: "20px 32px",
           boxShadow: "0px 8px 16px rgba(26, 163, 233, 0.24)",
-          '&:hover': {
-            boxShadow: 'none',
+          "&:hover": {
+            boxShadow: "none",
           },
         },
         outlined: ({ theme }) => ({
           color: theme.palette.primary.main,
           borderColor: theme.palette.primary.main,
-           boxShadow: 'none',
+          boxShadow: "none",
         }),
 
         chevron: ({ theme }) => ({
-          borderColor: 'none',
-          boxShadow: 'none',
+          borderColor: "none",
+          boxShadow: "none",
         }),
       },
     },

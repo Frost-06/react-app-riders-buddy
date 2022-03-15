@@ -51,7 +51,8 @@ function CarouselContainer({ maxSteps = 3 }) {
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
-            startIcon={<img src="/img/chevron-forward.png" />} />
+            startIcon={<img src="/img/chevron-forward.png" />}
+          />
         }
         backButton={
           <Button
@@ -60,7 +61,8 @@ function CarouselContainer({ maxSteps = 3 }) {
             size="small"
             startIcon={<img src="/img/chevron-backward.png" />}
             onClick={handleBack}
-            disabled={activeStep === 0} />
+            disabled={activeStep === 0}
+          />
         }
       />
     </Container>
