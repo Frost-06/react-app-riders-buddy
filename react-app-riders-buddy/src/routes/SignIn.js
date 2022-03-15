@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   Grid,
-  InputAdornment,
   TextField,
   Typography,
   Paper,

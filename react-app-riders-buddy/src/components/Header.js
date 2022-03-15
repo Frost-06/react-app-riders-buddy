@@ -1,4 +1,3 @@
-import MenuIcon from "@mui/icons-material/Menu";
 import {
   Container,
   List,
@@ -18,6 +17,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { motion } from "framer-motion";
+import { MenuIcon } from "../mui/CustomIcons";
+import SvgIcon from "@mui/material/SvgIcon";
 
 export default function Header() {
   const loginID = 1;

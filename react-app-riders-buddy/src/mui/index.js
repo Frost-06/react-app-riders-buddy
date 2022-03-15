@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import EudoxusSans from '../fonts/EudoxusSans-Medium.ttf'
-import { StarIcon } from './CustomIcons';
+import { StarIcon, MenuIcon } from './CustomIcons';
 
 const eudoxusSans = {
   fontFamily: 'Eudoxus Sans',
@@ -31,6 +31,11 @@ export default createTheme({
         '@font-face': [eudoxusSans],
         "a:link": {
           textDecoration: "none",
+        },
+        html: {
+          width: '100%',
+          height: '100%',
+          WebkitOverflowScrolling: 'touch',
         },
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
@@ -142,6 +147,12 @@ export default createTheme({
           },
         },
         iconEmpty: { color: "#D9DBE9"},
+      },
+    },
+
+    MuiMenuItem: {
+      defaultProps: {
+        icon: <MenuIcon />,
       },
     },
 

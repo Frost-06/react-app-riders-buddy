@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, LinearProgress } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
@@ -147,6 +147,7 @@ export default function ProductItem(props) {
             <Grid xs={1}>
               <Button variant="contained">Get Price</Button>
             </Grid>
+            
           </Grid>
         </CardContent>
       </Card>

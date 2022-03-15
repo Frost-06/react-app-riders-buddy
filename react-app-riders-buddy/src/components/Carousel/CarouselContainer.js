@@ -27,7 +27,7 @@ function CarouselContainer({ maxSteps = 3 }) {
 
   return (
     <Container width="100%">
-      <AutoPlaySwipeableViews style={{lineHeight: "15px"}}
+      <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -40,6 +40,7 @@ function CarouselContainer({ maxSteps = 3 }) {
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
+        variant="dots"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
@@ -50,8 +51,7 @@ function CarouselContainer({ maxSteps = 3 }) {
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
-            startIcon={<img src="/img/chevron-forward.png" />}
-          ></Button>
+            startIcon={<img src="/img/chevron-forward.png" />} />
         }
         backButton={
           <Button
@@ -60,8 +60,7 @@ function CarouselContainer({ maxSteps = 3 }) {
             size="small"
             startIcon={<img src="/img/chevron-backward.png" />}
             onClick={handleBack}
-            disabled={activeStep === 0}
-          ></Button>
+            disabled={activeStep === 0} />
         }
       />
     </Container>

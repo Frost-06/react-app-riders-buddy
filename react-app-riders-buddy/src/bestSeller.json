@@ -121,5 +121,36 @@
       
     },
     "categoryType": "product"
+  },
+  {
+    "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
+    "price": 1500,
+    "image": "/img/item-img/1.png",
+    "endingPrice": 2500,
+    "salePrice": "0.25",
+    "rating": {
+      "stars": 4,
+      "count": "2.5k"
+    },
+    "productDescription": {
+      "soldItems": "500",
+      "parts": "Bike Chain",
+      "categories": "Bicycle Products",
+      "SKU": "96635",
+      "weight": "4kg",
+      "brand": "KMC",
+      "color": "Silver",
+      "stockStatus": "In Stock",
+      "numberOfStocks": "25",
+      "Dimensions": "10 x 20 x15"
+    },
+    "productSpec": {
+      "specOne": "",
+      "specTwo": "",
+      "material": "",
+      "type": ""
+      
+    },
+    "categoryType": "product"
   }
 ]
