@@ -44,6 +44,7 @@ export default function ProductItem(props) {
     categoryType,
     productSpec,
     serviceSpec,
+    reviews,
     categoryLabelIcon1,
   } = props;
   const [expanded, setExpanded] = React.useState(false);
@@ -116,7 +117,7 @@ export default function ProductItem(props) {
             >
               <Rating
                 name="half-rating-read"
-                defaultValue={rating.stars}
+                defaultValue={parseFloat(rating)}
                 precision={0.5}
                 readOnly
                 size="small"
@@ -127,7 +128,7 @@ export default function ProductItem(props) {
                 }}
               />
               &nbsp;&nbsp;
-              <span>({rating.count})</span>
+              <span>({reviews})</span>
             </Box>
           )}
           <Grid
