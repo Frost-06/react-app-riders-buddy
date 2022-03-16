@@ -97,15 +97,17 @@ function ProductDetails(props) {
         <CardHeader
           style={{ width: "60%" }}
           avatar={
-            salePrice && (
+            salePrice ? (
               <Box
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px" }}
+                style={{ padding: "5px 9px"}}
               >
                 {salePrice * 100}% off
               </Box>
+            ) : (
+              ""
             )
           }
           action={
