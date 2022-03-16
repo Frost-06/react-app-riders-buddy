@@ -32,7 +32,7 @@ export default function ProductItem(props) {
   const { chatDrawer, setChatDrawer } = useChat();
   // const static, let
   let {
-    name,
+    item_name,
     price,
     salePrice,
     endingPrice,
@@ -55,7 +55,7 @@ export default function ProductItem(props) {
         <CardHeader
           avatar={
             //sale price
-            salePrice ?  (
+            salePrice ? (
               <Box
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
@@ -64,7 +64,9 @@ export default function ProductItem(props) {
               >
                 {salePrice * 100}% off
               </Box>
-            ) : ""
+            ) : (
+              ""
+            )
           }
           action={
             // check if category type product or service
@@ -100,7 +102,7 @@ export default function ProductItem(props) {
               padding: "0px 0px 8px 0px",
             }}
           >
-            {name && name.slice(0, 45) + "..."}
+            {item_name && item_name.slice(0, 45) + "..."}
           </Typography>
           {rating && (
             <Box
@@ -149,7 +151,6 @@ export default function ProductItem(props) {
             <Grid xs={1}>
               <Button variant="contained">Get Price</Button>
             </Grid>
-            
           </Grid>
         </CardContent>
       </Card>
