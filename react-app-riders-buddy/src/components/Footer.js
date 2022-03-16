@@ -1,9 +1,5 @@
 import { Container, Divider, Link } from "@mui/material";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 
@@ -209,7 +205,6 @@ function Footer(props) {
         style={{
           display: "flex",
           alignItems: "center",
-          padding: "32px",
           justifyContent: "space-between",
           width: "80%",
           maxWidth: 1920,

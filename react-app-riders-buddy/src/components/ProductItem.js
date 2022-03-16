@@ -54,7 +54,8 @@ export default function ProductItem(props) {
       <Card sx={{ maxWidth: 356 }}>
         <CardHeader
           avatar={
-            salePrice && (
+            //sale price
+            salePrice ?  (
               <Box
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
@@ -63,7 +64,7 @@ export default function ProductItem(props) {
               >
                 {salePrice * 100}% off
               </Box>
-            )
+            ) : ""
           }
           action={
             // check if category type product or service
