@@ -201,6 +201,9 @@ export default createTheme({
         chevron: ({ theme }) => ({
           borderColor: "none",
           boxShadow: "none",
+          "&:hover": {
+            color: "#1AA3E9",
+          },
         }),
       },
     },

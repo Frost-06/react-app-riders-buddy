@@ -35,10 +35,15 @@ export function CloseIcon(props) {
 // MenuIcon
 export function MenuIcon(props) {
   return (
-    <SvgIcon {...props} width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <rect width="18" height="2" rx="1" fill="#1AA3E9" />
-      <rect y="10" width="18" height="2" rx="1" fill="#1AA3E9" />
-      <rect y="5" width="14" height="2" rx="1" fill="#76C8F2" />
+    <SvgIcon {...props}>
+      <path
+        d="M1 12H17C17.55 12 18 11.55 18 11C18 10.45 17.55 10 17 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM0 1C0 1.55 0.45 2 1 2H17C17.55 2 18 1.55 18 1C18 0.45 17.55 0 17 0H1C0.45 0 0 0.45 0 1Z"
+        fill="#1AA3E9"
+      />
+      <path
+        d="M13.2222 7H0.777778C0.35 7 0 6.55 0 6C0 5.45 0.35 5 0.777778 5H13.2222C13.65 5 14 5.45 14 6C14 6.55 13.65 7 13.2222 7Z"
+        fill="#76C8F2"
+      />
     </SvgIcon>
   );
 }

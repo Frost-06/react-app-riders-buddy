@@ -92,12 +92,12 @@ export default function Header() {
             <IconButton
               size="large"
               edge="start"
-              color="inherit"
+              color="primary"
               aria-label="menu"
               sx={{ mr: 2 }}
               onClick={toggleDrawer("left", true)}
             >
-              <MenuIcon />
+              <MenuIcon/>
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link href="/">

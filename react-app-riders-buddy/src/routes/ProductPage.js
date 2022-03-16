@@ -11,7 +11,7 @@ import {
 
 import React from "react";
 import SecondHeader from "../components/SecondHeader";
-import CarouselContainer from "../components/Carousel/CarouselContainer";
+import ThirdCarouselContainer from "../components/Carousel/ThirdCarouselContainer";
 import { useTheme } from "@emotion/react";
 import ProductDetails from "../components/Product/ProductDetails";
 import ChatContainer from "../components/Chat/ChatContainer";
@@ -93,7 +93,7 @@ function ProductPage(props) {
           >
             Product or Service You May Like
           </Typography>
-          <CarouselContainer />
+          <ThirdCarouselContainer />
         </Container>
         <Footer />
       </useScrollToTop>
