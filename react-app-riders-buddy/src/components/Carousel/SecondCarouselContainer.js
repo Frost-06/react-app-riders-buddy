@@ -51,7 +51,7 @@ function SecondCarouselContainer({ maxSteps = 3 }) {
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
-            startIcon={<img src="/img/chevron-forward.png" />}
+            startIcon={<img src="/img/chevron-forward.png" alt="" />}
           ></Button>
         }
         backButton={
@@ -59,7 +59,7 @@ function SecondCarouselContainer({ maxSteps = 3 }) {
             style={{ order: 2 }}
             variant="chevron"
             size="small"
-            startIcon={<img src="/img/chevron-backward.png" />}
+            startIcon={<img src="/img/chevron-backward.png"  alt="" />}
             onClick={handleBack}
             disabled={activeStep === 0}
           ></Button>

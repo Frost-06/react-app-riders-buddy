@@ -8,8 +8,6 @@ import {
   Divider,
   useMediaQuery,
 } from "@mui/material";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -19,7 +17,6 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuIcon } from "../theme/CustomIcons";
-import SvgIcon from "@mui/material/SvgIcon";
 import { useTheme } from "@emotion/react";
 
 export default function Header() {
@@ -104,7 +101,7 @@ export default function Header() {
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link href="/">
-                <img src="/img/logo.png" width={isMd ? 150 : 249} />
+                <img src="/img/logo.png" width={isMd ? 150 : 249}  alt=""/>
               </Link>
             </Typography>
             <Button

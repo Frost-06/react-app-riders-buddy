@@ -48,7 +48,7 @@ function Banner(props) {
                   ),
                   endAdornment: (
                     <InputAdornment position="start">
-                      <img src="/img/target-icon.png" />
+                      <img src="/img/target-icon.png" alt=""/>
                     </InputAdornment>
                   ),
                 }}

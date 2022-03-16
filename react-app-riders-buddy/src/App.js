@@ -3,7 +3,6 @@ import ProductPage from "./routes/ProductPage";
 import Dashboard from "./routes/Dashboard";
 import SignIn from "./routes/SignIn";
 import SignUp from "./routes/SignUp";
-import UserPage from "./routes/UserPage";
 import ServicePage from "./routes/ServicePage";
 import ChatContext from "./context/ChatContext";
 import { useState } from "react";
