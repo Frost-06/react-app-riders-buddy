@@ -8,7 +8,8 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import SecondCarouselContainer from "../components/Carousel/SecondCarouselContainer";
@@ -21,6 +22,16 @@ import ProductItem from "../components/ProductItem";
 function Dashboard(props) {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
+  const [products, setProducts] = useState();
+
+  useEffect(() => {
+    axios.get("items").then((resp) => {
+      if (resp.data) {
+        setProducts(resp.data);
+      }
+    });
+  }, []);
+
   return (
     <div>
       <ChatContainer />
@@ -77,13 +88,16 @@ function Dashboard(props) {
           Explore shops products and services that fits you
         </Typography>
         <Box width="100%" spacing={2}>
-          <Grid container columns={isMd ? 2 : 4} spacing={2}>
-            {require("../products.json").map((product, index) => (
-              <Grid key={index} item xs={1}>
-                <ProductItem {...product} />
-              </Grid>
-            ))}
-          </Grid>
+          {products && (
+            <Grid container columns={isMd ? 2 : 4} spacing={2}>
+              {products.map((product, index) => (
+                <Grid key={index} item xs={1}>
+                  <ProductItem {...product} />
+                </Grid>
+              ))}
+            </Grid>
+          )}
+          {!products && <i>Loading products...</i>}
         </Box>
       </Container>
 
