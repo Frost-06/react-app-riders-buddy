@@ -43,16 +43,17 @@ function a11yProps(index) {
 
 export default function TabPage() {
   const loc = useLocation();
-  const { productDescription } = loc.state;
+  const { description, weight, rating, reviews } = loc.state;
   const { productSpec } = loc.state;
   const [value, setValue] = React.useState(0);
+  const totalBuyer = 170;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Box sx={{ width: "100%", marginTop: "-35%" }}>
+    <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -72,9 +73,7 @@ export default function TabPage() {
         >
           Product Details
         </Typography>
-        <Typography variant="label">
-         {productDescription.description}
-        </Typography>
+        <Typography variant="label">{description}</Typography>
 
         <Typography
           variant="h1"
@@ -87,6 +86,54 @@ export default function TabPage() {
           Specifications
         </Typography>
         <Box style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+          {productSpec && (
+            <>
+              <Typography
+                variant="label"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "22px",
+                }}
+              >
+                <img src="/img/checkbox.png" />
+                {productSpec.specOne}
+              </Typography>
+              <Typography
+                variant="label"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "22px",
+                }}
+              >
+                <img src="/img/checkbox.png" />
+                {productSpec.specTwo}
+              </Typography>
+              <Typography
+                variant="label"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "22px",
+                }}
+              >
+                <img src="/img/checkbox.png" />
+                {productSpec.type}
+              </Typography>
+              <Typography
+                variant="label"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "22px",
+                }}
+              >
+                <img src="/img/checkbox.png" />
+                {productSpec.material}
+              </Typography>
+            </>
+          )}
           <Typography
             variant="label"
             style={{
@@ -96,51 +143,7 @@ export default function TabPage() {
             }}
           >
             <img src="/img/checkbox.png" />
-            {productSpec.specOne}
-          </Typography>
-          <Typography
-            variant="label"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "22px",
-            }}
-          >
-            <img src="/img/checkbox.png" />
-           {productSpec.specTwo}
-          </Typography>
-          <Typography
-            variant="label"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "22px",
-            }}
-          >
-            <img src="/img/checkbox.png" />
-           {productSpec.type}
-          </Typography>
-          <Typography
-            variant="label"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "22px",
-            }}
-          >
-            <img src="/img/checkbox.png" />
-            {productSpec.material}
-          </Typography>
-          <Typography
-            variant="label"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "22px",
-            }}
-          >
-            <img src="/img/checkbox.png" />
-            {productDescription.weight}
+            {weight}
           </Typography>
         </Box>
       </TabPanel>
@@ -156,12 +159,15 @@ export default function TabPage() {
             variant="h1"
             style={{ color: "#1AA3E9", fontWeight: "bold" }}
           >
-            5
+            {Math.round(rating)}
           </Typography>
-          <Typography>1k customer reviews</Typography>
+          <Typography>{reviews} customer reviews</Typography>
         </Container>
         <Container style={{ width: "100%" }}>
-          <LinearProgress variant="determinate" value={20} />
+          <LinearProgress
+            variant="determinate"
+            value={(reviews / totalBuyer) * 100}
+          />
         </Container>
       </TabPanel>
       <TabPanel value={value} index={2}>

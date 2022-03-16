@@ -33,7 +33,7 @@ function App() {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/service" element={<ServicePage />} />
-        <Route path="/homepage" element={<UserPage />} />
+        <Route path="/homepage" element={<Dashboard />} />
         <Route path="/" element={<Dashboard />} />
       </Routes>
     </ChatContext.Provider>

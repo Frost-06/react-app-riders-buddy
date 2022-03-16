@@ -48,11 +48,7 @@ function ProductPage(props) {
 
             <Typography color="text.primary">Product Page</Typography>
           </Breadcrumbs>
-          <Grid
-            container
-            component="main"
-            sx={{ height: "140vh", marginBottom: "56px" }}
-          >
+          <Grid container component="main" sx={{ marginBottom: "56px" }}>
             <CssBaseline />
 
             {/* Product Images */}

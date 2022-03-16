@@ -18,12 +18,24 @@ function ProductDetails(props) {
   const { chatDrawer, setChatDrawer } = useChat();
 
   const loc = useLocation();
-  const { name } = loc.state;
-  const { rating } = loc.state;
-  const { productDescription } = loc.state;
-  const { price } = loc.state;
-  const { endingPrice } = loc.state;
-  const { salePrice } = loc.state;
+  const {
+    name,
+    reviews,
+    rating,
+    description,
+    price,
+    endingPrice,
+    salePrice,
+    descriptionCategories,
+    numberOfStocks,
+    stockStatus,
+    SKU,
+    weight,
+    brand,
+    dimensions,
+    color,
+    parts,
+  } = loc.state;
 
   return (
     <div>
@@ -47,7 +59,7 @@ function ProductDetails(props) {
             color="text.secondary"
             sx={{ display: "inline-flex", alignItems: "center" }}
           >
-            {new Array(rating.stars).fill(0).map((s, i) => (
+            {new Array(parseInt(rating)).fill(0).map((s, i) => (
               <React.Fragment key={i}>
                 <img
                   src={"/img/star.png"}
@@ -56,10 +68,19 @@ function ProductDetails(props) {
                 />
               </React.Fragment>
             ))}
+            {new Array(5 - parseInt(rating)).fill(0).map((s, i) => (
+              <React.Fragment key={i}>
+                <img
+                  src={"/img/star.png"}
+                  alt="stars"
+                  style={{ marginRight: "8px", filter: "saturate(0)" }}
+                />
+              </React.Fragment>
+            ))}
             &nbsp;&nbsp;
             <span variant> | </span>&nbsp;&nbsp;
-            <span>{rating.count} review | </span> &nbsp;&nbsp;
-            <span>{productDescription.soldItems} sold</span>
+            <span>{reviews} reviews </span> &nbsp;&nbsp;
+            {/* <span>{productDescription.soldItems} sold</span> */}
           </Typography>
         )}
       </Typography>
@@ -77,14 +98,14 @@ function ProductDetails(props) {
           style={{ width: "60%" }}
           avatar={
             salePrice && (
-            <Box
-              bgcolor={theme.palette.primary.main}
-              color="#ffffff"
-              width={100}
-              style={{ padding: "5px 9px" }}
-            >
-              {salePrice * 100}% off
-            </Box>
+              <Box
+                bgcolor={theme.palette.primary.main}
+                color="#ffffff"
+                width={100}
+                style={{ padding: "5px 9px" }}
+              >
+                {salePrice * 100}% off
+              </Box>
             )
           }
           action={
@@ -98,6 +119,8 @@ function ProductDetails(props) {
           subheader=""
         />
       </Grid>
+      <br />
+      <Typography>{description}</Typography>
       <Grid
         style={{
           width: "100%",
@@ -118,7 +141,7 @@ function ProductDetails(props) {
                 color: "#14142B",
               }}
             >
-              {productDescription.parts}
+              {parts}
             </span>
           </Typography>
         </Container>
@@ -134,7 +157,7 @@ function ProductDetails(props) {
                 color: "#1AA3E9",
               }}
             >
-              {productDescription.categories}
+              {descriptionCategories}
             </span>
           </Typography>
         </Container>
@@ -158,7 +181,7 @@ function ProductDetails(props) {
                 color: "#14142B",
               }}
             >
-              {productDescription.SKU}
+              {SKU}
             </span>
           </Typography>
         </Container>
@@ -174,7 +197,7 @@ function ProductDetails(props) {
                 color: "#14142B",
               }}
             >
-              {productDescription.weight}
+              {weight}
             </span>
           </Typography>
         </Container>
@@ -198,7 +221,7 @@ function ProductDetails(props) {
                 color: "#14142B",
               }}
             >
-              {productDescription.brand}
+              {brand}
             </span>
           </Typography>
         </Container>
@@ -214,7 +237,7 @@ function ProductDetails(props) {
                 color: "#14142B",
               }}
             >
-              {productDescription.color}
+              {color}
             </span>
           </Typography>
         </Container>
@@ -232,7 +255,7 @@ function ProductDetails(props) {
                 color: "#008A00",
               }}
             >
-              {productDescription.stockStatus}
+              {stockStatus}
             </span>
             <span
               variat="label"
@@ -242,7 +265,7 @@ function ProductDetails(props) {
                 marginLeft: "-35px",
               }}
             >
-              ({productDescription.numberOfStocks})
+              ({numberOfStocks})
             </span>
           </Typography>
         </Container>
@@ -258,7 +281,7 @@ function ProductDetails(props) {
                 color: "#14142B",
               }}
             >
-              {productDescription.Dimensions}
+              {dimensions}
             </span>
           </Typography>
         </Container>

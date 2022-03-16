@@ -25,7 +25,7 @@ function Dashboard(props) {
   const [products, setProducts] = useState();
 
   useEffect(() => {
-    axios.get("items").then((resp) => {
+    axios.get("api/items").then((resp) => {
       if (resp.data) {
         setProducts(resp.data);
       }

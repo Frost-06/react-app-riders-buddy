@@ -6,7 +6,7 @@ import {
   Link,
   Breadcrumbs,
   Divider,
-  CardMedia
+  CardMedia,
 } from "@mui/material";
 
 import React from "react";
@@ -44,11 +44,7 @@ function Service(props) {
 
           <Typography color="text.primary">Service Page</Typography>
         </Breadcrumbs>
-        <Grid
-          container
-          component="main"
-          sx={{ height: "140vh", marginBottom: "56px" }}
-        >
+        <Grid container component="main" sx={{ marginBottom: "56px" }}>
           <CssBaseline />
           <Grid
             item
@@ -69,8 +65,11 @@ function Service(props) {
               borderRadius: "24px",
             }}
           >
-            <CardMedia 
-              component="img" height="600" image={image} style={{borderRadius: "32px"}}
+            <CardMedia
+              component="img"
+              height="600"
+              image={image}
+              style={{ borderRadius: "32px" }}
             />
           </Grid>
           <Grid item md={5} elevation={6}>
