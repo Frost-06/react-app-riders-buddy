@@ -60,7 +60,7 @@ export default function ProductItem(props) {
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px", marginLeft: "-16px" }}
+                style={{ padding: "5px 9px", marginLeft: "-16px", zIndex: "0" }}
               >
                 {salePrice * 100}% off
               </Box>
