@@ -26,7 +26,7 @@ function CarouselContainer({ maxSteps = 3 }) {
   };
 
   return (
-    <Container width="100%">
+    <Container width="100%" style={{margin: "0 0 100 0 !important"}}>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}

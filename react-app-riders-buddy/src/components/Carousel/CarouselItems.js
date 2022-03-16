@@ -1,27 +1,41 @@
 import { useTheme } from "@emotion/react";
 import { Grid, useMediaQuery } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductItem from "../ProductItem";
+import axios from "axios";
 
 function CarouselItems(props) {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [bestSellers, setProducts] = useState();
+
+  useEffect(() => {
+    axios.get("api/bestseller").then((resp) => {
+      if (resp.data) {
+        setProducts(resp.data);
+      }
+    });
+  }, []);
   return (
     <Box
       width="100%"
       spacing={4}
       style={{
-        padding: "10px 0px 10px 1px",
+        padding: "10px 0px 30px 1px",
       }}
     >
+      {bestSellers && (
       <Grid container columns={isMd ? 2 : 4} spacing={2}>
-        {require("../../bestSeller.json").map((bestSeller, index) => (
+        {bestSellers.map((bestSeller, index) => (
           <Grid key={index} item xs={1}>
             <ProductItem {...bestSeller} />
           </Grid>
         ))}
       </Grid>
+      )}
+      {!bestSellers && <i>Loading products...</i>}
     </Box>
   );
 }

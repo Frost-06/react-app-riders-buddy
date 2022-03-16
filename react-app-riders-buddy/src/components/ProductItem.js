@@ -40,7 +40,6 @@ export default function ProductItem(props) {
     rating,
     productDescription,
     serviceDescription,
-    categoryLabelIcon = "/img/product-category-label-icon.png",
     categoryType,
     productSpec,
     serviceSpec,

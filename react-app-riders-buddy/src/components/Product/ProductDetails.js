@@ -19,7 +19,7 @@ function ProductDetails(props) {
 
   const loc = useLocation();
   const {
-    name,
+    item_name,
     reviews,
     rating,
     description,
@@ -46,7 +46,7 @@ function ProductDetails(props) {
           padding: "0px 0px 8px 0px",
         }}
       >
-        {name}
+        {item_name}
       </Typography>
       <Typography
         variant="body2"
