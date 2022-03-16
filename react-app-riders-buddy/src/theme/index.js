@@ -75,7 +75,7 @@ export default createTheme({
           justifyContent: "center",
         },
         ".searchbox": {
-          width: "calc(100% - 148x)",
+          width: "calc(100% - 148px)",
           height: 67,
           "& > div": {
             height: "100%",

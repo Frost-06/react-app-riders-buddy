@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "@emotion/react";
+import { NearbyLocation } from "../theme/CustomIcons";
 
 function Banner(props) {
   const theme = useTheme();
@@ -42,7 +43,7 @@ function Banner(props) {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <img src="/img/location-icon.png" />
+                      <NearbyLocation />
                     </InputAdornment>
                   ),
                   endAdornment: (
