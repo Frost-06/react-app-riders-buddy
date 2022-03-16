@@ -47,7 +47,7 @@ function Footer(props) {
           width: "80%",
           maxWidth: 1920,
           margin: "0 auto",
-          padding: "22px 0",
+          padding: "96px 0",
         }}
       >
         <Box>

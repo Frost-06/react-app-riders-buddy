@@ -18,7 +18,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MenuIcon } from "../mui/CustomIcons";
+import { MenuIcon } from "../theme/CustomIcons";
 import SvgIcon from "@mui/material/SvgIcon";
 import { useTheme } from "@emotion/react";
 
@@ -56,7 +56,7 @@ export default function Header() {
         <Typography variant="h1" style={{ fontSize: 28, marginBottom: 32 }}>
           Sign-in to enjoy exclusive deals and offers
         </Typography>
-        <Button variant="contained" href="/sign-in">
+        <Button variant="contained" href="/sign-in" fullWidth="true">
           Sign in
         </Button>
         <Box>

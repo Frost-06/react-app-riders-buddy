@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import EudoxusSans from "../fonts/EudoxusSans-Medium.ttf";
-import { StarIcon, MenuIcon } from "./CustomIcons";
+import { StarIcon, MenuIcon, CheckboxIcon, CheckboxCheckedIcon, CheckboxIndeterminateIcon } from "./CustomIcons";
 
 const eudoxusSans = {
   fontFamily: "Eudoxus Sans",
@@ -15,6 +15,10 @@ const eudoxusSans = {
   unicodeRange:
     "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
 };
+
+const ICON_SMALL = { width: 20, height: 20 };
+const ICON_LARGE = { width: 28, height: 28 };
+
 export default createTheme({
   typography: {
     fontFamily: "Eudoxus Sans",
@@ -89,7 +93,8 @@ export default createTheme({
           position: "relative",
           width: 500,
           minHeight: 162,
-          backgroundColor: "#ffffff",
+          backgroundColor: "#fcfcfc",
+          boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
           padding: 32,
           borderBottom: "8px solid transparent",
           "&:hover": {
@@ -98,6 +103,7 @@ export default createTheme({
               color: "#1AA3E9",
             },
             borderBottomColor: "#1AA3E9",
+            boxShadow: "none",
           },
 
           h2: {
@@ -146,10 +152,12 @@ export default createTheme({
       styleOverrides: {
         root: {
           "&.Mui-disabled": {
-            opacity: 0.25,
+            opacity: 0.48,
           },
         },
         iconEmpty: { color: "#D9DBE9" },
+        sizeSmall: { '& svg': { ...ICON_SMALL } },
+        sizeLarge: { '& svg': { ...ICON_LARGE } },
       },
     },
 
@@ -244,6 +252,36 @@ export default createTheme({
             textDecoration: "underline",
           },
         }),
+      },
+    },
+  },
+  MuiCheckbox: {
+    defaultProps: {
+      icon: <CheckboxIcon />,
+      checkedIcon: <CheckboxCheckedIcon />,
+      indeterminateIcon: <CheckboxIndeterminateIcon />,
+    },
+
+    styleOverrides: {
+      root: {
+        padding: "2",
+        '&.Mui-checked.Mui-disabled, &.Mui-disabled': {
+          color: "gray",
+        },
+        '& .MuiSvgIcon-fontSizeMedium': {
+          width: 24,
+          height: 24,
+        },
+        '& .MuiSvgIcon-fontSizeSmall': {
+          width: 20,
+          height: 20,
+        },
+        svg: {
+          fontSize: 24,
+          '&[font-size=small]': {
+            fontSize: 20,
+          },
+        },
       },
     },
   },

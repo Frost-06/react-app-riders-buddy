@@ -9,9 +9,7 @@ import SecondCarouselItem from "./SecondCarouselItem";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function SecondCarouselContainer(
-    {maxSteps=1}
-) {
+function SecondCarouselContainer({ maxSteps = 1 }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -42,12 +40,14 @@ function SecondCarouselContainer(
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
+        variant="dots"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
         nextButton={
           <Button
             style={{ order: 3 }}
+            variant="chevron"
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
@@ -57,6 +57,7 @@ function SecondCarouselContainer(
         backButton={
           <Button
             style={{ order: 2 }}
+            variant="chevron"
             size="small"
             startIcon={<img src="/img/chevron-backward.png" />}
             onClick={handleBack}

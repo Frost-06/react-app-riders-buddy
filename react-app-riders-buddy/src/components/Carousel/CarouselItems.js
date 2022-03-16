@@ -10,7 +10,7 @@ function CarouselItems(props) {
   return (
     <Box
       width="100%"
-      spacing={20}
+      spacing={4}
       style={{
         padding: "10px 0px 10px 1px",
       }}

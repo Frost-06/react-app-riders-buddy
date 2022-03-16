@@ -9,7 +9,7 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
 import { Box } from "@mui/system";
-import { StarIcon } from "../mui/CustomIcons";
+import { StarIcon } from "../theme/CustomIcons";
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -116,6 +116,7 @@ export default function ProductItem(props) {
                 defaultValue={rating.stars}
                 precision={0.5}
                 readOnly
+                size="small"
                 style={{
                   display: "inline-flex",
                   justifyContent: "center",
