@@ -1,6 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 import EudoxusSans from "../fonts/EudoxusSans-Medium.ttf";
-import { StarIcon, MenuIcon, CheckboxIcon, CheckboxCheckedIcon, CheckboxIndeterminateIcon, InfoIcon, SuccessIcon, WarningIcon, ErrorIcon } from "./CustomIcons";
+import {
+  StarIcon,
+  MenuIcon,
+  CheckboxIcon,
+  CheckboxCheckedIcon,
+  CheckboxIndeterminateIcon,
+  InfoIcon,
+  SuccessIcon,
+  WarningIcon,
+  ErrorIcon,
+} from "./CustomIcons";
 
 const eudoxusSans = {
   fontFamily: "Eudoxus Sans",
@@ -44,6 +54,7 @@ export default createTheme({
         body: {
           overflowX: "hidden",
         },
+        
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
           backgroundSize: "cover",
@@ -81,7 +92,7 @@ export default createTheme({
             height: "100%",
             borderRadius: 16,
             "&:not(.noshadow)": {
-              boxShadow: "0px 4px 8px rgba(0,0,0,0.08)",
+              boxShadow: "0px 16px 32px -4px rgba(110, 113, 145, 0.12);",
             },
             marginRight: 19,
             borderColor: "#D9DBE9",
@@ -89,19 +100,22 @@ export default createTheme({
           },
         },
         ".category-card": {
-          fontFamily: "Eudoxus Sans",
           position: "relative",
           width: 500,
           minHeight: 162,
           backgroundColor: "#fcfcfc",
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
+          filter: "grayscale(100%)",
           padding: 32,
           borderBottom: "8px solid transparent",
           "&:hover": {
             cursor: "pointer",
+            filter: "none",
+
             h2: {
               color: "#1AA3E9",
             },
+            zIndex: 99,
             borderBottomColor: "#1AA3E9",
             boxShadow: "none",
           },
@@ -118,10 +132,10 @@ export default createTheme({
           },
         },
         ".category-image": {
-          filter: "grayscale(100%)",
           position: "absolute",
           right: 0,
           bottom: -1,
+          marginBottom: -7,
           "&:hover": {
             filter: "none",
           },
@@ -156,8 +170,8 @@ export default createTheme({
           },
         },
         iconEmpty: { color: "#D9DBE9" },
-        sizeSmall: { '& svg': { ...ICON_SMALL } },
-        sizeLarge: { '& svg': { ...ICON_LARGE } },
+        sizeSmall: { "& svg": { ...ICON_SMALL } },
+        sizeLarge: { "& svg": { ...ICON_LARGE } },
       },
     },
 
@@ -202,7 +216,7 @@ export default createTheme({
           borderColor: "none",
           boxShadow: "none",
           "&:hover": {
-            color: "#1AA3E9",
+            color: theme.palette.primary.main,
           },
         }),
       },
@@ -212,22 +226,28 @@ export default createTheme({
         h1: {
           fontSize: 48,
           color: "#14142B",
+          letterSpacing: "1px",
         },
         h2: {
           fontSize: 32,
           color: "#14142B",
           fontWeight: "bold",
+          letterSpacing: "1px",
         },
         h3: {
           fontSize: 18,
           color: "#14142B",
           fontWeight: "600",
+          letterSpacing: "1px",
         },
         label: {
           fontSize: 15,
           color: "#6E7191",
+          letterSpacing: "0.75px",
         },
+        
       },
+
     },
     MuiAppBar: {
       styleOverrides: {
@@ -257,57 +277,88 @@ export default createTheme({
         }),
       },
     },
-  },
-  MuiCheckbox: {
-    defaultProps: {
-      icon: <CheckboxIcon />,
-      checkedIcon: <CheckboxCheckedIcon />,
-      indeterminateIcon: <CheckboxIndeterminateIcon />,
-    },
 
-    styleOverrides: {
-      root: {
-        padding: "2",
-        '&.Mui-checked.Mui-disabled, &.Mui-disabled': {
-          color: "gray",
-        },
-        '& .MuiSvgIcon-fontSizeMedium': {
-          width: 24,
-          height: 24,
-        },
-        '& .MuiSvgIcon-fontSizeSmall': {
-          width: 20,
-          height: 20,
-        },
-        svg: {
-          fontSize: 24,
-          '&[font-size=small]': {
-            fontSize: 20,
+    MuiCheckbox: {
+      defaultProps: {
+        icon: <CheckboxIcon />,
+        checkedIcon: <CheckboxCheckedIcon />,
+        indeterminateIcon: <CheckboxIndeterminateIcon />,
+      },
+
+      styleOverrides: {
+        root: {
+          padding: "2",
+          "&.Mui-checked.Mui-disabled, &.Mui-disabled": {
+            color: "gray",
+          },
+          "& .MuiSvgIcon-fontSizeMedium": {
+            width: 24,
+            height: 24,
+          },
+          "& .MuiSvgIcon-fontSizeSmall": {
+            width: 20,
+            height: 20,
+          },
+          svg: {
+            fontSize: 24,
+            "&[font-size=small]": {
+              fontSize: 20,
+            },
           },
         },
       },
     },
-  },
 
-  MuiAlert: {
-    defaultProps: {
-      iconMapping: {
-        info: <InfoIcon />,
-        success: <SuccessIcon />,
-        warning: <WarningIcon />,
-        error: <ErrorIcon />,
+    MuiAlert: {
+      defaultProps: {
+        iconMapping: {
+          info: <InfoIcon />,
+          success: <SuccessIcon />,
+          warning: <WarningIcon />,
+          error: <ErrorIcon />,
+        },
       },
-    },
 
-    styleOverrides: {
-        '& .MuiAlert-message': {
+      styleOverrides: {
+        "& .MuiAlert-message": {
           marginBottom: "2px",
         },
-      action: {
-        '& button:not(:first-of-type)': {
-          marginLeft: "2px",
+        action: {
+          "& button:not(:first-of-type)": {
+            marginLeft: "2px",
+          },
         },
       },
     },
-  }
+
+    MuiSvgIcon: {
+      styleOverrides: {
+        fontSizeSmall: {
+          width: 20,
+          height: 20,
+          fontSize: "inherit",
+        },
+        fontSizeLarge: {
+          width: 32,
+          height: 32,
+          fontSize: "inherit",
+        },
+      },
+    },
+
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 16,
+          fontWeight: 500,
+          "& .MuiOutlinedInput-root. Mui-focused .MuiOutlinedInput-notchedOutline": {
+
+              borderColor: "orange !important"
+
+          },
+        },
+
+      },
+    },
+  }, //end of component
 });

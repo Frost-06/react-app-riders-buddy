@@ -18,6 +18,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuIcon } from "../theme/CustomIcons";
 import { useTheme } from "@emotion/react";
+import axios from "axios";
 
 export default function Header() {
   const theme = useTheme();
@@ -91,17 +92,39 @@ export default function Header() {
           <Toolbar>
             <IconButton
               size="large"
-              edge="start"
               color="primary"
-              aria-label="menu"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2}}
               onClick={toggleDrawer("left", true)}
             >
-              <MenuIcon/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="3" y="6" width="18" height="2" rx="1" fill="#1AA3E9" />
+                <rect
+                  x="3"
+                  y="16"
+                  width="18"
+                  height="2"
+                  rx="1"
+                  fill="#1AA3E9"
+                />
+                <rect
+                  x="3"
+                  y="11"
+                  width="14"
+                  height="2"
+                  rx="1"
+                  fill="#76C8F2"
+                />
+              </svg>
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link href="/">
-                <img src="/img/logo.png" width={isMd ? 150 : 249}  alt=""/>
+                <img src="/img/logo.png" width={isMd ? 164 : 249} alt="" />
               </Link>
             </Typography>
             <Button
