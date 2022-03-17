@@ -27,7 +27,7 @@ function Banner(props) {
         transition={{ delay: 0.5, duration: 1 }}
       >
         <Container className={banner} maxWidth="100%">
-          <div style={{ marginLeft: isSm ? 0 : 150 }}>
+          <div style={{ marginLeft: isSm ? 0 : 10 }}>
             <Typography
               variant="h1"
               style={{
