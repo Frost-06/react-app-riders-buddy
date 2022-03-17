@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import EudoxusSans from "../fonts/EudoxusSans-Medium.ttf";
-import { StarIcon, MenuIcon, CheckboxIcon, CheckboxCheckedIcon, CheckboxIndeterminateIcon } from "./CustomIcons";
+import { StarIcon, MenuIcon, CheckboxIcon, CheckboxCheckedIcon, CheckboxIndeterminateIcon, InfoIcon, SuccessIcon, WarningIcon, ErrorIcon } from "./CustomIcons";
 
 const eudoxusSans = {
   fontFamily: "Eudoxus Sans",
@@ -288,4 +288,26 @@ export default createTheme({
       },
     },
   },
+
+  MuiAlert: {
+    defaultProps: {
+      iconMapping: {
+        info: <InfoIcon />,
+        success: <SuccessIcon />,
+        warning: <WarningIcon />,
+        error: <ErrorIcon />,
+      },
+    },
+
+    styleOverrides: {
+        '& .MuiAlert-message': {
+          marginBottom: "2px",
+        },
+      action: {
+        '& button:not(:first-of-type)': {
+          marginLeft: "2px",
+        },
+      },
+    },
+  }
 });

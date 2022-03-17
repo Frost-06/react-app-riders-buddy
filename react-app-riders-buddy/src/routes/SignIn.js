@@ -5,6 +5,8 @@ import {
   TextField,
   Typography,
   Paper,
+  Alert,
+  AlertTitle,
 } from "@mui/material";
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
@@ -14,7 +16,10 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import swal from "sweetalert";
+import IconButton from "@mui/material/IconButton";
+import Collapse from "@mui/material/Collapse";
+import CloseIcon from "@mui/icons-material/Close";
+import { WarningIcon } from "../theme/CustomIcons";
 
 function Copyright(props) {
   return (
@@ -25,7 +30,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="#">
         Riders Buddy
       </Link>{" "}
       {new Date().getFullYear()}
@@ -35,7 +40,9 @@ function Copyright(props) {
 }
 
 export default function SignIn() {
+  let invalidUser = "true";
   const navigate = useNavigate();
+  const [open, setOpen] = useState();
   const [loginInput, setLogin] = useState({
     email: "",
     password: "",
@@ -52,22 +59,25 @@ export default function SignIn() {
       email: loginInput.email,
       password: loginInput.password,
     };
+    
     axios.get("/sanctum/csrf-cookie").then((response) => {
       axios.post(`/api/login`, data).then((res) => {
         if (res.data.status === 200) {
           localStorage.setItem("user", res.data);
-          swal("Success", res.data.message, "success");
+          console.log("Success", res.data.message, "success");
           navigate("/homepage");
         } else if (res.data.status === 401) {
-          swal("Warning", res.data.message, "warning");
+          console.log("Warning", res.data.message, "warning");
+
         } else {
           setLogin({ ...loginInput, error_list: res.data.validation_errors });
         }
       });
     });
   };
-
+  console.log(invalidUser);
   return (
+    <>
     <Grid container component="main" sx={{ height: "100vh" }}>
       <CssBaseline />
       <Grid
@@ -88,6 +98,34 @@ export default function SignIn() {
       />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <Container component="main" maxWidth="xs">
+        {invalidUser ? (<Box sx={{ width: "100%" }}>
+          
+        <Collapse in={open} style={{marginBottom: "-39px"}}>
+          <Alert
+            sx={{borderRadius: "16px", marginTop: "20px"}}
+            icon={<WarningIcon />}
+            severity="warning"
+            color="warning"
+            action={
+              <IconButton
+                aria-label="close"
+                color="warning"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+          >
+            Invalid Credentials
+          </Alert>
+        </Collapse>
+      </Box>) : (
+        ""
+      )
+    }
           <CssBaseline />
           <Box
             sx={{
@@ -166,6 +204,9 @@ export default function SignIn() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={() => {
+                  setOpen(true);
+                }}
               >
                 Sign In
               </Button>
@@ -208,5 +249,6 @@ export default function SignIn() {
         </Container>
       </Grid>
     </Grid>
+    </>
   );
 }
