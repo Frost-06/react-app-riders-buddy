@@ -51,7 +51,7 @@ export default function Header() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Container style={{ marginTop: 40 }}>
-        <Typography variant="h3" style={{ marginBottom: 32, lineHeight: "28px", }}>
+        <Typography variant="h5" style={{ marginBottom: 32, lineHeight: "28px", }}>
           Sign in to enjoy exclusive deals and offers
         </Typography>
         <Button variant="contained" href="/sign-in" fullWidth="true">
@@ -124,7 +124,7 @@ export default function Header() {
             </IconButton>
             <Box sx={{ flexGrow: 1 }}>
               <Link href="/">
-                <img src="/img/logo.png" width={isMd ? 200 : 249} alt="" />
+                <img src="/assets/riders-buddy-horizontal-logo.svg" width={isMd ? 200 : 249} alt="" />
               </Link>
             </Box>
             <Button
