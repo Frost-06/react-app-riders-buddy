@@ -203,6 +203,7 @@ export default createTheme({
           "&.Mui-disabled": {
             opacity: 0.48,
           },
+          color: "#EAAC30"
         },
         iconEmpty: { color: "#D9DBE9" },
         sizeSmall: { "& svg": { ...ICON_SMALL } },
@@ -241,6 +242,11 @@ export default createTheme({
             boxShadow: "none",
           },
         },
+        sizeSmall: {
+          height: 56,
+          width: 156
+        },
+
         outlined: ({ theme }) => ({
           color: theme.palette.primary.main,
           borderColor: theme.palette.primary.main,
@@ -259,39 +265,77 @@ export default createTheme({
     MuiTypography: {
       styleOverrides: {
         h1: {
-          fontSize: 48,
-          color: "#14142B",
+          lineHeight: "80px",
+          fontSize: 64,
           letterSpacing: "1px",
         },
         h2: {
-          fontSize: 32,
-          color: "#14142B",
-          fontWeight: "bold",
+          lineHeight: "54px",
+          fontSize: 48,
           letterSpacing: "1px",
         },
         h3: {
-          fontSize: 18,
-          color: "#14142B",
-          fontWeight: "400",
+          lineHeight: "48px",
+          fontSize: 32,
           letterSpacing: "1px",
         },
         h4: {
+          fontWeight: 700,
+          lineHeight: "36px",
           fontSize: 24,
-          color: "#14142B",
-          fontWeight: "400",
           letterSpacing: "1px",
         },
         h5: {
-          fontSize: 20,
-          color: "#14142B",
-          fontWeight: "700",
-          letterSpacing: "0.75px",
+          fontWeight: 700,
           lineHeight: "32px",
-        },
-        label: {
-          fontSize: 15,
-          color: "#6E7191",
+          fontSize: 20,
           letterSpacing: "0.75px",
+        },
+        h6: {
+          fontWeight: 700,
+          lineHeight: "32px",
+          fontSize: 18,
+          letterSpacing: "0.75px",
+        },
+        subtitle1: {
+          fontWeight: 500,
+          lineHeight: "24px",
+          fontSize: 16,
+          letterSpacing: "0.75px",
+        },
+        subtitle2: {
+          fontWeight: 600,
+          lineHeight: "22px",
+          fontSize: 14,
+          letterSpacing: "0.75px",
+        },
+        body1: {
+          lineHeight: "24px",
+          fontSize: 16,
+          letterSpacing: "0.75px",
+        },
+        body2: {
+          lineHeight: "22px",
+          fontSize: 14,
+          letterSpacing: "0.75px",
+        },
+        caption: {
+          lineHeight: "22px",
+          fontSize: 12,
+          letterSpacing: "0.25px",
+        },
+        overline: {
+          lineHeight: "22px",
+          fontSize: 12,
+          textTransform: "uppercase",
+          letterSpacing: "0.25px",
+        },
+        button: {
+          fontWeight: 800,
+          lineHeight: "26px",
+          fontSize: 15,
+          letterSpacing: "0.75px",
+          textTransform: "none",
         },
       },
     },
