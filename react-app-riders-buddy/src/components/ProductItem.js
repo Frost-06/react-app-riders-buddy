@@ -93,7 +93,7 @@ export default function ProductItem(props) {
         </motion.div>
         <CardContent>
           <Typography
-            variant="h2"
+            variant="h5"
             style={{
               fontSize: 20,
               padding: "0px 0px 8px 0px",
