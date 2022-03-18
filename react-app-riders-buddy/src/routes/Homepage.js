@@ -40,8 +40,8 @@ function Homepage(props) {
       <Banner />
       <Container style={{ maxWidth: 1620 }}>
         <Box style={{ marginBottom: 56, marginTop: 56 }}>
-          <Typography variant="h2" style={{ marginBottom: 8 }}>Explore by Category</Typography>
-          <Typography variant="body2" style={{ marginBottom: 49 }}>
+          <Typography variant="h3" style={{fontWeight: "800", marginBottom: 8 }}>Explore by Category</Typography>
+          <Typography variant="body1" style={{color: "#6E7191", marginBottom: 49 }}>
             Discover items and services that will fit to your needs
           </Typography>
           <Categories />
@@ -79,8 +79,8 @@ function Homepage(props) {
           }}
           variant="outlined"
         />
-        <Typography variant="h2" style={{ marginBottom: 8 }}>Best Deals</Typography>
-        <Typography variant="body2" style={{ marginBottom: 56 }}>
+        <Typography variant="h3" style={{fontWeight: "800", marginBottom: 8 }}>Best Deals</Typography>
+        <Typography variant="body1" style={{color: "#6E7191", marginBottom: 56 }}>
           Greatest offers awaits you.
         </Typography>
         <CarouselContainer />
@@ -120,14 +120,14 @@ function Homepage(props) {
           variant="outlined"
         />
 
-        <Typography variant="h2" style={{ marginBottom: 8 }}>What’s new?</Typography>
-        <Typography variant="body2" style={{ marginBottom: 56 }}>
+        <Typography variant="h3" style={{fontWeight: "800", marginBottom: 8 }}>What’s new?</Typography>
+        <Typography variant="body1" style={{color: "#6E7191", marginBottom: 56 }}>
           Experience the latest and be part of the trend!
         </Typography>
         <SecondCarouselContainer />
         <Divider sx={{mb: "48px", mt: "48px"}} />
-        <Typography variant="h2" style={{ marginBottom: 8 }}>Bicycle Products and Services</Typography>
-        <Typography variant="body2" style={{ marginBottom: 56 }}>
+        <Typography variant="h3" style={{fontWeight: "800", marginBottom: 8 }}>Bicycle Products and Services</Typography>
+        <Typography variant="body1" style={{color: "#6E7191", marginBottom: 56 }}>
           Explore shops products and services that fits you
         </Typography>
         <Box width="100%" spacing={2}>
