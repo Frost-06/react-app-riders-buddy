@@ -126,7 +126,7 @@ function Homepage(props) {
         </Typography>
         <SecondCarouselContainer />
         <Divider sx={{mb: "48px", mt: "48px"}} />
-        <Typography variant="h2">Bicycle Products and Services</Typography>
+        <Typography variant="h2" style={{ marginBottom: 8 }}>Bicycle Products and Services</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Explore shops products and services that fits you
         </Typography>
