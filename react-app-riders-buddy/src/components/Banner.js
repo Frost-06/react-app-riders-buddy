@@ -29,7 +29,7 @@ function Banner(props) {
         <Container className={banner} maxWidth="100%">
           <div style={{ marginLeft: isMd ? 10 : 140 }}>
             <Typography
-              variant="h1"
+              variant="h2"
               style={{
                 fontWeight: 700,
                 marginBottom: 24,
@@ -42,7 +42,7 @@ function Banner(props) {
                 className="searchbox"
                 placeholder="Enter your delivery address..."
                 InputProps={{
-                  outline: 'none',
+                  outline: "none",
                   startAdornment: (
                     <InputAdornment position="start">
                       <svg
