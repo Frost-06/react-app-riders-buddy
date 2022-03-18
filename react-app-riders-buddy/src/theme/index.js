@@ -442,7 +442,7 @@ export default createTheme({
           fontWeight: 500,
           "& .MuiOutlinedInput-root. Mui-focused .MuiOutlinedInput-notchedOutline":
             {
-              borderColor: "orange !important",
+              border: "1px solid green !important",
             },
         },
       },
