@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Button, Grid, LinearProgress } from "@mui/material";
+import { Button, Container, Grid, LinearProgress } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
@@ -52,7 +52,11 @@ export default function ProductItem(props) {
   return (
     <Link to={"/" + categoryType} state={props}>
       <Card sx={{ maxWidth: 356 }}>
+        <Container
+        sx={{position: "absolute"}}
+        >
         <CardHeader
+          sx={{ position: "relative", zIndex: "1500"}}
           avatar={
             //sale price
             salePrice ? (
@@ -60,7 +64,7 @@ export default function ProductItem(props) {
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px", marginLeft: "-16px", zIndex: "0" }}
+                style={{ padding: "5px 9px", marginLeft: "-40px", zIndex: "0" }}
               >
                 {salePrice * 100}% off
               </Box>
@@ -78,21 +82,14 @@ export default function ProductItem(props) {
               />
             )
           }
-          title=""
-          subheader=""
         />
+        </Container>
         <motion.div
           whileHover={{
             scale: 1.1,
           }}
         >
-          <CardMedia
-            component="img"
-            height="194"
-            image={image}
-            alt=""
-            style={{ marginTop: "10px" }}
-          />
+          <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
         <CardContent>
           <Typography
@@ -102,7 +99,7 @@ export default function ProductItem(props) {
               padding: "0px 0px 8px 0px",
             }}
           >
-            {item_name && item_name.slice(0, 45) + "..."}
+            {item_name && item_name.slice(0, 40) + "..."}
           </Typography>
           {rating && (
             <Box

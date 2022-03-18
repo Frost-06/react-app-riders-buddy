@@ -236,7 +236,7 @@ export default createTheme({
         h3: {
           fontSize: 18,
           color: "#14142B",
-          fontWeight: "600",
+          fontWeight: "400",
           letterSpacing: "1px",
         },
         label: {
@@ -253,12 +253,12 @@ export default createTheme({
         root: ({ theme }) => ({
           height: 120,
           paddingTop: 25,
-          backgroundColor: "#ffffff",
+          backgroundColor: "transparent",
           position: "inherit",
           top: 0,
           zIndex: 99,
-          color: theme.palette.primary.main,
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
+          backdropFilter:"blur(50px)"
         }),
       },
     },
