@@ -26,10 +26,10 @@ function Footer(props) {
           }}
         >
           <Typography
-            variant="h1"
+            variant="h2"
             style={{ fontWeight: "bold", color: "#1AA3E9", padding: "0px 24px 0px 24px"}}
           >
-            Why Riders Buddy?
+           Why choose Riders Buddy?
           </Typography>
         </Container>
       </Box>
@@ -38,7 +38,7 @@ function Footer(props) {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "128px",
+          gap: "120px",
           flexWrap: "wrap",
           width: "80%",
           maxWidth: 1920,
@@ -50,10 +50,10 @@ function Footer(props) {
           <Box style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/prof-mechanic.png"} alt="prof" />
             <Container>
-              <Typography variant="h2" style={{ color: "#0D5275" }}>
+              <Typography variant="h3" style={{fontWeight: "800", color: "#0D5275" }}>
                 Professional Mechanics
               </Typography>
-              <Typography variant="normal">
+              <Typography variant="body1" style={{color: "#6E7191"}}>
                 Cheap with excellent jobs
               </Typography>
             </Container>
@@ -64,10 +64,10 @@ function Footer(props) {
           <Box style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/security.png"} alt="prof" />
             <Container>
-              <Typography variant="h2" style={{ color: "#0D5275" }}>
+              <Typography variant="h3" style={{fontWeight: "800", color: "#0D5275" }}>
                 Reliable products
               </Typography>
-              <Typography variant="normal">
+              <Typography variant="body1" style={{color: "#6E7191"}}>
                 Proven and tested product quality
               </Typography>
             </Container>
@@ -78,10 +78,10 @@ function Footer(props) {
           <Box style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/support.png"} alt="prof" />
             <Container>
-              <Typography variant="h2" style={{ color: "#0D5275" }}>
+              <Typography variant="h3" style={{fontWeight: "800", color: "#0D5275" }}>
                 Customer Support
               </Typography>
-              <Typography variant="normal">Friendly 24/7 Support</Typography>
+              <Typography variant="body1" style={{color: "#6E7191"}}>Friendly 24/7 Support</Typography>
             </Container>
           </Box>
         </Box>
