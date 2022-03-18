@@ -40,7 +40,7 @@ function Homepage(props) {
       <Banner />
       <Container style={{ maxWidth: 1620 }}>
         <Box style={{ marginBottom: 56, marginTop: 56 }}>
-          <Typography variant="h2">Explore by Category</Typography>
+          <Typography variant="h2" style={{ marginBottom: 8 }}>Explore by Category</Typography>
           <Typography variant="body2" style={{ marginBottom: 49 }}>
             Discover items and services that will fit to your needs
           </Typography>
@@ -79,7 +79,7 @@ function Homepage(props) {
           }}
           variant="outlined"
         />
-        <Typography variant="h2">Best Deals</Typography>
+        <Typography variant="h2" style={{ marginBottom: 8 }}>Best Deals</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Greatest offers awaits you.
         </Typography>
@@ -120,7 +120,7 @@ function Homepage(props) {
           variant="outlined"
         />
 
-        <Typography variant="h2">What’s new?</Typography>
+        <Typography variant="h2" style={{ marginBottom: 8 }}>What’s new?</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Experience the latest and be part of the trend!
         </Typography>
@@ -132,7 +132,7 @@ function Homepage(props) {
         </Typography>
         <Box width="100%" spacing={2}>
           {products && (
-            <Grid container columns={isMd ? 2 : 4} spacing={2}>
+            <Grid container columns={isMd ? 2 : 4} spacing={4}>
               {products.map((product, index) => (
                 <Grid key={index} item xs={1}>
                   <ProductItem {...product} />
