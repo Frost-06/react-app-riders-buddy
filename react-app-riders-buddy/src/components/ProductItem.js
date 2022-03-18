@@ -64,7 +64,7 @@ export default function ProductItem(props) {
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px", marginLeft: "-40px", zIndex: "0" }}
+                style={{ padding: "5px 9px", marginLeft: "-40px", zIndex: "0", fontSize: "12" , fontWeight: "500" }}
               >
                 {salePrice * 100}% off
               </Box>
@@ -91,7 +91,7 @@ export default function ProductItem(props) {
         >
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
-        <CardContent>
+        <CardContent sx={{paddingRight: "14px !important"}}>
           <Typography
             variant="h5"
             style={{
@@ -124,29 +124,30 @@ export default function ProductItem(props) {
                 }}
               />
               &nbsp;&nbsp;
-              <span>({reviews})</span>
+              <Typography variant="subtitle1" sx={{color: "#6E7191"}}>({reviews})</Typography>
             </Box>
           )}
           <Grid
             container
             columns={2}
             alignItems="center"
-            style={{ marginTop: "20px" }}
+            style={{ marginTop: "20px"}}
           >
             <Grid xs={1}>
-              <span variant="label">Starting at</span>
+              <span variant="body1">Starting at</span>
               <Typography
+              variant="h3"
                 style={{
                   color: "#1AA3E9",
-                  fontSize: 28,
-                  fontWeight: 700,
+                  lineHeight: "25px !important",
+                  fontWeight: 800,
                 }}
               >
                 ₱ {price}
               </Typography>
             </Grid>
             <Grid xs={1}>
-              <Button variant="contained">Get Price</Button>
+              <Button variant="contained" size="small">Get Price</Button>
             </Grid>
           </Grid>
         </CardContent>
