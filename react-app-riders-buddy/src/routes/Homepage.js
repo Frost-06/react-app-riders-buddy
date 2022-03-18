@@ -20,7 +20,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ProductItem from "../components/ProductItem";
 
-function Dashboard(props) {
+function Homepage(props) {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
   const [products, setProducts] = useState();
@@ -38,14 +38,14 @@ function Dashboard(props) {
       <ChatContainer />
       <Header />
       <Banner />
-      <Container style={{ maxWidth: 1600 }}>
-        <div style={{ marginBottom: 56, marginTop: 56 }}>
+      <Container style={{ maxWidth: 1620 }}>
+        <Box style={{ marginBottom: 56, marginTop: 56 }}>
           <Typography variant="h2">Explore by Category</Typography>
           <Typography variant="body2" style={{ marginBottom: 49 }}>
             Discover items and services that will fit to your needs
           </Typography>
           <Categories />
-        </div>
+        </Box>
         <TextField
           style={{ width: 560, marginBottom: 56 }}
           className="searchbox noshadow"
@@ -149,4 +149,4 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+export default Homepage;

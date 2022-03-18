@@ -1,10 +1,15 @@
-import { Container, Grid } from "@mui/material";
+import { useTheme } from "@emotion/react";
+import { Container, Grid, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
 import CategoryCard from "./CategoryCard";
 
 function Categories(props) {
+  const theme = useTheme();
+
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} sx={{ flexWrap: isMd ? "wrap !important" : "nowrap !important"}}>
       {[
         {
           title: "BICYCLE",

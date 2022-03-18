@@ -101,7 +101,7 @@ export default createTheme({
         },
         ".category-card": {
           position: "relative",
-          width: 500,
+          width: 502,
           minHeight: 162,
           backgroundColor: "#fcfcfc",
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
@@ -115,7 +115,6 @@ export default createTheme({
             h2: {
               color: "#1AA3E9",
             },
-            zIndex: 99,
             borderBottomColor: "#1AA3E9",
             boxShadow: "none",
           },
@@ -252,13 +251,12 @@ export default createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: ({ theme }) => ({
-          paddingBottom: 32,
           height: 120,
-          paddingTop: 32,
+          paddingTop: 25,
           backgroundColor: "#ffffff",
-          position: "sticky",
+          position: "inherit",
           top: 0,
-          zIndex: 20,
+          zIndex: 99,
           color: theme.palette.primary.main,
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
         }),

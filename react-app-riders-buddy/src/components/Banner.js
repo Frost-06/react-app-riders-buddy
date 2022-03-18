@@ -15,7 +15,7 @@ import { NearbyLocation } from "../theme/CustomIcons";
 
 function Banner(props) {
   const theme = useTheme();
-  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   var arr = ["banner-3", "banner", "banner-2"];
   var banner = arr[Math.floor(Math.random() * arr.length)];
   console.log(banner);
@@ -27,7 +27,7 @@ function Banner(props) {
         transition={{ delay: 0.5, duration: 1 }}
       >
         <Container className={banner} maxWidth="100%">
-          <div style={{ marginLeft: isSm ? 0 : 10 }}>
+          <div style={{ marginLeft: isMd ? 10 : 140 }}>
             <Typography
               variant="h1"
               style={{

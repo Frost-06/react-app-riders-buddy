@@ -122,11 +122,11 @@ export default function Header() {
                 />
               </svg>
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1 }}>
               <Link href="/">
-                <img src="/img/logo.png" width={isMd ? 164 : 249} alt="" />
+                <img src="/img/logo.png" width={isMd ? 200 : 249} alt="" />
               </Link>
-            </Typography>
+            </Box>
             <Button
               variant="contained"
               href="/sign-in"
