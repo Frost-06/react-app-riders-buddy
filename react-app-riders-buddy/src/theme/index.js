@@ -15,8 +15,6 @@ import {
 const eudoxusSans = {
   fontFamily: "Eudoxus Sans",
   fontStyle: "medium",
-  // fontDisplay: 'swap',
-  // fontWeight: '600',
   src: `
     local('EudoxusSans'),
     local('EudoxusSans-Medium'),
@@ -33,10 +31,48 @@ export default createTheme({
   typography: {
     fontFamily: "Eudoxus Sans",
   },
-
   palette: {
     primary: {
+      lighter: "#E5F3F9",
+      light: "#D1EDFB",
       main: "#1AA3E9",
+      dark: "#0D5275",
+      darker: "#76C8F2",
+    },
+    secondary: {
+      lighter: "#E5F3F9",
+      light: "#E2EBF2",
+      main: "#003459",
+      dark: "#001A2D",
+      darker: "#66859B",
+    },
+    info: {
+      lighter: "#E5F3F9",
+      light: "#D1EDFB",
+      main: "#1AA3E9",
+      dark: "#0D5275",
+      darker: "#76C8F2",
+    },
+    success: {
+      lighter: "#EAF9DE",
+      light: "#CBFFAE",
+      main: "#008A00",
+      dark: "#067306",
+      darker: "#A6F787",
+    },
+    warning: {
+      lighter: "#FFF8E9",
+      light: "#FFE6B0",
+      main: "#EAAC30",
+      dark: "#946300",
+      darker: "#FFDF9A",
+    },
+    error: {
+      lighter: "#FFF2F1",
+      light: "#FFC3C0",
+      main: "#E61B00",
+      dark: "#AB1400",
+      darker: "#FD6150",
     },
   },
   components: {
@@ -54,7 +90,7 @@ export default createTheme({
         body: {
           overflowX: "hidden",
         },
-        
+
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
           backgroundSize: "cover",
@@ -239,14 +275,25 @@ export default createTheme({
           fontWeight: "400",
           letterSpacing: "1px",
         },
+        h4: {
+          fontSize: 24,
+          color: "#14142B",
+          fontWeight: "400",
+          letterSpacing: "1px",
+        },
+        h5: {
+          fontSize: 20,
+          color: "#14142B",
+          fontWeight: "700",
+          letterSpacing: "0.75px",
+          lineHeight: "32px",
+        },
         label: {
           fontSize: 15,
           color: "#6E7191",
           letterSpacing: "0.75px",
         },
-        
       },
-
     },
     MuiAppBar: {
       styleOverrides: {
@@ -258,7 +305,7 @@ export default createTheme({
           top: 0,
           zIndex: 99,
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
-          backdropFilter:"blur(50px)"
+          backdropFilter: "blur(50px)",
         }),
       },
     },
@@ -349,13 +396,11 @@ export default createTheme({
         root: {
           borderRadius: 16,
           fontWeight: 500,
-          "& .MuiOutlinedInput-root. Mui-focused .MuiOutlinedInput-notchedOutline": {
-
-              borderColor: "orange !important"
-
-          },
+          "& .MuiOutlinedInput-root. Mui-focused .MuiOutlinedInput-notchedOutline":
+            {
+              borderColor: "orange !important",
+            },
         },
-
       },
     },
   }, //end of component
