@@ -22,9 +22,9 @@ function SecondCarouselItems(props) {
   return (
     <Box
       width="100%"
-      spacing={4}
+      spacing={5}
       style={{
-        padding: "10px 0px 30px 1px",
+        padding: "10px 0px 30px 10px",
       }}
     >
       {newItems && (
