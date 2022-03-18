@@ -5,7 +5,7 @@ import * as React from "react";
 
 function Footer(props) {
   return (
-    <div>
+    <div >
       <Box
         style={{
           backgroundColor: "#F7F7FC",
@@ -20,14 +20,14 @@ function Footer(props) {
           style={{
             margin: "0 auto",
             marginTop: "88px",
-            width: "80%",
+            width: "100%",
             padding: "42px 0",
+            maxWidth: 1600
           }}
-          maxWidth="1920px!important"
         >
           <Typography
             variant="h1"
-            style={{ fontWeight: "bold", color: "#1AA3E9" }}
+            style={{ fontWeight: "bold", color: "#1AA3E9", padding: "0px 24px 0px 24px"}}
           >
             Why Riders Buddy?
           </Typography>
@@ -181,13 +181,35 @@ function Footer(props) {
               color: "#1AA3E9",
             }}
           >
-            CONTACT
+              &nbsp;
           </Typography>
-          <Typography>support-ridersbuddy@gmail.com</Typography>
+          <Link href="https://sites.google.com/view/riders-buddy/home">
+            Terms and Conditions
+          </Link>
+          <Link>Privacy Policy</Link>
 
-          <Typography>(032) 541 9812</Typography>
-
-          <Box style={{ display: "flex", gap: "32px" }}>
+          
+        </Box>
+      </Box>
+      <Divider/>
+      <Container
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "80%",
+          maxWidth: 1600,
+          margin: "0 auto",
+          padding: "22px 0",
+        }}
+      >
+        <Typography
+          style={{ fontSize: "18px", fontWeight: "bold", color: "#1AA3E9" }}
+        >
+          ©2022 Riders Buddy
+        </Typography>
+        <Box style={{ display: "flex", flexDirection: "row", gap: "32px" }}>
+        <Box style={{ display: "flex", gap: "32px" }}>
             <Link>
               <img src={"/img/Facebook.png"} alt="fb" />
             </Link>
@@ -199,31 +221,7 @@ function Footer(props) {
             </Link>
           </Box>
         </Box>
-      </Box>
-      <Divider />
-      <Box
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "80%",
-          maxWidth: 1920,
-          margin: "0 auto",
-          padding: "22px 0",
-        }}
-      >
-        <Typography
-          style={{ fontSize: "18px", fontWeight: "bold", color: "#1AA3E9" }}
-        >
-          ©2022 Riders Buddy
-        </Typography>
-        <Box style={{ display: "flex", flexDirection: "row", gap: "32px" }}>
-          <Link href="https://sites.google.com/view/riders-buddy/home">
-            Terms and Conditions
-          </Link>
-          <Link>Privacy Policy</Link>
-        </Box>
-      </Box>
+      </Container>
     </div>
   );
 }

@@ -9,7 +9,7 @@ function Categories(props) {
 
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Grid container spacing={2} sx={{ flexWrap: isMd ? "wrap !important" : "nowrap !important"}}>
+    <Grid container spacing={4} sx={{ flexWrap: isMd ? "wrap !important" : "nowrap !important"}}>
       {[
         {
           title: "BICYCLE",

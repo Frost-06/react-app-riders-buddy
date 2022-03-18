@@ -51,8 +51,8 @@ export default function Header() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Container style={{ marginTop: 40 }}>
-        <Typography variant="h1" style={{ fontSize: 28, marginBottom: 32 }}>
-          Sign-in to enjoy exclusive deals and offers
+        <Typography variant="h3" style={{ marginBottom: 32, lineHeight: "28px", }}>
+          Sign in to enjoy exclusive deals and offers
         </Typography>
         <Button variant="contained" href="/sign-in" fullWidth="true">
           Sign in
@@ -88,7 +88,7 @@ export default function Header() {
           {list("left")}
         </SwipeableDrawer>
 
-        <AppBar position="sticky">
+        <AppBar position="sticky" color="transparent">
           <Toolbar>
             <IconButton
               size="large"
