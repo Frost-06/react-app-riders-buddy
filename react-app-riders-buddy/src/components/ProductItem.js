@@ -52,37 +52,41 @@ export default function ProductItem(props) {
   return (
     <Link to={"/" + categoryType} state={props}>
       <Card sx={{ maxWidth: 356 }}>
-        <Container
-        sx={{position: "absolute"}}
-        >
-        <CardHeader
-          sx={{ position: "relative", zIndex: "1500"}}
-          avatar={
-            //sale price
-            salePrice ? (
-              <Box
-                bgcolor={theme.palette.primary.main}
-                color="#ffffff"
-                width={100}
-                style={{ padding: "5px 9px", marginLeft: "-40px", zIndex: "0", fontSize: "12" , fontWeight: "500" }}
-              >
-                {salePrice * 100}% off
-              </Box>
-            ) : (
-              ""
-            )
-          }
-          action={
-            // check if category type product or service
-            categoryType === "product" && (
-              <img
-                src={"/img/product-category-label-icon.png"}
-                style={{ marginTop: "-12px" }}
-                alt=""
-              />
-            )
-          }
-        />
+        <Container sx={{ position: "absolute" }}>
+          <CardHeader
+            sx={{ position: "relative", zIndex: "1500" }}
+            avatar={
+              //sale price
+              salePrice ? (
+                <Box
+                  bgcolor={theme.palette.primary.main}
+                  color="#ffffff"
+                  width={100}
+                  style={{
+                    padding: "5px 9px",
+                    marginLeft: "-40px",
+                    zIndex: "0",
+                    fontSize: "12",
+                    fontWeight: "500",
+                  }}
+                >
+                  {salePrice * 100}% off
+                </Box>
+              ) : (
+                ""
+              )
+            }
+            action={
+              // check if category type product or service
+              categoryType === "product" && (
+                <img
+                  src={"/img/product-category-label-icon.png"}
+                  style={{ marginTop: "-12px" }}
+                  alt=""
+                />
+              )
+            }
+          />
         </Container>
         <motion.div
           whileHover={{
@@ -91,15 +95,22 @@ export default function ProductItem(props) {
         >
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
-        <CardContent sx={{paddingRight: "14px !important"}}>
+        <CardContent sx={{ paddingRight: "14px !important" }}>
           <Typography
-            variant="h5"
+            variant="h6"
             style={{
-              fontSize: 20,
               padding: "0px 0px 8px 0px",
+              maxWidth: "100%",
+              textAlign: "left",
+              textJustify: "inter-word",
+              display: "-webkit-box",
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 2,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
-            {item_name && item_name.slice(0, 40) + "..."}
+            {item_name}
           </Typography>
           {rating && (
             <Box
@@ -124,19 +135,25 @@ export default function ProductItem(props) {
                 }}
               />
               &nbsp;&nbsp;
-              <Typography variant="subtitle1" sx={{color: "#6E7191"}}>({reviews})</Typography>
+              <Typography variant="subtitle1" sx={{ color: "#6E7191" }}>
+                ({reviews})
+              </Typography>
             </Box>
           )}
           <Grid
             container
             columns={2}
             alignItems="center"
-            style={{ marginTop: "20px"}}
+            style={{
+              display: "flex",
+              marginTop: "20px",
+              justifyContent: "space-between",
+            }}
           >
-            <Grid xs={1}>
-              <span variant="body1">Starting at</span>
+            <Box xs={1}>
+              <Typography variant="body2">Starting at</Typography>
               <Typography
-              variant="h3"
+                variant="h3"
                 style={{
                   color: "#1AA3E9",
                   lineHeight: "25px !important",
@@ -145,10 +162,12 @@ export default function ProductItem(props) {
               >
                 ₱ {price}
               </Typography>
-            </Grid>
-            <Grid xs={1}>
-              <Button variant="contained" size="small">Get Price</Button>
-            </Grid>
+            </Box>
+            <Box xs={1}>
+              <Button variant="contained" size="small" alignItems="right">
+                Get Price
+              </Button>
+            </Box>
           </Grid>
         </CardContent>
       </Card>

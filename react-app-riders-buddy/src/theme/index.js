@@ -244,7 +244,7 @@ export default createTheme({
         },
         sizeSmall: {
           height: 56,
-          width: 156
+          maxWidth: 156
         },
 
         outlined: ({ theme }) => ({
