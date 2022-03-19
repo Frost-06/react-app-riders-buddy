@@ -24,7 +24,7 @@ const eudoxusSans = {
     "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
 };
 
-const ICON_SMALL = { width: 20, height: 20 };
+const ICON_SMALL = { width: 16, height: 16 };
 const ICON_LARGE = { width: 28, height: 28 };
 
 export default createTheme({
@@ -137,8 +137,6 @@ export default createTheme({
         },
         ".category-card": {
           position: "relative",
-          width: 502,
-          minHeight: 162,
           backgroundColor: "#fcfcfc",
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
           filter: "grayscale(100%)",
@@ -233,18 +231,20 @@ export default createTheme({
         root: {
           borderRadius: 40,
           color: "#ffffff",
-          fontSize: 15,
+          fontSize: 14,
           fontWeight: "bold",
           textTransform: "none",
           padding: "20px 32px",
+          letterSpacing: "0.75px",
           boxShadow: "0px 8px 16px rgba(26, 163, 233, 0.24)",
           "&:hover": {
             boxShadow: "none",
           },
         },
         sizeSmall: {
-          height: 56,
-          maxWidth: 156
+          height: 48,
+          width: 144,
+          maxWidth: 156,
         },
 
         outlined: ({ theme }) => ({

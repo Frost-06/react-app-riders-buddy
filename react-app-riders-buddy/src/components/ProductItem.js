@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Button, Container, Grid, LinearProgress } from "@mui/material";
+import { Button,  CardActions, Container, Grid, LinearProgress } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
@@ -51,7 +51,7 @@ export default function ProductItem(props) {
 
   return (
     <Link to={"/" + categoryType} state={props}>
-      <Card sx={{ maxWidth: 356 }}>
+      <Card sx={{ maxWidth: 356, height: 424 }}>
         <Container sx={{ position: "absolute" }}>
           <CardHeader
             sx={{ position: "relative", zIndex: "1500" }}
@@ -112,7 +112,8 @@ export default function ProductItem(props) {
           >
             {item_name}
           </Typography>
-          {rating && (
+          <Grid>
+            {rating && (
             <Box
               variant="body2"
               style={{
@@ -140,7 +141,9 @@ export default function ProductItem(props) {
               </Typography>
             </Box>
           )}
-          <Grid
+
+          <CardActions>
+          <Grid //lower
             container
             columns={2}
             alignItems="center"
@@ -153,7 +156,7 @@ export default function ProductItem(props) {
             <Box xs={1}>
               <Typography variant="body2">Starting at</Typography>
               <Typography
-                variant="h3"
+                variant="h4"
                 style={{
                   color: "#1AA3E9",
                   lineHeight: "25px !important",
@@ -168,6 +171,8 @@ export default function ProductItem(props) {
                 Get Price
               </Button>
             </Box>
+          </Grid>
+          </CardActions>
           </Grid>
         </CardContent>
       </Card>
