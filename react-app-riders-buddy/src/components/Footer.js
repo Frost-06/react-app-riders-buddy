@@ -222,7 +222,7 @@ function Footer(props) {
               Terms and Conditions
             </Link>
             <Link>Privacy Policy</Link>
-            <Typography>&nbsp;</Typography>
+            <Link>Return Policy</Link>
           </Box>
         </Box>
 
