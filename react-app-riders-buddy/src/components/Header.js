@@ -7,6 +7,7 @@ import {
   Link,
   Divider,
   useMediaQuery,
+  Grid,
 } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -89,7 +90,7 @@ export default function Header() {
         </SwipeableDrawer>
 
         <AppBar position="sticky" color="transparent">
-          <Toolbar>
+          <Toolbar >
             <IconButton
               size="large"
               color="primary"

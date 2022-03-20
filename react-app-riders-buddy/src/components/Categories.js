@@ -9,8 +9,8 @@ function Categories(props) {
 
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Grid container spacing={4} sx={{ flexWrap: isMd ? "wrap !important" : "nowrap !important"}}>
-      {[
+    <Grid sx={{flexWrap: isMd ? "wrap !important" : "nowrap !important"}}>
+      {[ 
         {
           title: "BICYCLE",
           description:
@@ -30,9 +30,7 @@ function Categories(props) {
           image: "/img/shops.png",
         },
       ].map(({ title, description, image }) => (
-        <Grid item key={title}>
-          <CategoryCard title={title} description={description} image={image} />
-        </Grid>
+          <CategoryCard key={title} title={title} description={description} image={image}/>
       ))}
     </Grid>
   );

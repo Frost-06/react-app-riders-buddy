@@ -184,11 +184,7 @@ export default createTheme({
         },
       },
     },
-    MuiButtonBase: {
-      defaultProps: {
-        disableRipple: false,
-      },
-    },
+    
 
     MuiRating: {
       defaultProps: {
@@ -226,6 +222,12 @@ export default createTheme({
       },
     },
 
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: false,
+      },
+    },
+
     MuiButton: {
       styleOverrides: {
         root: {
@@ -246,6 +248,7 @@ export default createTheme({
           width: 144,
           maxWidth: 156,
         },
+        
 
         outlined: ({ theme }) => ({
           color: theme.palette.primary.main,
@@ -266,7 +269,7 @@ export default createTheme({
       styleOverrides: {
         h1: {
           lineHeight: "80px",
-          fontSize: 64,
+          fontSize: 56,
           letterSpacing: "1px",
         },
         h2: {
@@ -343,7 +346,8 @@ export default createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           height: 120,
-          paddingTop: 25,
+          justifyContent: "space-evenly",
+          gap: 5,
           backgroundColor: "transparent",
           position: "inherit",
           top: 0,

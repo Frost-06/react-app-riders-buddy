@@ -27,9 +27,9 @@ function Banner(props) {
         transition={{ delay: 0.5, duration: 1 }}
       >
         <Container className={banner} maxWidth="100%">
-          <div style={{ marginLeft: isMd ? 10 : 140 }}>
+          <div style={{ marginLeft: isMd ? 10 : 80 }}>
             <Typography
-              variant="h2"
+              variant="h1"
               style={{
                 fontWeight: 700,
                 marginBottom: 24,
@@ -68,60 +68,67 @@ function Banner(props) {
                     </InputAdornment>
                   ),
                   endAdornment: (
-                    <IconButton color="primary">
-                      <InputAdornment position="end">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            x="11"
-                            y="1"
-                            width="2"
-                            height="3"
-                            rx="1"
-                            fill="#1AA3E9"
-                          />
-                          <rect
-                            x="11"
-                            y="20"
-                            width="2"
-                            height="3"
-                            rx="1"
-                            fill="#1AA3E9"
-                          />
-                          <rect
-                            x="23"
-                            y="11"
-                            width="2"
-                            height="3"
-                            rx="1"
-                            transform="rotate(90 23 11)"
-                            fill="#1AA3E9"
-                          />
-                          <rect
-                            x="4"
-                            y="11"
-                            width="2"
-                            height="3"
-                            rx="1"
-                            transform="rotate(90 4 11)"
-                            fill="#1AA3E9"
-                          />
-                          <circle
-                            cx="12"
-                            cy="12"
-                            r="8"
-                            stroke="#1AA3E9"
-                            stroke-width="2"
-                          />
-                          <circle cx="12" cy="12" r="4" fill="#76C8F2" />
-                        </svg>
-                      </InputAdornment>
-                    </IconButton>
+                      <IconButton color="primary" disableRipple={true}>
+                        <motion.div
+                      initial={{scale: 1}}
+                      whileTap={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 100, ease: "easeIn", duration: 1 }}
+                      style={{originZ: 0.5}}
+                    >
+                        <InputAdornment position="end">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="11"
+                              y="1"
+                              width="2"
+                              height="3"
+                              rx="1"
+                              fill="#1AA3E9"
+                            />
+                            <rect
+                              x="11"
+                              y="20"
+                              width="2"
+                              height="3"
+                              rx="1"
+                              fill="#1AA3E9"
+                            />
+                            <rect
+                              x="23"
+                              y="11"
+                              width="2"
+                              height="3"
+                              rx="1"
+                              transform="rotate(90 23 11)"
+                              fill="#1AA3E9"
+                            />
+                            <rect
+                              x="4"
+                              y="11"
+                              width="2"
+                              height="3"
+                              rx="1"
+                              transform="rotate(90 4 11)"
+                              fill="#1AA3E9"
+                            />
+                            <circle
+                              cx="12"
+                              cy="12"
+                              r="8"
+                              stroke="#1AA3E9"
+                              stroke-width="2"
+                            />
+                            <circle cx="12" cy="12" r="4" fill="#76C8F2" />
+                          </svg>
+                        </InputAdornment>
+                        </motion.div>
+                      </IconButton>
                   ),
                 }}
                 variant="outlined"

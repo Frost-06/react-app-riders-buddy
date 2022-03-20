@@ -51,7 +51,7 @@ export default function ProductItem(props) {
 
   return (
     <Link to={"/" + categoryType} state={props}>
-      <Card sx={{ maxWidth: 356, height: 424 }}>
+      <Card sx={{ maxWidth: 356, height: 408 }}>
         <Container sx={{ position: "absolute" }}>
           <CardHeader
             sx={{ position: "relative", zIndex: "1500" }}
@@ -142,7 +142,7 @@ export default function ProductItem(props) {
             </Box>
           )}
 
-          <CardActions>
+          <CardActions sx={{padding: "0 !important"}}>
           <Grid //lower
             container
             columns={2}
