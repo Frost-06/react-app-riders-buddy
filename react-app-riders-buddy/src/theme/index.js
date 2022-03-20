@@ -128,10 +128,10 @@ export default createTheme({
             height: "100%",
             borderRadius: 16,
             "&:not(.noshadow)": {
-              boxShadow: "0px 16px 32px -4px rgba(110, 113, 145, 0.12);",
+              boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
             },
             marginRight: 19,
-            borderColor: "#D9DBE9",
+            border: "#D9DBE9",
             backgroundColor: "#ffffff",
           },
         },
@@ -146,7 +146,7 @@ export default createTheme({
           "&:hover": {
             cursor: "pointer",
             filter: "none",
-
+            transition: ".2s ease-in",
             h2: {
               color: "#1AA3E9",
             },
@@ -445,9 +445,10 @@ export default createTheme({
         root: {
           borderRadius: 16,
           fontWeight: 500,
-          "& .MuiOutlinedInput-root. Mui-focused .MuiOutlinedInput-notchedOutline":
+          "& .MuiOutlinedInput-notchedOutline":
             {
-              border: "1px solid green !important",
+              border: "none",
+              color: "#FCFCFC"
             },
         },
       },
