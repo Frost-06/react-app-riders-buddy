@@ -138,6 +138,7 @@ export default createTheme({
         ".category-card": {
           position: "relative",
           backgroundColor: "#fcfcfc",
+          maxWidth: 548,
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
           filter: "grayscale(100%)",
           padding: 32,
