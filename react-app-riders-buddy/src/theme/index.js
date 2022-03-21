@@ -92,25 +92,25 @@ export default createTheme({
         },
 
         ".banner": {
-          background: "url(/img/banner-bg.png) no-repeat center",
+          background: "url(/img/banner-bg.png) no-repeat left center",
           backgroundSize: "cover",
-          height: "calc( 100vh - 120px )",
+          height: "calc( 100vh - 96px )",
           display: "flex!important",
           alignItems: "center",
           maxWidth: "1920px!important",
         },
         ".banner-2": {
-          background: "url(/img/banner-bg-2.png) no-repeat center",
+          background: "url(/img/banner-bg-2.png) no-repeat left center",
           backgroundSize: "cover",
-          height: "calc( 100vh - 120px )",
+          height: "calc( 100vh - 96px )",
           display: "flex!important",
           alignItems: "center",
           maxWidth: "1920px!important",
         },
         ".banner-3": {
-          background: "url(/img/banner-bg-3.png) no-repeat center",
+          background: "url(/img/banner-bg-3.png) no-repeat left center",
           backgroundSize: "cover",
-          height: "calc( 100vh - 120px )",
+          height: "calc( 100vh - 96px )",
           display: "flex!important",
           alignItems: "center",
           maxWidth: "1920px!important",
@@ -123,18 +123,24 @@ export default createTheme({
         },
         ".searchbox": {
           width: "calc(100% - 148px)",
-          height: 67,
+          height: 64,
+          
           "& > div": {
             height: "100%",
             borderRadius: 16,
             "&:not(.noshadow)": {
               boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
+              "&:hover": {
+                border: "1px solid #A0A3BD",
+                transition: ".2s ease-in-out"
+              },
             },
             marginRight: 19,
             border: "#D9DBE9",
             backgroundColor: "#ffffff",
           },
         },
+
         ".category-card": {
           position: "relative",
           backgroundColor: "#fcfcfc",
@@ -219,6 +225,10 @@ export default createTheme({
           boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
           borderRadius: "16px",
           zIndex: 0, // Fix Safari overflow: hidden with border radius
+          "&:hover": {
+            marginTop: "-4px",
+            transition: ".2s ease-out",
+          },
         },
       },
     },
@@ -246,8 +256,14 @@ export default createTheme({
         },
         sizeSmall: {
           height: 48,
-          width: 144,
-          maxWidth: 156,
+        },
+
+        sizeMedium: {
+          height: 56,
+        },
+
+        sizeLarge: {
+          height: 64,
         },
         
 
@@ -346,7 +362,7 @@ export default createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: ({ theme }) => ({
-          height: 120,
+          height: 96,
           justifyContent: "space-evenly",
           gap: 5,
           backgroundColor: "transparent",
@@ -445,10 +461,11 @@ export default createTheme({
         root: {
           borderRadius: 16,
           fontWeight: 500,
+          paddingLeft: "16px",
           "& .MuiOutlinedInput-notchedOutline":
             {
               border: "none",
-              color: "#FCFCFC"
+              color: "#FCFCFC",
             },
         },
       },

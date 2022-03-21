@@ -31,7 +31,7 @@ function Banner(props) {
             <Typography
               variant="h1"
               style={{
-                fontWeight: 700,
+                fontWeight: 800,
                 marginBottom: 24,
               }}
             >
@@ -133,7 +133,7 @@ function Banner(props) {
                 }}
                 variant="outlined"
               />
-              <Button variant="contained">Find Shops</Button>
+              <Button variant="contained" size="large">Find Shops</Button>
             </Grid>
           </div>
         </Container>

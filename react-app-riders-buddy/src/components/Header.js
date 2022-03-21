@@ -90,7 +90,8 @@ export default function Header() {
         </SwipeableDrawer>
 
         <AppBar position="sticky" color="transparent">
-          <Toolbar >
+          <Container sx={{  minWidth: 1800}}>
+          <Toolbar sx={{margin: "0", justifyContent: "sapce-between"}}>
             <IconButton
               size="large"
               color="primary"
@@ -125,7 +126,7 @@ export default function Header() {
             </IconButton>
             <Box sx={{ flexGrow: 1 }}>
               <Link href="/">
-                <img src="/assets/riders-buddy-horizontal-logo.svg" width={isMd ? 200 : 249} alt="" />
+                <img src="/assets/riders-buddy-horizontal-logo.svg" width={isMd ? 200 : 220} alt="" />
               </Link>
             </Box>
             <Button
@@ -139,6 +140,7 @@ export default function Header() {
               Sign up
             </Button>
           </Toolbar>
+          </Container>
         </AppBar>
       </motion.header>
     </>

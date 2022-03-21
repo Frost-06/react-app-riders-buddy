@@ -56,7 +56,7 @@ function Homepage(props) {
           <Categories />
         </Box>
         <TextField
-          style={{ width: 560, marginBottom: 56 }}
+          style={{ maxWidth: 560, marginBottom: 56 }}
           className="searchbox noshadow"
           placeholder="Search product, or services..."
           InputProps={{
@@ -98,7 +98,7 @@ function Homepage(props) {
               Best Deals
             </Typography>
           </Grid>
-          <IconButton disableRipple={true} sx={{display: "flex", gap: "16px"}}>
+          <IconButton disableRipple={true} sx={{display: "flex", gap: "8px"}}>
             <Typography variant="subtitle1" style={{ fontWeight: "700", color: "#262338" }}>
               View all
             </Typography>
