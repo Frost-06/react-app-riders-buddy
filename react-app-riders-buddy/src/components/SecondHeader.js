@@ -8,7 +8,7 @@ import {
   Link,
   TextField,
   InputAdornment,
-  Divider
+  Divider,
 } from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -20,10 +20,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { motion } from "framer-motion";
-
+import UserContext from "../context/UserContext";
 
 export default function Header() {
-  const loginID = 1;
+  const { user, updateUser } = React.useContext(UserContext);
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -55,7 +55,7 @@ export default function Header() {
           <img src={"/img/user-icon.png"} style={{ width: "25%" }} alt="prof" />
           <Box style={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="h1" style={{ fontSize: 28 }}>
-              Andre Guinita
+              {user.firstName} {user.lastName}
             </Typography>
             <Link style={{ fontWeight: "bold !important", color: "#1AA3E9" }}>
               View Account
@@ -108,13 +108,17 @@ export default function Header() {
               <ListItem disablePadding>
                 <ListItemButton
                   style={{ marginBottom: "24px", padding: "22px" }}
+                  onClick={() => {
+                    updateUser({ type: "logout" });
+                  }}
                 >
                   <ListItemIcon>
                     <img src={"/img/log-out.png"} alt="prof" />
                   </ListItemIcon>
-                  <Link style={{ fontWeight: "bold" }} href={"/"}>
+                  <Typography style={{ fontWeight: "bold" }}>
                     Log-out
-                  </Link>
+                  </Typography>
+                  <ListItemText style={{ fontWeight: "bold" }}></ListItemText>
                 </ListItemButton>
               </ListItem>
             </List>
@@ -166,18 +170,18 @@ export default function Header() {
               </Link>
             </Typography>
             <TextField
-          style={{ width: 760, marginBottom: 6, marginRight: 525 }}
-          className="searchbox noshadow"
-          placeholder="Search product, or services..."
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <img src="/img/search-icon.png" />
-              </InputAdornment>
-            ),
-          }}
-          variant="outlined"
-        />
+              style={{ width: 760, marginBottom: 6, marginRight: 525 }}
+              className="searchbox noshadow"
+              placeholder="Search product, or services..."
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <img src="/img/search-icon.png" />
+                  </InputAdornment>
+                ),
+              }}
+              variant="outlined"
+            />
             <Link style={{ marginRight: 40, width: "-25%" }}>
               <img src="/img/message.png" height="40" />
             </Link>

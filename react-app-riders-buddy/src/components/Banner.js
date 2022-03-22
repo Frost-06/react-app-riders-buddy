@@ -18,7 +18,7 @@ function Banner(props) {
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
   var arr = ["banner-3", "banner", "banner-2"];
   var banner = arr[Math.floor(Math.random() * arr.length)];
-  console.log(banner);
+
   return (
     <>
       <motion.div
@@ -29,7 +29,7 @@ function Banner(props) {
         <Container className={banner} maxWidth="100%">
           <div style={{ marginLeft: isMd ? 10 : 80 }}>
             <Typography
-              variant={isMd ? "h3": "h1" }
+              variant={isMd ? "h3" : "h1"}
               style={{
                 fontWeight: 800,
                 marginBottom: 24,
@@ -39,7 +39,7 @@ function Banner(props) {
             </Typography>
             <Grid>
               <TextField
-                sx={{width: isMd ? 324 : 724}}
+                sx={{ width: isMd ? 324 : 724 }}
                 className="searchbox"
                 placeholder="Enter your delivery address..."
                 InputProps={{
@@ -69,13 +69,18 @@ function Banner(props) {
                     </InputAdornment>
                   ),
                   endAdornment: (
-                      <IconButton color="primary" disableRipple={true}>
-                        <motion.div
-                      initial={{scale: 1}}
-                      whileTap={{ scale: 1.1 }}
-                      transition={{ type: "spring", stiffness: 100, ease: "easeIn", duration: 1 }}
-                      style={{originZ: 0.5}}
-                    >
+                    <IconButton color="primary" disableRipple={true}>
+                      <motion.div
+                        initial={{ scale: 1 }}
+                        whileTap={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 100,
+                          ease: "easeIn",
+                          duration: 1,
+                        }}
+                        style={{ originZ: 0.5 }}
+                      >
                         <InputAdornment position="end">
                           <svg
                             width="24"
@@ -128,16 +133,22 @@ function Banner(props) {
                             <circle cx="12" cy="12" r="4" fill="#76C8F2" />
                           </svg>
                         </InputAdornment>
-                        </motion.div>
-                      </IconButton>
+                      </motion.div>
+                    </IconButton>
                   ),
                 }}
                 variant="outlined"
               />
-              <Button variant="contained" size="large"
-              sx={{width: isMd ? "316px !important" : "160px",
-              mt: isMd ? "24px !important" : ""}}
-              >Find Shops</Button>
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  width: isMd ? "316px !important" : "160px",
+                  mt: isMd ? "24px !important" : "",
+                }}
+              >
+                Find Shops
+              </Button>
             </Grid>
           </div>
         </Container>
