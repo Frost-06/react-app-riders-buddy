@@ -1,34 +1,26 @@
+import { useTheme } from "@emotion/react";
 import {
   Box,
   Container,
   Grid,
   TextField,
   Typography,
-  Paper,
-  Alert,
-  AlertTitle,
-  FormControl,
   useMediaQuery,
 } from "@mui/material";
-import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import Link from "@mui/material/Link";
 import axios from "axios";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import IconButton from "@mui/material/IconButton";
-import Collapse from "@mui/material/Collapse";
-import CloseIcon from "@mui/icons-material/Close";
-import { WarningIcon } from "../theme/CustomIcons";
-import { useTheme } from "@emotion/react";
+import UserContext from "../context/UserContext";
 
 export default function SignIn() {
-  var invalidUser = true;
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
   const navigate = useNavigate();
-  const [open, setOpen] = useState();
+  const { updateUser } = useContext(UserContext);
   const [loginInput, setLogin] = useState({
     email: "",
     password: "",
@@ -46,23 +38,27 @@ export default function SignIn() {
       password: loginInput.password,
     };
 
-    axios.get("/sanctum/csrf-cookie").then((response) => {
-      axios.post(`/api/login`, data).then((res) => {
-        if (res.data.status === 200) {
-          localStorage.setItem("auth_token", res.data.token);
-          localStorage.setItem("auth_name", res.data.username);
-          localStorage.setItem("user", res.data);
-          console.log("Success", res.data.message, "success");
+    axios.post(`/api/login`, data).then((res) => {
+      if (res.data.status === 200) {
+        axios.defaults.headers.post["Authorization"] =
+          "Bearer " + res.data.token;
+        updateUser({
+          type: "setUser",
+          payload: {
+            ...res.data.user,
+            isLoggedIn: true,
+          },
+        });
+        setTimeout(() => {
           navigate("/homepage");
-        } else if (res.data.status === 401) {
-          console.log("Warning", res.data.message, "warning");
-        } else {
-          setLogin({ ...loginInput, error_list: res.data.validation_errors });
-        }
-      });
+        }, 0);
+      } else if (res.data.status === 401) {
+      } else {
+        setLogin({ ...loginInput, error_list: res.data.validation_errors });
+      }
     });
   };
-  console.log(invalidUser);
+
   return (
     <>
       <Grid
@@ -162,9 +158,7 @@ export default function SignIn() {
             type="submit"
             variant="contained"
             sx={{ mt: 4 }}
-            onClick={() => {
-              setOpen(true);
-            }}
+            onClick={handleSubmit}
           >
             Sign In
           </Button>
