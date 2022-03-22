@@ -46,13 +46,16 @@ export default function Header() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 400 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 400 || isMd ? 360 : "" }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Container style={{ marginTop: 40 }}>
-        <Typography variant="h5" style={{ marginBottom: 32, lineHeight: "28px", }}>
+        <Typography
+          variant="h5"
+          style={{ marginBottom: 32, lineHeight: "28px" }}
+        >
           Sign in to enjoy exclusive deals and offers
         </Typography>
         <Button variant="contained" href="/sign-in" fullWidth="true">
@@ -90,56 +93,73 @@ export default function Header() {
         </SwipeableDrawer>
 
         <AppBar position="sticky" color="transparent">
-          <Container sx={{  minWidth: 1800}}>
-          <Toolbar sx={{margin: "0", justifyContent: "sapce-between"}}>
-            <IconButton
-              size="large"
-              color="primary"
-              sx={{ mr: 2}}
-              onClick={toggleDrawer("left", true)}
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          <Container sx={{ minWidth: isMd ? 360 : 1800 }}>
+            <Toolbar sx={{ margin: "0", justifyContent: "sapce-between" }}>
+              <IconButton
+                size="large"
+                color="primary"
+                sx={{ mr: 2 }}
+                onClick={toggleDrawer("left", true)}
               >
-                <rect x="3" y="6" width="18" height="2" rx="1" fill="#1AA3E9" />
-                <rect
-                  x="3"
-                  y="16"
-                  width="18"
-                  height="2"
-                  rx="1"
-                  fill="#1AA3E9"
-                />
-                <rect
-                  x="3"
-                  y="11"
-                  width="14"
-                  height="2"
-                  rx="1"
-                  fill="#76C8F2"
-                />
-              </svg>
-            </IconButton>
-            <Box sx={{ flexGrow: 1 }}>
-              <Link href="/">
-                <img src="/assets/riders-buddy-horizontal-logo.svg" width={isMd ? 200 : 220} alt="" />
-              </Link>
-            </Box>
-            <Button
-              variant="contained"
-              href="/sign-in"
-              style={{ marginRight: 24 }}
-            >
-              Sign in
-            </Button>
-            <Button variant="outlined" href="/sign-up">
-              Sign up
-            </Button>
-          </Toolbar>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="6"
+                    width="18"
+                    height="2"
+                    rx="1"
+                    fill="#1AA3E9"
+                  />
+                  <rect
+                    x="3"
+                    y="16"
+                    width="18"
+                    height="2"
+                    rx="1"
+                    fill="#1AA3E9"
+                  />
+                  <rect
+                    x="3"
+                    y="11"
+                    width="14"
+                    height="2"
+                    rx="1"
+                    fill="#76C8F2"
+                  />
+                </svg>
+              </IconButton>
+              <Box sx={{ flexGrow: 1 }}>
+                <Link href="/">
+                  <img
+                    src="/assets/riders-buddy-horizontal-logo.svg"
+                    width={isMd ? 200 : 220}
+                    alt=""
+                  />
+                </Link>
+              </Box>
+              {isMd ? (
+                ""
+              ) : (
+                <>
+                  <Button
+                    variant="contained"
+                    href="/sign-in"
+                    style={{ marginRight: 24 }}
+                  >
+                    Sign in
+                  </Button>
+                  <Button variant="outlined" href="/sign-up">
+                    Sign up
+                  </Button>
+                </>
+              )}
+            </Toolbar>
           </Container>
         </AppBar>
       </motion.header>

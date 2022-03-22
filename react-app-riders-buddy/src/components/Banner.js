@@ -29,7 +29,7 @@ function Banner(props) {
         <Container className={banner} maxWidth="100%">
           <div style={{ marginLeft: isMd ? 10 : 80 }}>
             <Typography
-              variant="h1"
+              variant={isMd ? "h3": "h1" }
               style={{
                 fontWeight: 800,
                 marginBottom: 24,
@@ -39,6 +39,7 @@ function Banner(props) {
             </Typography>
             <Grid>
               <TextField
+                sx={{width: isMd ? 324 : 724}}
                 className="searchbox"
                 placeholder="Enter your delivery address..."
                 InputProps={{
@@ -133,7 +134,10 @@ function Banner(props) {
                 }}
                 variant="outlined"
               />
-              <Button variant="contained" size="large">Find Shops</Button>
+              <Button variant="contained" size="large"
+              sx={{width: isMd ? "316px !important" : "160px",
+              mt: isMd ? "24px !important" : ""}}
+              >Find Shops</Button>
             </Grid>
           </div>
         </Container>

@@ -42,13 +42,13 @@ function Homepage(props) {
       <Container style={{ maxWidth: 1400, float: "none", margin:"auto", }}>
         <Box style={{ marginBottom: 56, marginTop: 56 }}>
           <Typography
-            variant="h3"
+            variant={isMd ? "h4" : "h3"}
             style={{ fontWeight: "800", marginBottom: 8 }}
           >
             Explore by Category
           </Typography>
           <Typography
-            variant="body1"
+            variant={isMd ? "body2" : "body1"}
             style={{ color: "#6E7191", marginBottom: 49 }}
           >
             Discover items and services that will fit to your needs

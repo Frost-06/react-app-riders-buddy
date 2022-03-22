@@ -116,6 +116,24 @@ export default createTheme({
           maxWidth: "1920px!important",
         },
 
+        ".sign-in-banner": {
+          background: "url(/img/sign-in-img.png) no-repeat left center",
+          backgroundSize: "contain, cover",
+          height: "100vh",
+          width: 960,
+          maxWidth: 1075,
+          alignItems: "left",
+        },
+
+        ".sign-up-banner": {
+          background: "url(/img/sign-up-img.png) no-repeat left center",
+          backgroundSize: "contain, cover",
+          height: "100vh",
+          width: 960,
+          maxWidth: 1075,
+          alignItems: "left",
+        },
+
         ".MuiMobileStepper-dots": {
           flex: "1 100%",
           display: "flex",
@@ -128,16 +146,36 @@ export default createTheme({
           "& > div": {
             height: "100%",
             borderRadius: 16,
+            marginRight: "8px",
             "&:not(.noshadow)": {
               boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
               "&:hover": {
                 border: "1px solid #A0A3BD",
-                transition: ".2s ease-in-out"
+                transition: ".2s ease-out"
               },
             },
-            marginRight: 19,
             border: "#D9DBE9",
             backgroundColor: "#ffffff",
+          },
+        },
+
+        ".textinputbox": {
+          width: "100%",
+          height: 64,
+          
+          "& > div": {
+            height: "100%",
+            borderRadius: 16,
+            "&:not(.noshadow)": {
+              boxShadow: "none",
+              border: "1px solid #D9DBE9",
+              "&:hover": {
+                border: "1px solid #A0A3BD",
+                transition: ".2s ease-out"
+              },
+            },
+            border: "#D9DBE9",
+            backgroundColor: "#FCFCFC",
           },
         },
 
@@ -153,7 +191,12 @@ export default createTheme({
             cursor: "pointer",
             filter: "none",
             transition: ".2s ease-in",
+            delay: "0.5s",
             h2: {
+              color: "#1AA3E9",
+            },
+            
+            h3: {
               color: "#1AA3E9",
             },
             borderBottomColor: "#1AA3E9",
@@ -164,6 +207,10 @@ export default createTheme({
             fontWeight: 800,
             letterSpacing: 1,
             fontSize: 32,
+          },
+
+          h3: {
+            fontWeight: 800,
           },
 
           p: {

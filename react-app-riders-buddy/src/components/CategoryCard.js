@@ -14,11 +14,11 @@ function CategoryCard({ image, isActive, title, description }) {
         marginBottom: isMd ? "16px !important" : "",
       }}
     >
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant={isMd ? "h3" : "h2"}>{title}</Typography>
       <Typography variant="body2">{description}</Typography>
       {image && (
         // eslint-disable-next-line jsx-a11y/alt-text
-        <img src={image} className="category-image" />
+        <img src={image} className="category-image" alt="" width={isMd ? "164" : ""}/>
       )}
     </Grid>
   );
