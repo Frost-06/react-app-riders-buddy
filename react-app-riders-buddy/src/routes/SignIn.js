@@ -17,7 +17,6 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../context/UserContext";
 
 export default function SignIn() {
-  var invalidUser = true;
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
   const navigate = useNavigate();
@@ -39,30 +38,25 @@ export default function SignIn() {
       password: loginInput.password,
     };
 
-    axios
-      .post(`/api/login`, {
-        email: "mark@gmail.com",
-        password: "12345678",
-      })
-      .then((res) => {
-        if (res.data.status === 200) {
-          axios.defaults.headers.post["Authorization"] =
-            "Bearer " + res.data.token;
-          updateUser({
-            type: "setUser",
-            payload: {
-              ...res.data.user,
-              isLoggedIn: true,
-            },
-          });
-          setTimeout(() => {
-            navigate("/homepage");
-          }, 0);
-        } else if (res.data.status === 401) {
-        } else {
-          setLogin({ ...loginInput, error_list: res.data.validation_errors });
-        }
-      });
+    axios.post(`/api/login`, data).then((res) => {
+      if (res.data.status === 200) {
+        axios.defaults.headers.post["Authorization"] =
+          "Bearer " + res.data.token;
+        updateUser({
+          type: "setUser",
+          payload: {
+            ...res.data.user,
+            isLoggedIn: true,
+          },
+        });
+        setTimeout(() => {
+          navigate("/homepage");
+        }, 0);
+      } else if (res.data.status === 401) {
+      } else {
+        setLogin({ ...loginInput, error_list: res.data.validation_errors });
+      }
+    });
   };
 
   return (
