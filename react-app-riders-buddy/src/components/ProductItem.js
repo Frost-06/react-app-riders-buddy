@@ -1,5 +1,12 @@
 import { useTheme } from "@emotion/react";
-import { Button,  CardActions, Container, Grid, LinearProgress, useMediaQuery } from "@mui/material";
+import {
+  Button,
+  CardActions,
+  Container,
+  Grid,
+  LinearProgress,
+  useMediaQuery,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
@@ -98,6 +105,12 @@ export default function ProductItem(props) {
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
         <CardContent sx={{ paddingRight: "14px !important" }}>
+          <div style={{textAlign: "right"}}><img
+            src={"/img/add-to-wishlist.png"}
+            style={{ backgroundcolor: "green", borderRadius: "50%" }}
+            alt=""
+          />
+          </div>
           <Typography
             variant="h6"
             style={{
@@ -116,65 +129,65 @@ export default function ProductItem(props) {
           </Typography>
           <Grid>
             {rating && (
-            <Box
-              variant="body2"
-              style={{
-                display: "inline-flex",
-                justifyContent: "center",
-                alignItems: "center",
-                alignContent: "center",
-              }}
-            >
-              <Rating
-                name="half-rating-read"
-                defaultValue={parseFloat(rating)}
-                precision={0.5}
-                readOnly
-                size="medium"
+              <Box
+                variant="body2"
                 style={{
                   display: "inline-flex",
                   justifyContent: "center",
                   alignItems: "center",
-                }}
-              />
-              &nbsp;&nbsp;
-              <Typography variant="subtitle1" sx={{ color: "#6E7191" }}>
-                ({reviews})
-              </Typography>
-            </Box>
-          )}
-
-          <CardActions sx={{padding: "0 !important"}}>
-          <Grid //lower
-            container
-            columns={2}
-            alignItems="center"
-            style={{
-              display: "flex",
-              marginTop: "20px",
-              justifyContent: "space-between",
-            }}
-          >
-            <Box xs={1}>
-              <Typography variant="body2">Starting at</Typography>
-              <Typography
-                variant="h4"
-                style={{
-                  color: "#1AA3E9",
-                  lineHeight: "25px !important",
-                  fontWeight: 800,
+                  alignContent: "center",
                 }}
               >
-                ₱ {price}
-              </Typography>
-            </Box>
-            <Box xs={1}>
-              <Button variant="contained" size="small" alignItems="right">
-                Get Price
-              </Button>
-            </Box>
-          </Grid>
-          </CardActions>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={parseFloat(rating)}
+                  precision={0.5}
+                  readOnly
+                  size="medium"
+                  style={{
+                    display: "inline-flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                />
+                &nbsp;&nbsp;
+                <Typography variant="subtitle1" sx={{ color: "#6E7191" }}>
+                  ({reviews})
+                </Typography>
+              </Box>
+            )}
+
+            <CardActions sx={{ padding: "0 !important" }}>
+              <Grid //lower
+                container
+                columns={2}
+                alignItems="center"
+                style={{
+                  display: "flex",
+                  marginTop: "20px",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box xs={1}>
+                  <Typography variant="body2">Starting at</Typography>
+                  <Typography
+                    variant="h4"
+                    style={{
+                      color: "#1AA3E9",
+                      lineHeight: "25px !important",
+                      fontWeight: 800,
+                    }}
+                  >
+                    ₱ {price}
+                  </Typography>
+                </Box>
+                <Box xs={1}>
+                  <Button variant="contained" size="small" alignItems="right">
+                    Get Price
+                  </Button>
+                </Box>
+              </Grid>
+            </CardActions>
           </Grid>
         </CardContent>
       </Card>

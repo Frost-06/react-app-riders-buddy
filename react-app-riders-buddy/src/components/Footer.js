@@ -29,7 +29,7 @@ function Footer(props) {
           }}
         >
           <Typography
-            variant={isMd ? "h3" : "h2"}
+            variant={isMd ? "h4" : "h2"}
             style={{
               textAlign: "center",
               fontWeight: "bold",
@@ -46,7 +46,7 @@ function Footer(props) {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           flexWrap: "wrap",
           width: "100%",
           maxWidth: 1400,
@@ -55,16 +55,16 @@ function Footer(props) {
         }}
       >
         <Box>
-          <Box style={{ display: "flex", alignItems: "center", paddingBottom: isMd ? "24px" : "" }}>
-            <img src={"/assets/prof-mechanics.svg"} alt="prof"/>
+          <Box style={{ display: "flex", flexDirection: "column" ,alignItems: "center", paddingBottom: isMd ? "32px 0" : ""}}>
+            <img src={"/assets/prof-mechanics.svg"} alt="prof" />
             <Container>
               <Typography
                 variant={isMd ? "h6" : "h4"}
-                style={{ fontWeight: "800", color: "#0D5275" }}
+                style={{ fontWeight: "800", color: "#0D5275", textAlign: "center", }}
               >
                 Professional Mechanics
               </Typography>
-              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191" }}>
+              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191", textAlign: "center" }}>
                 Cheap with excellent jobs
               </Typography>
             </Container>
@@ -72,16 +72,16 @@ function Footer(props) {
         </Box>
 
         <Box>
-          <Box style={{ display: "flex", alignItems: "center", paddingBottom: isMd ? "24px" : ""}}>
+          <Box style={{ display: "flex", flexDirection: "column" ,alignItems: "center", paddingBottom: isMd ? "32px" : ""}}>
             <img src={"/assets/relia-prod.svg"} alt="prof" />
             <Container>
               <Typography
                  variant={isMd ? "h6" : "h4"}
-                style={{ fontWeight: "800", color: "#0D5275" }}
+                style={{ fontWeight: "800", color: "#0D5275", textAlign: "center" }}
               >
                 Reliable products
               </Typography>
-              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191" }}>
+              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191", textAlign: "center" }}>
                 Proven and tested product quality
               </Typography>
             </Container>
@@ -89,16 +89,16 @@ function Footer(props) {
         </Box>
 
         <Box>
-          <Box style={{ display: "flex", alignItems: "center" }}>
+          <Box style={{ display: "flex", flexDirection: "column" ,alignItems: "center" }}>
             <img src={"/assets/cus-support.svg"} alt="prof" />
             <Container>
               <Typography
                 variant={isMd ? "h6" : "h4"}
-                style={{ fontWeight: "800", color: "#0D5275" }}
+                style={{ fontWeight: "800", color: "#0D5275", textAlign: "center" }}
               >
                 Customer Support
               </Typography>
-              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191" }}>
+              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191", textAlign: "center" }}>
                 Friendly 24/7 Support
               </Typography>
             </Container>
