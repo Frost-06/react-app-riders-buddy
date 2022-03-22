@@ -1,9 +1,12 @@
-import { Container, Divider, Grid, Link } from "@mui/material";
+import { Container, Divider, Grid, Link, useMediaQuery } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { useTheme } from "@emotion/react";
 
 function Footer(props) {
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
       <Box
@@ -21,13 +24,14 @@ function Footer(props) {
             margin: "0 auto",
             marginTop: "88px",
             width: "100%",
-            padding: "42px 0",
+            padding: isMd ? "24px 0 " : "42px 0",
             maxWidth: 1400,
           }}
         >
           <Typography
-            variant="h2"
+            variant={isMd ? "h3" : "h2"}
             style={{
+              textAlign: "center",
               fontWeight: "bold",
               color: "#1AA3E9",
               padding: "0px 24px 0px 24px",
@@ -44,40 +48,40 @@ function Footer(props) {
           alignItems: "center",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          width: "80%",
+          width: "100%",
           maxWidth: 1400,
           margin: "0 auto",
-          padding: "80px 24px",
+          padding: isMd ? "40px 30px" : "80px 24px",
         }}
       >
-        <Grid>
-          <Box style={{ display: "flex", alignItems: "center" }}>
+        <Box>
+          <Box style={{ display: "flex", alignItems: "center", paddingBottom: isMd ? "24px" : "" }}>
             <img src={"/assets/prof-mechanics.svg"} alt="prof"/>
             <Container>
               <Typography
-                variant="h4"
+                variant={isMd ? "h6" : "h4"}
                 style={{ fontWeight: "800", color: "#0D5275" }}
               >
                 Professional Mechanics
               </Typography>
-              <Typography variant="body1" style={{ color: "#6E7191" }}>
+              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191" }}>
                 Cheap with excellent jobs
               </Typography>
             </Container>
           </Box>
-        </Grid>
+        </Box>
 
         <Box>
-          <Box style={{ display: "flex", alignItems: "center" }}>
+          <Box style={{ display: "flex", alignItems: "center", paddingBottom: isMd ? "24px" : ""}}>
             <img src={"/assets/relia-prod.svg"} alt="prof" />
             <Container>
               <Typography
-                variant="h4"
+                 variant={isMd ? "h6" : "h4"}
                 style={{ fontWeight: "800", color: "#0D5275" }}
               >
                 Reliable products
               </Typography>
-              <Typography variant="body1" style={{ color: "#6E7191" }}>
+              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191" }}>
                 Proven and tested product quality
               </Typography>
             </Container>
@@ -89,12 +93,12 @@ function Footer(props) {
             <img src={"/assets/cus-support.svg"} alt="prof" />
             <Container>
               <Typography
-                variant="h4"
+                variant={isMd ? "h6" : "h4"}
                 style={{ fontWeight: "800", color: "#0D5275" }}
               >
                 Customer Support
               </Typography>
-              <Typography variant="body1" style={{ color: "#6E7191" }}>
+              <Typography variant={isMd ? "subtitle2" : "body1"} style={{ fontWeight: "500", color: "#6E7191" }}>
                 Friendly 24/7 Support
               </Typography>
             </Container>
