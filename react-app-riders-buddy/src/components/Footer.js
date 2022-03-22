@@ -117,31 +117,33 @@ function Footer(props) {
           justifyContent: "space-between",
           flexWrap: "wrap",
           alignItems: "flex-start",
-          padding: "48px 0"
+          padding: "48px 0",
+          flexDirection: isMd ? "column" : ""
         }}
       >
         <Box
           style={{
             display: "flex",
             flexDirection: "column",
-            maxWidth: "60%",
+            maxWidth: isMd ? "100%" : "60%",
             gap: "32px",
             flexWrap: "wrap",
-
+            padding: isMd ? "0 24px" : ""
           }}
         >
           <img
             src={"/assets/riders-buddy-horizontal-logo.svg"}
             alt="logo"
-            width=" 35%"
+            width={isMd ? "80%" : "35%"}
           />
           <Typography
-            variant="body1"
+            variant={isMd ? "caption" : "body1"}
             style={{
               fontWeight: "400",
               color: "#6E7191",
-              width: "80%",
+              width: isMd ? "100%" : "80%",
               lineHeight: "40px",
+              textAlign: "justify"
             }}
           >
             Riders Buddy is a cross-platform application that offers buying and
@@ -151,16 +153,19 @@ function Footer(props) {
             an open space to work with potential stores that sells bicycle and
             motorcycle parts and accessories.
           </Typography>
+          {isMd ? <Divider />  : "" }
+          
         </Box>
+
         <Box
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             flexWrap: "wrap",
-            width: "40%",
+            width: isMd ? "100%" : "40%",
             margin: "0 auto",
-            paddingTop: "20px"
+            padding: isMd ? "32px 24px" : ""
           }}
         >
           <Box
@@ -217,6 +222,7 @@ function Footer(props) {
                 fontSize: "20px",
                 fontWeight: "bold",
                 color: "#1AA3E9",
+                paddingTop: isMd ? "64px" : ""
               }}
             >
               Legal
@@ -238,17 +244,17 @@ function Footer(props) {
         width: "100%",
         maxWidth: 1400,
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: isMd ? "space-around" : "space-between",
         flexWrap: "wrap",
         alignItems: "center",
-        padding: "24px 0"
+        padding: isMd ? "24px 24px" : "24px 0"
       }}>
       <Typography
-        style={{ fontSize: "18px", fontWeight: "bold", color: "#1AA3E9" }}
+        style={{ fontSize: "18px", fontWeight: "bold", color: "#1AA3E9", margin: isMd ? "0 auto": "" }}
       >
         ©2022 Riders Buddy
       </Typography>
-      <Box style={{ display: "flex", flexDirection: "row", gap: "32px" }}>
+      <Box style={{ display: "flex", flexDirection: "row", gap: "24px", padding: isMd ? "32px 0" : "", rgin: isMd ? "0 auto": ""}}>
           <Link>
             <img src={"/img/Facebook.png"} alt="fb" />
           </Link>
