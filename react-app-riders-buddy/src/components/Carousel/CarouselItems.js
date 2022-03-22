@@ -27,7 +27,7 @@ function CarouselItems(props) {
       }}
     >
       {bestSellers && (
-      <Grid container columns={isMd ? 2 : 4} spacing={2}>
+      <Grid container columns={isMd ? 1 : 4} spacing={2}>
         {bestSellers.map((bestSeller, index) => (
           <Grid key={index} item xs={1}>
             <ProductItem {...bestSeller} />

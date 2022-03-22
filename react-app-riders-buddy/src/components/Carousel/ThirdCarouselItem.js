@@ -28,7 +28,7 @@ function ThirdCarouselItem(props) {
       }}
     >
       {similarProducts && (
-      <Grid container columns={isMd ? 2 : 4} spacing={2}>
+      <Grid container columns={isMd ? 1 : 4} spacing={2}>
         {similarProducts.map((similarProduct, index) => (
           <Grid key={index} item xs={1}>
             <ProductItem {...similarProduct} />

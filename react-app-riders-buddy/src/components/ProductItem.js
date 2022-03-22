@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Button,  CardActions, Container, Grid, LinearProgress } from "@mui/material";
+import { Button,  CardActions, Container, Grid, LinearProgress, useMediaQuery } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
@@ -49,6 +49,8 @@ export default function ProductItem(props) {
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
 
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Link to={"/" + categoryType} state={props}>
       <Card sx={{ maxWidth: 356, height: 408 }}>
@@ -63,7 +65,7 @@ export default function ProductItem(props) {
                   color="#ffffff"
                   width={100}
                   style={{
-                    padding: "5px 9px",
+                    padding: isMd ? "5px 18px " : "5px 9px",
                     marginLeft: "-40px",
                     zIndex: "0",
                     fontSize: "12",
@@ -128,7 +130,7 @@ export default function ProductItem(props) {
                 defaultValue={parseFloat(rating)}
                 precision={0.5}
                 readOnly
-                size="small"
+                size="medium"
                 style={{
                   display: "inline-flex",
                   justifyContent: "center",
