@@ -1,4 +1,5 @@
 import { useTheme } from "@emotion/react";
+import styled from "@emotion/styled";
 import {
   Avatar,
   Box,
@@ -12,11 +13,28 @@ import React from "react";
 import UserContext from "../../context/UserContext";
 import useChat from "../../hooks/useChat";
 import socket, { events } from "../../utils/socket";
+import Rating from "@mui/material/Rating";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { IconButton } from "@mui/material";
 
 function ProductDetails({ product }) {
   const theme = useTheme();
   const { chatDrawer, setChatDrawer } = useChat();
   const { user, updateUser } = React.useContext(UserContext);
+
+  const StyledRating = styled(Rating)({
+    "& .MuiRating-icon": {
+      color: "#E61B00",
+    },
+
+    "& .MuiRating-iconFilled": {
+      color: "#E61B00",
+    },
+    "& .MuiRating-iconHover": {
+      color: "#E61B00",
+    },
+  });
 
   const {
     item_name,
@@ -38,11 +56,10 @@ function ProductDetails({ product }) {
   } = product;
 
   return (
-    <div>
+    <Container>
       <Typography
-        variant="h2"
+        variant="h5"
         style={{
-          fontSize: 20,
           padding: "0px 0px 8px 0px",
         }}
       >
@@ -84,24 +101,29 @@ function ProductDetails({ product }) {
           </Typography>
         )}
       </Typography>
-      <Grid className="priceRange" container columns={2}>
+      <Grid
+        className="priceRange"
+        container
+        columns={2}
+        sx={{ justifyContent: "space-between", padding: "8px 24px !important" }}
+      >
         <Typography
+          variant="h3"
           style={{
             color: "#1AA3E9",
-            fontSize: 28,
             fontWeight: 700,
           }}
         >
           ₱ {price} - ₱ {endingPrice}
         </Typography>
         <CardHeader
-          style={{ width: "60%" }}
+          style={{ width: "40%" }}
           avatar={
             salePrice ? (
               <Box
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
-                width={100}
+                width={"100px"}
                 style={{ padding: "5px 9px" }}
               >
                 {salePrice * 100}% off
@@ -306,28 +328,70 @@ function ProductDetails({ product }) {
       </Button>
       <Grid
         style={{
-          marginLeft: "24px",
-          marginRight: "24px",
-          display: "inline-flex",
+          display: "flex",
           alignItems: "center",
           flexWrap: "wrap",
-          gap: "22px",
+          width: "100%",
+          justifyContent: "space-evenly",
         }}
       >
-        <Avatar alt="Favourite" src="/img/Favorite.png" />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "16px",
+          }}
+        >
+          <IconButton>
+            <StyledRating
+              name="customized-color"
+              defaultValue={0}
+              max={1}
+              size="large"
+              sx={{ margin: "0 auto" }}
+              icon={<FavoriteIcon />}
+              emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+            />
+          </IconButton>
 
-        <Typography variant="h3">Add to Favourites</Typography>
+          <Typography variant="h6">Add to Favourites</Typography>
+        </Box>
         <img src={"/img/vertical-line.png"} alt="vertical" />
 
-        <img src={"/img/Share.png"} alt="vertical" />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "16px",
+          }}
+        >
+          <IconButton>
+            <img src={"/assets/share.svg  "} alt="vertical" />
+          </IconButton>
 
-        <Typography variant="h3">Share</Typography>
+          <Typography variant="h6">Share</Typography>
+        </Box>
         <img src={"/img/vertical-line.png"} alt="vertical" />
 
-        <img src={"/img/Compare.png"} alt="vertical" />
-        <Typography variant="h3">Compare</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "16px",
+          }}
+        >
+          <IconButton>
+            {" "}
+            <img src={"/assets/similar.svg"} alt="vertical" />
+          </IconButton>
+
+          <Typography variant="h6">Similar</Typography>
+        </Box>
       </Grid>
-    </div>
+    </Container>
   );
 }
 

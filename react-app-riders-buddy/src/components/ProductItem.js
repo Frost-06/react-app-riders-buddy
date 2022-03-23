@@ -35,6 +35,10 @@ const ExpandMore = styled((props) => {
 }));
 
 const StyledRating = styled(Rating)({
+  "& .MuiRating-icon": {
+    color: "#A0A3BD",
+  },
+
   "& .MuiRating-iconFilled": {
     color: "#E61B00",
   },

@@ -47,8 +47,8 @@ function ProductPage(props) {
             underline="hover"
             color="inherit"
             href="/homepage"
-            variant="h3"
-            st
+            variant="subtitle1"
+            sx={{ fontWeight: "700" }}
           >
             Home
           </Link>
