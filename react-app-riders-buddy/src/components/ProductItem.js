@@ -16,7 +16,13 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import * as React from "react";
+=======
+import ChatContainer from "../components/Chat/ChatContainer";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+>>>>>>> 247991f73a7749c02a065a4a6f6f38a19426cd10
 import useChat from "../hooks/useChat";
 
 const ExpandMore = styled((props) => {
@@ -30,6 +36,15 @@ const ExpandMore = styled((props) => {
     duration: theme.transitions.duration.shortest,
   }),
 }));
+
+const StyledRating = styled(Rating)({
+  "& .MuiRating-iconFilled": {
+    color: "#ff6d75",
+  },
+  "& .MuiRating-iconHover": {
+    color: "#ff3d47",
+  },
+});
 
 export default function ProductItem(props) {
   const { chatDrawer, setChatDrawer } = useChat();
@@ -88,6 +103,7 @@ export default function ProductItem(props) {
             }
           />
         </Container>
+        
         <motion.div
           whileHover={{
             scale: 1.1,
@@ -95,14 +111,29 @@ export default function ProductItem(props) {
         >
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
+<<<<<<< HEAD
         <CardContent sx={{ paddingRight: "14px !important" }}>
           <div style={{ textAlign: "right" }}>
             <img
               src={"/img/add-to-wishlist.png"}
               style={{ backgroundcolor: "green", borderRadius: "50%" }}
               alt=""
+=======
+        <div
+            style={{ textAlign: "right", position: "absolute", zIndex: "1500" }}
+          >
+            <StyledRating
+              name="customized-color"
+              defaultValue={0}
+              max={1}
+              size="large"
+              icon={<FavoriteIcon />}
+              emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+>>>>>>> 247991f73a7749c02a065a4a6f6f38a19426cd10
             />
           </div>
+        <CardContent sx={{ paddingRight: "14px !important" }}>
+          
           <Typography
             variant="h6"
             style={{
