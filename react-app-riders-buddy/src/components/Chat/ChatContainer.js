@@ -21,7 +21,10 @@ function ChatContainer(props) {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 464 }}
+      sx={{
+        width: anchor === "top" || anchor === "bottom" ? "auto" : 464,
+        height: "100%",
+      }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}

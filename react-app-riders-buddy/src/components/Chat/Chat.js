@@ -1,3 +1,6 @@
+import { TextField } from "@mui/material";
+import { InputAdornment } from "@mui/material";
+import { Grid } from "@mui/material";
 import {
   AppBar,
   CardMedia,
@@ -53,9 +56,43 @@ function Chat(props) {
           </Toolbar>
         )}
       </AppBar>
-      <Container>
-        <Divider>Yesterday</Divider>
-        {JSON.stringify(chatData)}
+      <Container className="chat-body">
+        <div>
+          {chatData?.messages &&
+            chatData.messages.map((message) => {
+              if (message.from.id == user.id) {
+                return (
+                  <div className="chat-send">
+                    <p>{message.message}</p>
+                  </div>
+                );
+              } else if (message.from == "SYSTEM") {
+                return <Divider>{message.message}</Divider>;
+              } else {
+                return (
+                  <div className="chat-receive">
+                    <p>{message.message}</p>
+                  </div>
+                );
+              }
+            })}
+        </div>
+        <TextField
+          sx={{ width: "100%", position: "relative", zIndex: "1500" }}
+          className="textinputbox"
+          placeholder="Type your message"
+          InputProps={{
+            outline: "none",
+            endAdornment: (
+              <IconButton color="primary" disableRipple={true}>
+                <InputAdornment position="end">
+                  <img src="/assets/send-icon.svg" alt="" />
+                </InputAdornment>
+              </IconButton>
+            ),
+          }}
+          variant="outlined"
+        />
       </Container>
 
       <div></div>
