@@ -18,7 +18,8 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import UserContext from "../context/UserContext";
 import useChat from "../hooks/useChat";
 
 const ExpandMore = styled((props) => {
@@ -35,10 +36,10 @@ const ExpandMore = styled((props) => {
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
-    color: "#ff6d75",
+    color: "#E61B00",
   },
   "& .MuiRating-iconHover": {
-    color: "#ff3d47",
+    color: "#E61B00",
   },
 });
 
@@ -59,6 +60,7 @@ export default function ProductItem(props) {
   const theme = useTheme();
 
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { user, updateUser } = useContext(UserContext);
 
   return (
     <a href={"/" + categoryType + "/" + id}>
@@ -107,18 +109,38 @@ export default function ProductItem(props) {
         >
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
-        <div
-          style={{ textAlign: "right", position: "absolute", zIndex: "1500" }}
-        >
-          <StyledRating
-            name="customized-color"
-            defaultValue={0}
-            max={1}
-            size="large"
-            icon={<FavoriteIcon />}
-            emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
-          />
-        </div>
+        {user.isLoggedIn ? (
+          <div
+            style={{
+              textAlign: "right",
+              width: "48px",
+              height: "48px",
+              position: "absolute",
+              zIndex: "1500",
+              backgroundColor: "#FCFCFC",
+              boxShadow: "0px 24px 48px rgba(110, 113, 145, 0.2)",
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              marginLeft: "240px",
+              marginTop: "-60px",
+              border: "1px solid #D9DBE9",
+            }}
+          >
+            <StyledRating
+              name="customized-color"
+              defaultValue={0}
+              max={1}
+              size="large"
+              sx={{ margin: "0 auto" }}
+              icon={<FavoriteIcon />}
+              emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+            />
+          </div>
+        ) : (
+          ""
+        )}
+
         <CardContent sx={{ paddingRight: "14px !important" }}>
           <Typography
             variant="h6"
