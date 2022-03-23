@@ -1,4 +1,6 @@
 import { useTheme } from "@emotion/react";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import {
   Button,
   CardActions,
@@ -16,13 +18,7 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import * as React from "react";
-=======
-import ChatContainer from "../components/Chat/ChatContainer";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
->>>>>>> 247991f73a7749c02a065a4a6f6f38a19426cd10
+import React from "react";
 import useChat from "../hooks/useChat";
 
 const ExpandMore = styled((props) => {
@@ -103,7 +99,7 @@ export default function ProductItem(props) {
             }
           />
         </Container>
-        
+
         <motion.div
           whileHover={{
             scale: 1.1,
@@ -111,29 +107,19 @@ export default function ProductItem(props) {
         >
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
-<<<<<<< HEAD
-        <CardContent sx={{ paddingRight: "14px !important" }}>
-          <div style={{ textAlign: "right" }}>
-            <img
-              src={"/img/add-to-wishlist.png"}
-              style={{ backgroundcolor: "green", borderRadius: "50%" }}
-              alt=""
-=======
         <div
-            style={{ textAlign: "right", position: "absolute", zIndex: "1500" }}
-          >
-            <StyledRating
-              name="customized-color"
-              defaultValue={0}
-              max={1}
-              size="large"
-              icon={<FavoriteIcon />}
-              emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
->>>>>>> 247991f73a7749c02a065a4a6f6f38a19426cd10
-            />
-          </div>
+          style={{ textAlign: "right", position: "absolute", zIndex: "1500" }}
+        >
+          <StyledRating
+            name="customized-color"
+            defaultValue={0}
+            max={1}
+            size="large"
+            icon={<FavoriteIcon />}
+            emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+          />
+        </div>
         <CardContent sx={{ paddingRight: "14px !important" }}>
-          
           <Typography
             variant="h6"
             style={{
