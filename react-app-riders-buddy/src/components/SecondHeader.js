@@ -9,6 +9,7 @@ import {
   TextField,
   InputAdornment,
   Divider,
+  useMediaQuery,
 } from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -22,6 +23,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import UserContext from "../context/UserContext";
 import ChatContext from "../context/ChatContext";
+import { useTheme } from "@emotion/react";
 
 export default function Header() {
   const { user, updateUser } = React.useContext(UserContext);
@@ -32,6 +34,9 @@ export default function Header() {
     bottom: false,
     right: false,
   });
+
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -56,10 +61,13 @@ export default function Header() {
         <Box style={{ display: "flex", gap: "32px", alignItems: "center" }}>
           <img src={"/img/user-icon.png"} style={{ width: "25%" }} alt="prof" />
           <Box style={{ display: "flex", flexDirection: "column" }}>
-            <Typography variant="h1" style={{ fontSize: 28 }}>
+            <Typography variant="h5" style={{}}>
               {user.firstName} {user.lastName}
             </Typography>
-            <Link style={{ fontWeight: "bold !important", color: "#1AA3E9" }}>
+            <Link
+              variant="subtitle2"
+              style={{ fontWeight: "600 !important", color: "#1AA3E9" }}
+            >
               View Account
             </Link>
           </Box>
@@ -158,27 +166,73 @@ export default function Header() {
           <Toolbar>
             <IconButton
               size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
+              color="primary"
               sx={{ mr: 2 }}
               onClick={toggleDrawer("left", true)}
             >
-              <MenuIcon />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="3" y="6" width="18" height="2" rx="1" fill="#1AA3E9" />
+                <rect
+                  x="3"
+                  y="16"
+                  width="18"
+                  height="2"
+                  rx="1"
+                  fill="#1AA3E9"
+                />
+                <rect
+                  x="3"
+                  y="11"
+                  width="14"
+                  height="2"
+                  rx="1"
+                  fill="#76C8F2"
+                />
+              </svg>
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link href="/homepage">
-                <img src="/img/logo.png" width="249" height="40" />
+                <img
+                  src="/assets/riders-buddy-horizontal-logo.svg"
+                  width={isMd ? 200 : 220}
+                  alt=""
+                />
               </Link>
             </Typography>
             <TextField
-              style={{ width: 760, marginBottom: 6, marginRight: 525 }}
+              style={{
+                width: isMd ? 260 : "",
+                maxWidth: 664,
+                marginBottom: 6,
+                marginRight: 525,
+              }}
               className="searchbox noshadow"
               placeholder="Search product, or services..."
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <img src="/img/search-icon.png" />
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M22 22L18 18"
+                        stroke="#76C8F2"
+                        strokeWidth="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"
+                        stroke="#1AA3E9"
+                        strokeWidth="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </InputAdornment>
                 ),
               }}
@@ -190,10 +244,10 @@ export default function Header() {
                 setChatDrawer({ ...chatDrawer, right: true });
               }}
             >
-              <img src="/img/message.png" height="40" />
+              <img src="/assets/message.svg" height="40" />
             </Link>
             <Link style={{ marginRight: 24, width: "-25%" }}>
-              <img src="/img/cart.png" height="40" />
+              <img src="/assets/cart.svg" height="40" />
             </Link>
           </Toolbar>
         </AppBar>
