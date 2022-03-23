@@ -25,7 +25,6 @@ function Service(props) {
 
   return (
     <div>
-      <ChatContainer />
       <SecondHeader />
       <Container
         style={{ maxWidth: 1600, marginTop: "48px" }}

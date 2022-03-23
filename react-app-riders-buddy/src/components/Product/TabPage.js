@@ -42,7 +42,31 @@ function a11yProps(index) {
 }
 
 export default function TabPage() {
-  const loc = useLocation();
+  const loc = {
+    state: {
+      id: 1,
+      item_name:
+        "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
+      price: 1500,
+      endingPrice: 2500,
+      salePrice: 0.25,
+      parts: "Bike Chain",
+      descriptionCategories: "Bicycle Products",
+      SKU: 96635,
+      weight: "4kg",
+      brand: "KMC",
+      color: "Silver",
+      numberOfStocks: 25,
+      stockStatus: "In Stock",
+      dimensions: "10 x 20 x15",
+      categoryType: "product",
+      description: "",
+      created_at: "2022-03-16T19:12:42.000000Z",
+      updated_at: "2022-03-16T19:12:42.000000Z",
+      image: "/img/item-img/1.png",
+      sold_items: 0,
+    },
+  };
   const { description, weight, rating, reviews } = loc.state;
   const { productSpec } = loc.state;
   const [value, setValue] = React.useState(0);

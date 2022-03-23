@@ -128,7 +128,7 @@ function Banner(props) {
                               cy="12"
                               r="8"
                               stroke="#1AA3E9"
-                              stroke-width="2"
+                              strokeWidth="2"
                             />
                             <circle cx="12" cy="12" r="4" fill="#76C8F2" />
                           </svg>

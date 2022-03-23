@@ -1,23 +1,23 @@
+import { useTheme } from "@emotion/react";
 import {
+  Avatar,
   Box,
+  Button,
+  CardHeader,
   Container,
   Grid,
   Typography,
-  CardHeader,
-  Button,
-  Avatar,
 } from "@mui/material";
 import React from "react";
-import { useTheme } from "@emotion/react";
+import UserContext from "../../context/UserContext";
 import useChat from "../../hooks/useChat";
-import ChatContainer from "../Chat/ChatContainer";
-import { useLocation } from "react-router-dom";
+import socket, { events } from "../../utils/socket";
 
-function ProductDetails(props) {
+function ProductDetails({ product }) {
   const theme = useTheme();
   const { chatDrawer, setChatDrawer } = useChat();
+  const { user, updateUser } = React.useContext(UserContext);
 
-  const loc = useLocation();
   const {
     item_name,
     reviews,
@@ -35,7 +35,7 @@ function ProductDetails(props) {
     dimensions,
     color,
     parts,
-  } = loc.state;
+  } = product;
 
   return (
     <div>
@@ -102,7 +102,7 @@ function ProductDetails(props) {
                 bgcolor={theme.palette.primary.main}
                 color="#ffffff"
                 width={100}
-                style={{ padding: "5px 9px"}}
+                style={{ padding: "5px 9px" }}
               >
                 {salePrice * 100}% off
               </Box>
@@ -290,13 +290,17 @@ function ProductDetails(props) {
       </Grid>
       <Button
         onClick={() => {
+          updateUser({ type: "setCurrentItem", payload: product });
           setChatDrawer({ ...chatDrawer, right: true });
+          socket.emit(events.GET_PRICE, {
+            product,
+            user,
+          });
         }}
         type="submit"
         fullWidth
         variant="contained"
         sx={{ mt: 3, mb: 2 }}
-        state={props}
       >
         Get Price
       </Button>

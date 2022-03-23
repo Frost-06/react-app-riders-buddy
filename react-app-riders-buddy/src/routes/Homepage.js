@@ -137,14 +137,14 @@ function Homepage(props) {
                     <path
                       d="M22 22L18 18"
                       stroke="#76C8F2"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"
                       stroke="#1AA3E9"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />

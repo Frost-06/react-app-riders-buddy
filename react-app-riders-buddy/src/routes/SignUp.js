@@ -18,13 +18,13 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import axios from "axios";
 import { useTheme } from "@mui/material/styles";
-import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function SignUp() {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
-  const navigate = useNavigate();
+  const history = useHistory();
   const [registerInput, setRegister] = useState({
     firstName: "",
     lastName: "",
@@ -52,7 +52,7 @@ export default function SignUp() {
           localStorage.setItem("auth_token", res.data.token);
           localStorage.setItem("auth_name", res.data.username);
           swal("Success", res.data.message, "success");
-          navigate("/homepage");
+          history.push("/homepage");
         } else {
           setRegister({
             ...registerInput,
@@ -86,7 +86,7 @@ export default function SignUp() {
             padding: "0 24px",
           }}
         >
-          <Typography variant="h2" style={{ fontWeight: 800, }}>
+          <Typography variant="h2" style={{ fontWeight: 800 }}>
             Sign up
           </Typography>
           <Box
@@ -99,18 +99,23 @@ export default function SignUp() {
               height: isMd ? 916 : 516,
               justifyContent: "space-around",
               flexWrap: "wrap",
-              mt: isMd ? 4 : -2 
+              mt: isMd ? 4 : -2,
             }}
           >
             <Grid
-              sx={{ display: "inline-flex", flexWrap: isMd ? "wrap" : "no-wrap", justifyContent: "space-between", width: isMd ? 312 : 568,}}
+              sx={{
+                display: "inline-flex",
+                flexWrap: isMd ? "wrap" : "no-wrap",
+                justifyContent: "space-between",
+                width: isMd ? 312 : 568,
+              }}
             >
-              <Grid sx={{width: "100%", paddingRight: isMd ? "" : "16px",}}>
-                <Typography variant="body1" style={{ fontWeight: 700, }}>
+              <Grid sx={{ width: "100%", paddingRight: isMd ? "" : "16px" }}>
+                <Typography variant="body1" style={{ fontWeight: 700 }}>
                   First name
                 </Typography>
                 <TextField
-                sx={{mt:"12px", mb: isMd ? "16px" : "",}}
+                  sx={{ mt: "12px", mb: isMd ? "16px" : "" }}
                   width="100%"
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
@@ -123,12 +128,12 @@ export default function SignUp() {
                   // value={loginInput.email}
                 />
               </Grid>
-              <Grid sx={{width: "100%", paddingLeft: isMd ? "" : "16px",}}>
+              <Grid sx={{ width: "100%", paddingLeft: isMd ? "" : "16px" }}>
                 <Typography variant="body1" style={{ fontWeight: 700 }}>
                   Last Name
                 </Typography>
                 <TextField
-                sx={{mt:"12px", mb: isMd ? "16px" : "",}}
+                  sx={{ mt: "12px", mb: isMd ? "16px" : "" }}
                   width="100%"
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
@@ -147,7 +152,7 @@ export default function SignUp() {
             </Typography>
             <TextField
               width="100%"
-              sx={{mb: isMd ? "16px" : "",}}
+              sx={{ mb: isMd ? "16px" : "" }}
               className="textinputbox noshadow"
               placeholder="Enter your email address"
               variant="outlined"
@@ -173,7 +178,7 @@ export default function SignUp() {
               Mobile Number
             </Typography>
             <TextField
-              sx={{mb: isMd ? "16px" : "8px",}}
+              sx={{ mb: isMd ? "16px" : "8px" }}
               width="100%"
               className="textinputbox noshadow"
               placeholder="Enter your email address"
@@ -186,14 +191,19 @@ export default function SignUp() {
               // value={loginInput.email}
             />
             <Grid
-              sx={{ display: "inline-flex", flexWrap: isMd ? "wrap" : "no-wrap", justifyContent: "space-between", width: isMd ? 312 : 568,}}
+              sx={{
+                display: "inline-flex",
+                flexWrap: isMd ? "wrap" : "no-wrap",
+                justifyContent: "space-between",
+                width: isMd ? 312 : 568,
+              }}
             >
-              <Grid sx={{width: "100%", paddingRight: isMd ? "" : "16px",}}>
-                <Typography variant="body1" style={{ fontWeight: 700,}}>
+              <Grid sx={{ width: "100%", paddingRight: isMd ? "" : "16px" }}>
+                <Typography variant="body1" style={{ fontWeight: 700 }}>
                   Password
                 </Typography>
                 <TextField
-                sx={{mt:1, mb: isMd ? "16px" : "",}}
+                  sx={{ mt: 1, mb: isMd ? "16px" : "" }}
                   width="100%"
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
@@ -206,12 +216,12 @@ export default function SignUp() {
                   // value={loginInput.email}
                 />
               </Grid>
-              <Grid sx={{width: "100%", paddingLeft: isMd ? "" : "16px",}}>
+              <Grid sx={{ width: "100%", paddingLeft: isMd ? "" : "16px" }}>
                 <Typography variant="body1" style={{ fontWeight: 700 }}>
                   Confirm Password
                 </Typography>
                 <TextField
-                sx={{mt:1,mb: isMd ? "24px" : "",}}
+                  sx={{ mt: 1, mb: isMd ? "24px" : "" }}
                   width="100%"
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
@@ -246,7 +256,7 @@ export default function SignUp() {
             type="submit"
             wdith="100%"
             variant="contained"
-            sx={{mt: isMd ? 4 : "", mb:isMd ? 1 : -4}}
+            sx={{ mt: isMd ? 4 : "", mb: isMd ? 1 : -4 }}
             onClick={() => {
               // setOpen(true);
             }}
@@ -269,7 +279,7 @@ export default function SignUp() {
                 fontSize: "14px",
                 fontWeight: "500",
                 marginRight: 4,
-                mt:isMd ? 16 : ""
+                mt: isMd ? 16 : "",
               }}
             >
               {" "}

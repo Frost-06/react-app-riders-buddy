@@ -21,9 +21,11 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { motion } from "framer-motion";
 import UserContext from "../context/UserContext";
+import ChatContext from "../context/ChatContext";
 
 export default function Header() {
   const { user, updateUser } = React.useContext(UserContext);
+  const { chatDrawer, setChatDrawer } = React.useContext(ChatContext);
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -182,7 +184,12 @@ export default function Header() {
               }}
               variant="outlined"
             />
-            <Link style={{ marginRight: 40, width: "-25%" }}>
+            <Link
+              style={{ marginRight: 40, width: "-25%" }}
+              onClick={() => {
+                setChatDrawer({ ...chatDrawer, right: true });
+              }}
+            >
               <img src="/img/message.png" height="40" />
             </Link>
             <Link style={{ marginRight: 24, width: "-25%" }}>

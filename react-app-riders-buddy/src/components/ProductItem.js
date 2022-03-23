@@ -4,7 +4,6 @@ import {
   CardActions,
   Container,
   Grid,
-  LinearProgress,
   useMediaQuery,
 } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -12,15 +11,12 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
+import Rating from "@mui/material/Rating";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import Rating from "@mui/material/Rating";
 import { Box } from "@mui/system";
-import { StarIcon } from "../theme/CustomIcons";
-import * as React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import ChatContainer from "../components/Chat/ChatContainer";
+import * as React from "react";
 import useChat from "../hooks/useChat";
 
 const ExpandMore = styled((props) => {
@@ -39,19 +35,14 @@ export default function ProductItem(props) {
   const { chatDrawer, setChatDrawer } = useChat();
   // const static, let
   let {
+    id,
     item_name,
     price,
     salePrice,
-    endingPrice,
     image,
     rating,
-    productDescription,
-    serviceDescription,
     categoryType,
-    productSpec,
-    serviceSpec,
     reviews,
-    categoryLabelIcon1,
   } = props;
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
@@ -59,7 +50,7 @@ export default function ProductItem(props) {
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Link to={"/" + categoryType} state={props}>
+    <a href={"/" + categoryType + "/" + id}>
       <Card sx={{ maxWidth: 356, height: 408 }}>
         <Container sx={{ position: "absolute" }}>
           <CardHeader
@@ -105,11 +96,12 @@ export default function ProductItem(props) {
           <CardMedia component="img" height="194" image={image} alt="" />
         </motion.div>
         <CardContent sx={{ paddingRight: "14px !important" }}>
-          <div style={{textAlign: "right"}}><img
-            src={"/img/add-to-wishlist.png"}
-            style={{ backgroundcolor: "green", borderRadius: "50%" }}
-            alt=""
-          />
+          <div style={{ textAlign: "right" }}>
+            <img
+              src={"/img/add-to-wishlist.png"}
+              style={{ backgroundcolor: "green", borderRadius: "50%" }}
+              alt=""
+            />
           </div>
           <Typography
             variant="h6"
@@ -191,6 +183,6 @@ export default function ProductItem(props) {
           </Grid>
         </CardContent>
       </Card>
-    </Link>
+    </a>
   );
 }

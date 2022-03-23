@@ -20,7 +20,6 @@ import { motion } from "framer-motion";
 function UserPage(props) {
   return (
     <div>
-      <ChatContainer />
       <SecondHeader />
       <Banner />
       <Container style={{ maxWidth: 1600 }}>

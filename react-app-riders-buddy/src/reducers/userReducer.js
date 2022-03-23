@@ -9,6 +9,11 @@ export default function userReducer(state, action) {
       return {
         isLoggedIn: false,
       };
+    case "setCurrentItem":
+      return {
+        ...state,
+        item: action.payload,
+      };
     default:
       throw new Error("Invalid user context dispatch");
   }

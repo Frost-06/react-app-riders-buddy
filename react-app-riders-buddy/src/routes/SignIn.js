@@ -12,14 +12,15 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Link from "@mui/material/Link";
 import axios from "axios";
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useRef, useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import UserContext from "../context/UserContext";
 
 export default function SignIn() {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down("md"));
-  const navigate = useNavigate();
+  const history = useHistory();
+  const isMerchantRef = useRef();
   const { updateUser } = useContext(UserContext);
   const [loginInput, setLogin] = useState({
     email: "",
@@ -36,6 +37,7 @@ export default function SignIn() {
     const data = {
       email: loginInput.email,
       password: loginInput.password,
+      is_merchant: isMerchantRef.current.checked,
     };
 
     axios.post(`/api/login`, data).then((res) => {
@@ -50,7 +52,7 @@ export default function SignIn() {
           },
         });
         setTimeout(() => {
-          navigate("/homepage");
+          history.push("/homepage");
         }, 0);
       } else if (res.data.status === 401) {
       } else {
@@ -148,9 +150,10 @@ export default function SignIn() {
               {loginInput.error_list.password}
             </Container>
             <FormControlLabel
+              inputRef={isMerchantRef}
               sx={{ mt: -3 }}
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Merchant?"
             />
           </Box>
 
