@@ -120,9 +120,9 @@ export default function SignUp() {
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
                   variant="outlined"
-                  name="email"
-                  type="email"
-                  id="email"
+                  name="firstName"
+                  type="text"
+                  id="firstName"
                   required
                   onChange={handleInput}
                   // value={loginInput.email}
@@ -138,9 +138,9 @@ export default function SignUp() {
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
                   variant="outlined"
-                  name="email"
-                  type="email"
-                  id="email"
+                  name="lastName"
+                  type="text"
+                  id="lastName"
                   required
                   onChange={handleInput}
                   // value={loginInput.email}
@@ -208,9 +208,9 @@ export default function SignUp() {
                   className="textinputbox noshadow"
                   placeholder="Enter your email address"
                   variant="outlined"
-                  name="email"
-                  type="email"
-                  id="email"
+                  name="password"
+                  type="password"
+                  id="password"
                   required
                   onChange={handleInput}
                   // value={loginInput.email}

@@ -24,7 +24,7 @@ const eudoxusSans = {
     "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
 };
 
-const ICON_SMALL = { width: 14, height: 14};
+const ICON_SMALL = { width: 14, height: 14 };
 const ICON_MEDIUM = { width: 16, height: 16 };
 const ICON_LARGE = { width: 28, height: 28 };
 
@@ -143,7 +143,7 @@ export default createTheme({
         ".searchbox": {
           width: "calc(100% - 148px)",
           height: 64,
-          
+
           "& > div": {
             height: "100%",
             borderRadius: 16,
@@ -152,7 +152,7 @@ export default createTheme({
               boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
               "&:hover": {
                 border: "1px solid #A0A3BD",
-                transition: ".2s ease-out"
+                transition: ".2s ease-out",
               },
             },
             border: "#D9DBE9",
@@ -163,7 +163,7 @@ export default createTheme({
         ".textinputbox": {
           width: "100%",
           height: 64,
-          
+
           "& > div": {
             height: "100%",
             borderRadius: 16,
@@ -172,7 +172,7 @@ export default createTheme({
               border: "1px solid #D9DBE9",
               "&:hover": {
                 border: "1px solid #A0A3BD",
-                transition: ".2s ease-out"
+                transition: ".2s ease-out",
               },
             },
             border: "#D9DBE9",
@@ -239,7 +239,6 @@ export default createTheme({
         },
       },
     },
-    
 
     MuiRating: {
       defaultProps: {
@@ -252,7 +251,7 @@ export default createTheme({
           "&.Mui-disabled": {
             opacity: 0.48,
           },
-          color: "#EAAC30"
+          color: "#EAAC30",
         },
         iconEmpty: { color: "#D9DBE9" },
         sizeSmall: { "& svg": { ...ICON_SMALL } },
@@ -314,7 +313,6 @@ export default createTheme({
         sizeLarge: {
           height: 64,
         },
-        
 
         outlined: ({ theme }) => ({
           color: theme.palette.primary.main,
@@ -334,7 +332,7 @@ export default createTheme({
           borderRadius: 16,
           color: "#ffffff",
           borderColor: "none",
-          boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)", 
+          boxShadow: "0px 12px 24px -4px rgba(110, 113, 145, 0.12)",
           "&:hover": {
             color: theme.palette.primary.main,
             boxShadow: "none",
@@ -516,17 +514,16 @@ export default createTheme({
       },
     },
 
-    MuiOutlinedInput: {
+    MuiTextField: {
       styleOverrides: {
         root: {
           borderRadius: 16,
           fontWeight: 500,
           paddingLeft: "16px",
-          "& .MuiOutlinedInput-notchedOutline":
-            {
-              border: "none",
-              color: "#FCFCFC",
-            },
+          "& .MuiOutlinedInput-notchedOutline": {
+            border: "none",
+            color: "#FCFCFC",
+          },
         },
       },
     },

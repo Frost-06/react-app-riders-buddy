@@ -100,8 +100,12 @@ function ProductPage(props) {
         {!product && <CircularProgress />}
         <Divider />
         <Typography
-          variant="h2"
-          style={{ marginTop: "128px", marginBottom: "32px" }}
+          variant={"h3"}
+          style={{
+            fontWeight: "800",
+            marginTop: "128px",
+            marginBottom: "32px",
+          }}
         >
           Product or Service You May Like
         </Typography>

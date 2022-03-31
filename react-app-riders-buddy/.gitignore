@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/riders-buddy-chat/node_modules
 /.pnp
 .pnp.js
 
